@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>diagnostic</name>
+    <label>Diagnostic</label>
+    <description></description>
+    <creationDate>2026-04-21T17:14:28.731+05:30</creationDate>
+    <updateDate>2012-09-06T18:41:43.302+05:30</updateDate>
+    <resource>JSDiagnosticDataSource</resource>
+    <resource>JSDiagnosticReport</resource>
+    <resource>JSDiagnosticReport.pdf</resource>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+</folder>

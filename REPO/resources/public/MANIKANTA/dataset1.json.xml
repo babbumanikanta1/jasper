@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="dataset1.json.data">
+    <folder>/public/MANIKANTA</folder>
+    <name>dataset1.json</name>
+    <version>0</version>
+    <label>dataset1.json</label>
+    <creationDate>2026-06-16T17:50:08.806+05:30</creationDate>
+    <updateDate>2026-06-16T17:50:08.806+05:30</updateDate>
+    <fileType>json</fileType>
+</fileResource>

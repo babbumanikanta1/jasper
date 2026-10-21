@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.qualifier using JasperReports Library version 6.1.2  -->
+<!-- 2015-10-09T13:13:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookReport" pageWidth="595" pageHeight="842" sectionType="Part" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="e52780b9-8f01-4b16-86fe-712163e5aadc">
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<property name="ireport.jasperserver.url" value="http://build-master.jaspersoft.com:7980/jrs-pro-bugfix/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/Samples/Reports/17._Report_Workbook"/>
+	<property name="net.sf.jasperreports.export.pdf.tagged" value="true"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/Samples/Reports/17._Report_Workbook_files/BookReport"/>
+	<queryString>
+		<![CDATA[SELECT 1]]>
+	</queryString>
+	<detail>
+		<part evaluationTime="Report" uuid="05667aac-c884-40bf-b448-bb0f81313a3f">
+			<property name="net.sf.jasperreports.bookmarks.data.source.parameter" value="REPORT_DATA_SOURCE"/>
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd" usingCache="true">
+				<parametersMapExpression><![CDATA[null]]></parametersMapExpression>
+				<subreportExpression><![CDATA["repo:TOCPart"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="e5cfc44b-2d37-4fd6-bd7c-55b294b05ebd">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd" usingCache="true">
+				<parametersMapExpression><![CDATA[null]]></parametersMapExpression>
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["repo:ChartPart"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="b701ef46-c6e8-4d00-84b5-53e891f512db">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd" usingCache="true">
+				<parametersMapExpression><![CDATA[null]]></parametersMapExpression>
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["repo:CrosstabPart"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+		<part uuid="3c3b18ed-7c05-4865-83ad-73d614261fd6">
+			<p:subreportPart xmlns:p="http://jasperreports.sourceforge.net/jasperreports/parts" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/parts http://jasperreports.sourceforge.net/xsd/parts.xsd" usingCache="true">
+				<parametersMapExpression><![CDATA[null]]></parametersMapExpression>
+				<subreportParameter name="REPORT_CONNECTION">
+					<subreportParameterExpression><![CDATA[$P{REPORT_CONNECTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA["repo:TablePart"]]></subreportExpression>
+			</p:subreportPart>
+		</part>
+	</detail>
+</jasperReport>

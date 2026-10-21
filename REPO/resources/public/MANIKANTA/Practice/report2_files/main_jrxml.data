@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f18e95b-4373-4303-ab07-e3d1eb292969">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart Data Source"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/MANIKANTA/Practice/report2_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/MANIKANTA/Practice/report2"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#B4E0DD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#699178">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#9E7675">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#CEDCEB"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset1" uuid="ecf95460-351c-4796-abf4-9fd6eded7d54">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart Data Source"/>
+		<parameter name="country" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[select * from region
+where sales_country = $P{country}]]>
+		</queryString>
+		<field name="region_id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="region_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="region_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_city" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="sales_city"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_city"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_state_province" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="sales_state_province"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_state_province"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_district" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="sales_district"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_district"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_region" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="sales_region"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_region"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_country" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="sales_country"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_country"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+		<field name="sales_district_id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="sales_district_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="sales_district_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+		</field>
+	</subDataset>
+	<parameter name="country" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from region
+where sales_country = $P{country}
+]]>
+	</queryString>
+	<field name="region_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="region_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="region_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sales_city"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_city"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_state_province" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sales_state_province"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_state_province"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_district" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sales_district"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_district"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_region" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sales_region"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_region"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_country" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sales_country"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_country"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<field name="sales_district_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="sales_district_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales_district_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="region"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="50" forecolor="#000000" backcolor="#EBD1D1" uuid="09d4f61e-9dff-47b9-a164-586ba356904e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc5b0806-dd74-4c1c-a8dd-09950c5c7cda"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["country :  "+$F{sales_country}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="50" width="555" height="38" backcolor="#EBD1D1" uuid="071d259b-4391-4dc7-acc3-66458f365f3e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Country Wise Sales Data]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<componentElement>
+				<reportElement x="2" y="0" width="548" height="60" uuid="eb033abd-d4ce-4ce4-8219-e9017875f0fc">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="b565b290-82f4-4c46-bbd6-337910e796da">
+						<datasetParameter name="country">
+							<datasetParameterExpression><![CDATA[$P{country}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="110" uuid="009f6f2e-d5c0-4378-948f-b352c1d6d676">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="7a96f521-2335-4131-a332-8bc88ffc7428"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[region_id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="4be37269-972a-404f-9d97-1c6f707d8ea6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{region_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="765a598a-d3c2-4fd4-896f-5ffd4708b559">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="bb11de52-a56f-48b5-b590-9e1475d77d30"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[sales_district_id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="7ae9250e-1c87-4a99-9f83-fe5daad6230c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_district_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e59c5d0c-2fd2-4b5f-9d08-67cf2eae59fd">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="80fae792-41cb-4c16-99dc-ba063405b1d5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[sales_city]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="ca7ca1e0-1dd3-4b06-8104-0382e2f84440"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_city}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="08d99365-963f-48b0-8690-630cfe4c9ebf">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="8e89f3d3-67d3-4ee7-aab0-48747eb6f21d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[sales_region]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="57e3d2f8-7c86-494f-979b-64020ba2505a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_region}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="150" uuid="329c6df5-748d-45a5-9f1b-a0b35cd723e7">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="150" height="30" uuid="143c5016-d167-446d-a9ad-ca90a3d05e1e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[sales_country]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="150" height="30" uuid="aacb2f7d-74b7-4eec-981f-98c09641ca6f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_country}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

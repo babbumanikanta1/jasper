@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="FoodmartNoTopGrant.data">
+    <folder>/public/Samples/OLAP/Schemas</folder>
+    <name>FoodmartNoTopGrant</name>
+    <version>0</version>
+    <label>Foodmart Grant without top levels</label>
+    <description>ANALYSIS Foodmart Grant with no top levels allowing navigation in the browser</description>
+    <creationDate>2026-04-21T17:14:35.871+05:30</creationDate>
+    <updateDate>2012-07-04T01:29:28.063+05:30</updateDate>
+    <fileType>accessGrantSchema</fileType>
+</fileResource>

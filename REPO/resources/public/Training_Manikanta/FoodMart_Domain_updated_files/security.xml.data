@@ -1,0 +1,39 @@
+<securityDefinition xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0" itemGroupDefaultAccess="granted">
+
+    <resourceAccessGrants>
+        <resourceAccessGrantList id="JoinTree_1_row_security" label="Regional Row Security" resourceId="JoinTree_1">
+            <resourceAccessGrants>
+                
+                <resourceAccessGrant id="row_grant_central">
+                    <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_CENTRAL'] }</principalExpression>
+                    <filterExpression>region.sales_region in ('Central West')</filterExpression>
+                </resourceAccessGrant>
+                
+                <resourceAccessGrant id="row_grant_north">
+                    <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_NORTH'] }</principalExpression>
+                    <filterExpression>region.sales_region in ('North West')</filterExpression>
+                </resourceAccessGrant>
+
+            </resourceAccessGrants>
+        </resourceAccessGrantList>
+    </resourceAccessGrants>
+
+    <itemGroupAccessGrants>
+        <itemGroupAccessGrantList id="sales_fact_1977_security" label="Sales Fact Security" itemGroupId="sales_fact_1997" defaultAccess="granted">
+            <itemGroupAccessGrants>
+                
+                <itemGroupAccessGrant id="grant_permission" access="granted">
+                    <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_NORTH'] }</principalExpression>
+                    <itemAccessGrantList id="sensitive_columns" defaultAccess="denied">
+                        <itemAccessGrants>
+                            <itemAccessGrant id="show_sales" itemId="store_sales" access="denied"/>
+                            <itemAccessGrant id="show_cost" itemId="store_cost" access="granted"/>
+                        </itemAccessGrants>
+                    </itemAccessGrantList>
+                </itemGroupAccessGrant>
+
+            </itemGroupAccessGrants>
+        </itemGroupAccessGrantList>
+    </itemGroupAccessGrants>
+
+</securityDefinition>

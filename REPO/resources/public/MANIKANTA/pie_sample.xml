@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>pie_sample</name>
+    <version>13</version>
+    <label>pie_sample</label>
+    <description></description>
+    <creationDate>2026-06-09T13:11:34.169+05:30</creationDate>
+    <updateDate>2026-06-09T15:13:32.754+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/pie_sample_files</folder>
+            <name>main_jrxml</name>
+            <version>23</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-06-09T13:11:34.169+05:30</creationDate>
+            <updateDate>2026-06-09T14:07:47.399+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/sugarcrmJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/pie_sample_files</folder>
+            <name>pp</name>
+            <version>5</version>
+            <label>pp</label>
+            <creationDate>2026-06-09T14:07:47.613+05:30</creationDate>
+            <updateDate>2026-06-09T14:10:28.159+05:30</updateDate>
+            <type>7</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/MANIKANTA/pie_sample_files/pp_files</folder>
+                    <name>Query</name>
+                    <version>1</version>
+                    <label>Query</label>
+                    <creationDate>2026-06-09T14:10:28.159+05:30</creationDate>
+                    <updateDate>2026-06-09T14:10:28.159+05:30</updateDate>
+                    <language>sql</language>
+                    <queryString>select sales_stage from opportunities</queryString>
+                    <dataSource>
+                        <uri>/public/Samples/Data_Sources/sugarcrmJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>sales_stage</queryVisibleColumn>
+            <queryValueColumn>sales_stage</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="pie_cvc.css.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/pie_sample_files</folder>
+            <name>pie_cvc.css</name>
+            <version>15</version>
+            <label>pie_cvc.css</label>
+            <creationDate>2026-06-09T13:11:34.169+05:30</creationDate>
+            <updateDate>2026-06-09T14:05:15.038+05:30</updateDate>
+            <fileType>css</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="pie_cvc.min.js.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/pie_sample_files</folder>
+            <name>pie_cvc.min.js</name>
+            <version>18</version>
+            <label>pie_cvc.min.js</label>
+            <creationDate>2026-06-09T13:11:34.169+05:30</creationDate>
+            <updateDate>2026-06-09T14:05:15.057+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

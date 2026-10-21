@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3">
+  <dataIslands>
+    <itemGroup descriptionId="JOINTREE_1.DESCR" id="JoinTree_1" label="JoinTree_1" labelId="JOINTREE_1.LABEL" resourceId="JoinTree_1"></itemGroup>
+  </dataIslands>
+  <dataSources>
+    <jdbcDataSource id="FoodmartDataSourceJNDI">
+      <schemaMap>
+        <entry key="public">
+          <string>public</string>
+        </entry>
+        <entry key="defaultSchema">
+          <string></string>
+        </entry>
+      </schemaMap>
+    </jdbcDataSource>
+  </dataSources>
+  <itemGroups>
+    <itemGroup descriptionId="JOINTREE_1.DEPARTMENT.DESCR" id="department" label="department" labelId="JOINTREE_1.DEPARTMENT.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.DESCR" id="department_description" label="department_description" labelId="JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.LABEL" resourceId="JoinTree_1.department.department_description"></item>
+        <item descriptionId="JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.DESCR" id="department_id" label="department_id" labelId="JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.LABEL" resourceId="JoinTree_1.department.department_id"></item>
+      </items>
+    </itemGroup>
+    <itemGroup descriptionId="JOINTREE_1.EMPLOYEE.DESCR" id="employee" label="employee" labelId="JOINTREE_1.EMPLOYEE.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.BIRTH_DATE.DESCR" id="birth_date" label="birth_date" labelId="JOINTREE_1.EMPLOYEE.BIRTH_DATE.LABEL" resourceId="JoinTree_1.employee.birth_date"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.DESCR" id="department_id_1" label="department_id" labelId="JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.LABEL" resourceId="JoinTree_1.employee.department_id"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.DESCR" id="education_level" label="education_level" labelId="JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.LABEL" resourceId="JoinTree_1.employee.education_level"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.DESCR" id="employee_id" label="employee_id" labelId="JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.LABEL" resourceId="JoinTree_1.employee.employee_id"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.END_DATE.DESCR" id="end_date" label="end_date" labelId="JOINTREE_1.EMPLOYEE.END_DATE.LABEL" resourceId="JoinTree_1.employee.end_date"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.FIRST_NAME.DESCR" id="first_name" label="first_name" labelId="JOINTREE_1.EMPLOYEE.FIRST_NAME.LABEL" resourceId="JoinTree_1.employee.first_name"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.FULL_NAME.DESCR" id="full_name" label="full_name" labelId="JOINTREE_1.EMPLOYEE.FULL_NAME.LABEL" resourceId="JoinTree_1.employee.full_name"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.GENDER.DESCR" id="gender" label="gender" labelId="JOINTREE_1.EMPLOYEE.GENDER.LABEL" resourceId="JoinTree_1.employee.gender"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.HIRE_DATE.DESCR" id="hire_date" label="hire_date" labelId="JOINTREE_1.EMPLOYEE.HIRE_DATE.LABEL" resourceId="JoinTree_1.employee.hire_date"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.LAST_NAME.DESCR" id="last_name" label="last_name" labelId="JOINTREE_1.EMPLOYEE.LAST_NAME.LABEL" resourceId="JoinTree_1.employee.last_name"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.DESCR" id="management_role" label="management_role" labelId="JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.LABEL" resourceId="JoinTree_1.employee.management_role"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.MARITAL_STATUS.DESCR" id="marital_status" label="marital_status" labelId="JOINTREE_1.EMPLOYEE.MARITAL_STATUS.LABEL" resourceId="JoinTree_1.employee.marital_status"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.POSITION_ID.DESCR" id="position_id" label="position_id" labelId="JOINTREE_1.EMPLOYEE.POSITION_ID.LABEL" resourceId="JoinTree_1.employee.position_id"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.POSITION_TITLE.DESCR" id="position_title" label="position_title" labelId="JOINTREE_1.EMPLOYEE.POSITION_TITLE.LABEL" resourceId="JoinTree_1.employee.position_title"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.SALARY.DESCR" id="salary" label="salary" labelId="JOINTREE_1.EMPLOYEE.SALARY.LABEL" resourceId="JoinTree_1.employee.salary"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.STORE_ID.DESCR" id="store_id" label="store_id" labelId="JOINTREE_1.EMPLOYEE.STORE_ID.LABEL" resourceId="JoinTree_1.employee.store_id"></item>
+        <item descriptionId="JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.DESCR" id="supervisor_id" label="supervisor_id" labelId="JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.LABEL" resourceId="JoinTree_1.employee.supervisor_id"></item>
+      </items>
+    </itemGroup>
+    <itemGroup descriptionId="JOINTREE_1.REGION.DESCR" id="region" label="region" labelId="JOINTREE_1.REGION.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.REGION.REGION_ID_1.DESCR" id="region_id_1" label="region_id" labelId="JOINTREE_1.REGION.REGION_ID_1.LABEL" resourceId="JoinTree_1.region.region_id"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_CITY.DESCR" id="sales_city" label="sales_city" labelId="JOINTREE_1.REGION.SALES_CITY.LABEL" resourceId="JoinTree_1.region.sales_city"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_COUNTRY.DESCR" id="sales_country" label="sales_country" labelId="JOINTREE_1.REGION.SALES_COUNTRY.LABEL" resourceId="JoinTree_1.region.sales_country"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_DISTRICT.DESCR" id="sales_district" label="sales_district" labelId="JOINTREE_1.REGION.SALES_DISTRICT.LABEL" resourceId="JoinTree_1.region.sales_district"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_DISTRICT_ID.DESCR" id="sales_district_id" label="sales_district_id" labelId="JOINTREE_1.REGION.SALES_DISTRICT_ID.LABEL" resourceId="JoinTree_1.region.sales_district_id"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_REGION.DESCR" id="sales_region" label="sales_region" labelId="JOINTREE_1.REGION.SALES_REGION.LABEL" resourceId="JoinTree_1.region.sales_region"></item>
+        <item descriptionId="JOINTREE_1.REGION.SALES_STATE_PROVINCE.DESCR" id="sales_state_province" label="sales_state_province" labelId="JOINTREE_1.REGION.SALES_STATE_PROVINCE.LABEL" resourceId="JoinTree_1.region.sales_state_province"></item>
+      </items>
+    </itemGroup>
+    <itemGroup descriptionId="JOINTREE_1.SALES_FACT_1997.DESCR" id="sales_fact_1997" label="sales_fact_1997" labelId="JOINTREE_1.SALES_FACT_1997.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.DESCR" id="customer_id" label="customer_id" labelId="JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.LABEL" resourceId="JoinTree_1.sales_fact_1997.customer_id"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.DESCR" id="product_id" label="product_id" labelId="JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.LABEL" resourceId="JoinTree_1.sales_fact_1997.product_id"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.DESCR" id="promotion_id" label="promotion_id" labelId="JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.LABEL" resourceId="JoinTree_1.sales_fact_1997.promotion_id"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.STORE_COST.DESCR" id="store_cost" label="store_cost" labelId="JOINTREE_1.SALES_FACT_1997.STORE_COST.LABEL" resourceId="JoinTree_1.sales_fact_1997.store_cost"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.STORE_ID_2.DESCR" id="store_id_2" label="store_id" labelId="JOINTREE_1.SALES_FACT_1997.STORE_ID_2.LABEL" resourceId="JoinTree_1.sales_fact_1997.store_id"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.STORE_SALES.DESCR" id="store_sales" label="store_sales" labelId="JOINTREE_1.SALES_FACT_1997.STORE_SALES.LABEL" resourceId="JoinTree_1.sales_fact_1997.store_sales"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.TIME_ID.DESCR" id="time_id" label="time_id" labelId="JOINTREE_1.SALES_FACT_1997.TIME_ID.LABEL" resourceId="JoinTree_1.sales_fact_1997.time_id"></item>
+        <item descriptionId="JOINTREE_1.SALES_FACT_1997.UNIT_SALES.DESCR" id="unit_sales" label="unit_sales" labelId="JOINTREE_1.SALES_FACT_1997.UNIT_SALES.LABEL" resourceId="JoinTree_1.sales_fact_1997.unit_sales"></item>
+      </items>
+    </itemGroup>
+    <itemGroup descriptionId="JOINTREE_1.STORE.DESCR" id="store" label="store" labelId="JOINTREE_1.STORE.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.STORE.COFFEE_BAR.DESCR" id="coffee_bar" label="coffee_bar" labelId="JOINTREE_1.STORE.COFFEE_BAR.LABEL" resourceId="JoinTree_1.store.coffee_bar"></item>
+        <item descriptionId="JOINTREE_1.STORE.FIRST_OPENED_DATE.DESCR" id="first_opened_date" label="first_opened_date" labelId="JOINTREE_1.STORE.FIRST_OPENED_DATE.LABEL" resourceId="JoinTree_1.store.first_opened_date"></item>
+        <item descriptionId="JOINTREE_1.STORE.FLORIST.DESCR" id="florist" label="florist" labelId="JOINTREE_1.STORE.FLORIST.LABEL" resourceId="JoinTree_1.store.florist"></item>
+        <item descriptionId="JOINTREE_1.STORE.FROZEN_SQFT.DESCR" id="frozen_sqft" label="frozen_sqft" labelId="JOINTREE_1.STORE.FROZEN_SQFT.LABEL" resourceId="JoinTree_1.store.frozen_sqft"></item>
+        <item descriptionId="JOINTREE_1.STORE.GROCERY_SQFT.DESCR" id="grocery_sqft" label="grocery_sqft" labelId="JOINTREE_1.STORE.GROCERY_SQFT.LABEL" resourceId="JoinTree_1.store.grocery_sqft"></item>
+        <item descriptionId="JOINTREE_1.STORE.LAST_REMODEL_DATE.DESCR" id="last_remodel_date" label="last_remodel_date" labelId="JOINTREE_1.STORE.LAST_REMODEL_DATE.LABEL" resourceId="JoinTree_1.store.last_remodel_date"></item>
+        <item descriptionId="JOINTREE_1.STORE.MEAT_SQFT.DESCR" id="meat_sqft" label="meat_sqft" labelId="JOINTREE_1.STORE.MEAT_SQFT.LABEL" resourceId="JoinTree_1.store.meat_sqft"></item>
+        <item descriptionId="JOINTREE_1.STORE.PREPARED_FOOD.DESCR" id="prepared_food" label="prepared_food" labelId="JOINTREE_1.STORE.PREPARED_FOOD.LABEL" resourceId="JoinTree_1.store.prepared_food"></item>
+        <item descriptionId="JOINTREE_1.STORE.REGION_ID.DESCR" id="region_id" label="region_id" labelId="JOINTREE_1.STORE.REGION_ID.LABEL" resourceId="JoinTree_1.store.region_id"></item>
+        <item descriptionId="JOINTREE_1.STORE.SALAD_BAR.DESCR" id="salad_bar" label="salad_bar" labelId="JOINTREE_1.STORE.SALAD_BAR.LABEL" resourceId="JoinTree_1.store.salad_bar"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_CITY.DESCR" id="store_city" label="store_city" labelId="JOINTREE_1.STORE.STORE_CITY.LABEL" resourceId="JoinTree_1.store.store_city"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_COUNTRY.DESCR" id="store_country" label="store_country" labelId="JOINTREE_1.STORE.STORE_COUNTRY.LABEL" resourceId="JoinTree_1.store.store_country"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_FAX.DESCR" id="store_fax" label="store_fax" labelId="JOINTREE_1.STORE.STORE_FAX.LABEL" resourceId="JoinTree_1.store.store_fax"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_ID_1.DESCR" id="store_id_1" label="store_id" labelId="JOINTREE_1.STORE.STORE_ID_1.LABEL" resourceId="JoinTree_1.store.store_id"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_MANAGER.DESCR" id="store_manager" label="store_manager" labelId="JOINTREE_1.STORE.STORE_MANAGER.LABEL" resourceId="JoinTree_1.store.store_manager"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_NAME.DESCR" id="store_name" label="store_name" labelId="JOINTREE_1.STORE.STORE_NAME.LABEL" resourceId="JoinTree_1.store.store_name"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_NUMBER.DESCR" id="store_number" label="store_number" labelId="JOINTREE_1.STORE.STORE_NUMBER.LABEL" resourceId="JoinTree_1.store.store_number"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_PHONE.DESCR" id="store_phone" label="store_phone" labelId="JOINTREE_1.STORE.STORE_PHONE.LABEL" resourceId="JoinTree_1.store.store_phone"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_POSTAL_CODE.DESCR" id="store_postal_code" label="store_postal_code" labelId="JOINTREE_1.STORE.STORE_POSTAL_CODE.LABEL" resourceId="JoinTree_1.store.store_postal_code"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_SQFT.DESCR" id="store_sqft" label="store_sqft" labelId="JOINTREE_1.STORE.STORE_SQFT.LABEL" resourceId="JoinTree_1.store.store_sqft"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_STATE.DESCR" id="store_state" label="store_state" labelId="JOINTREE_1.STORE.STORE_STATE.LABEL" resourceId="JoinTree_1.store.store_state"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_STREET_ADDRESS.DESCR" id="store_street_address" label="store_street_address" labelId="JOINTREE_1.STORE.STORE_STREET_ADDRESS.LABEL" resourceId="JoinTree_1.store.store_street_address"></item>
+        <item descriptionId="JOINTREE_1.STORE.STORE_TYPE.DESCR" id="store_type" label="store_type" labelId="JOINTREE_1.STORE.STORE_TYPE.LABEL" resourceId="JoinTree_1.store.store_type"></item>
+        <item descriptionId="JOINTREE_1.STORE.VIDEO_STORE.DESCR" id="video_store" label="video_store" labelId="JOINTREE_1.STORE.VIDEO_STORE.LABEL" resourceId="JoinTree_1.store.video_store"></item>
+      </items>
+    </itemGroup>
+    <itemGroup descriptionId="JOINTREE_1.TIME_BY_DAY.DESCR" id="time_by_day" label="time_by_day" labelId="JOINTREE_1.TIME_BY_DAY.LABEL" resourceId="JoinTree_1">
+      <items>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.DESCR" id="day_of_month" label="day_of_month" labelId="JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.LABEL" resourceId="JoinTree_1.time_by_day.day_of_month"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.DESCR" id="day_of_week" label="day_of_week" labelId="JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.LABEL" resourceId="JoinTree_1.time_by_day.day_of_week"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.DESCR" id="fiscal_period" label="fiscal_period" labelId="JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.LABEL" resourceId="JoinTree_1.time_by_day.fiscal_period"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.DESCR" id="month_of_year" label="month_of_year" labelId="JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.LABEL" resourceId="JoinTree_1.time_by_day.month_of_year"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.QUARTER.DESCR" id="quarter" label="quarter" labelId="JOINTREE_1.TIME_BY_DAY.QUARTER.LABEL" resourceId="JoinTree_1.time_by_day.quarter"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.THE_DATE.DESCR" id="the_date" label="the_date" labelId="JOINTREE_1.TIME_BY_DAY.THE_DATE.LABEL" resourceId="JoinTree_1.time_by_day.the_date"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.THE_DAY.DESCR" id="the_day" label="the_day" labelId="JOINTREE_1.TIME_BY_DAY.THE_DAY.LABEL" resourceId="JoinTree_1.time_by_day.the_day"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.THE_MONTH.DESCR" id="the_month" label="the_month" labelId="JOINTREE_1.TIME_BY_DAY.THE_MONTH.LABEL" resourceId="JoinTree_1.time_by_day.the_month"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.THE_YEAR.DESCR" id="the_year" label="the_year" labelId="JOINTREE_1.TIME_BY_DAY.THE_YEAR.LABEL" resourceId="JoinTree_1.time_by_day.the_year"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.TIME_ID_1.DESCR" id="time_id_1" label="time_id" labelId="JOINTREE_1.TIME_BY_DAY.TIME_ID_1.LABEL" resourceId="JoinTree_1.time_by_day.time_id"></item>
+        <item descriptionId="JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.DESCR" id="week_of_year" label="week_of_year" labelId="JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.LABEL" resourceId="JoinTree_1.time_by_day.week_of_year"></item>
+      </items>
+    </itemGroup>
+  </itemGroups>
+  <resources>
+    <jdbcTable id="department" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="department" schemaAlias="public">
+      <fieldList>
+        <field id="department_id" type="java.lang.Integer"></field>
+        <field id="department_description" type="java.lang.String"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="employee" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="employee" schemaAlias="public">
+      <fieldList>
+        <field id="employee_id" type="java.lang.Integer"></field>
+        <field id="full_name" type="java.lang.String"></field>
+        <field id="first_name" type="java.lang.String"></field>
+        <field id="last_name" type="java.lang.String"></field>
+        <field id="position_id" type="java.lang.Integer"></field>
+        <field id="position_title" type="java.lang.String"></field>
+        <field id="store_id" type="java.lang.Integer"></field>
+        <field id="department_id" type="java.lang.Integer"></field>
+        <field id="birth_date" type="java.util.Date"></field>
+        <field id="hire_date" type="java.sql.Timestamp"></field>
+        <field id="end_date" type="java.sql.Timestamp"></field>
+        <field id="salary" type="java.math.BigDecimal"></field>
+        <field id="supervisor_id" type="java.lang.Integer"></field>
+        <field id="education_level" type="java.lang.String"></field>
+        <field id="marital_status" type="java.lang.String"></field>
+        <field id="gender" type="java.lang.String"></field>
+        <field id="management_role" type="java.lang.String"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="region" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="region" schemaAlias="public">
+      <fieldList>
+        <field id="region_id" type="java.lang.Integer"></field>
+        <field id="sales_city" type="java.lang.String"></field>
+        <field id="sales_state_province" type="java.lang.String"></field>
+        <field id="sales_district" type="java.lang.String"></field>
+        <field id="sales_region" type="java.lang.String"></field>
+        <field id="sales_country" type="java.lang.String"></field>
+        <field id="sales_district_id" type="java.lang.Integer"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="sales_fact_1997" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="sales_fact_1997" schemaAlias="public">
+      <fieldList>
+        <field id="product_id" type="java.lang.Integer"></field>
+        <field id="time_id" type="java.lang.Integer"></field>
+        <field id="customer_id" type="java.lang.Integer"></field>
+        <field id="promotion_id" type="java.lang.Integer"></field>
+        <field id="store_id" type="java.lang.Integer"></field>
+        <field id="store_sales" type="java.math.BigDecimal"></field>
+        <field id="store_cost" type="java.math.BigDecimal"></field>
+        <field id="unit_sales" type="java.math.BigDecimal"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="store" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="store" schemaAlias="public">
+      <fieldList>
+        <field id="store_id" type="java.lang.Integer"></field>
+        <field id="store_type" type="java.lang.String"></field>
+        <field id="region_id" type="java.lang.Integer"></field>
+        <field id="store_name" type="java.lang.String"></field>
+        <field id="store_number" type="java.lang.Integer"></field>
+        <field id="store_street_address" type="java.lang.String"></field>
+        <field id="store_city" type="java.lang.String"></field>
+        <field id="store_state" type="java.lang.String"></field>
+        <field id="store_postal_code" type="java.lang.String"></field>
+        <field id="store_country" type="java.lang.String"></field>
+        <field id="store_manager" type="java.lang.String"></field>
+        <field id="store_phone" type="java.lang.String"></field>
+        <field id="store_fax" type="java.lang.String"></field>
+        <field id="first_opened_date" type="java.sql.Timestamp"></field>
+        <field id="last_remodel_date" type="java.sql.Timestamp"></field>
+        <field id="store_sqft" type="java.lang.Integer"></field>
+        <field id="grocery_sqft" type="java.lang.Integer"></field>
+        <field id="frozen_sqft" type="java.lang.Integer"></field>
+        <field id="meat_sqft" type="java.lang.Integer"></field>
+        <field id="coffee_bar" type="java.lang.Boolean"></field>
+        <field id="video_store" type="java.lang.Boolean"></field>
+        <field id="salad_bar" type="java.lang.Boolean"></field>
+        <field id="prepared_food" type="java.lang.Boolean"></field>
+        <field id="florist" type="java.lang.Boolean"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="time_by_day" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="time_by_day" schemaAlias="public">
+      <fieldList>
+        <field id="time_id" type="java.lang.Integer"></field>
+        <field id="the_date" type="java.sql.Timestamp"></field>
+        <field id="the_day" type="java.lang.String"></field>
+        <field id="the_month" type="java.lang.String"></field>
+        <field id="the_year" type="java.lang.Short"></field>
+        <field id="day_of_month" type="java.lang.Short"></field>
+        <field id="week_of_year" type="java.lang.Integer"></field>
+        <field id="month_of_year" type="java.lang.Short"></field>
+        <field id="quarter" type="java.lang.String"></field>
+        <field id="fiscal_period" type="java.lang.String"></field>
+        <field id="day_of_week" type="java.lang.Integer"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="JoinTree_1" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="department" schemaAlias="public">
+      <fieldList>
+        <field id="sales_fact_1997.product_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.time_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.customer_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.promotion_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.store_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.store_sales" type="java.math.BigDecimal"></field>
+        <field id="sales_fact_1997.store_cost" type="java.math.BigDecimal"></field>
+        <field id="sales_fact_1997.unit_sales" type="java.math.BigDecimal"></field>
+        <field id="department.department_id" type="java.lang.Integer"></field>
+        <field id="department.department_description" type="java.lang.String"></field>
+        <field id="store.store_id" type="java.lang.Integer"></field>
+        <field id="store.store_type" type="java.lang.String"></field>
+        <field id="store.region_id" type="java.lang.Integer"></field>
+        <field id="store.store_name" type="java.lang.String"></field>
+        <field id="store.store_number" type="java.lang.Integer"></field>
+        <field id="store.store_street_address" type="java.lang.String"></field>
+        <field id="store.store_city" type="java.lang.String"></field>
+        <field id="store.store_state" type="java.lang.String"></field>
+        <field id="store.store_postal_code" type="java.lang.String"></field>
+        <field id="store.store_country" type="java.lang.String"></field>
+        <field id="store.store_manager" type="java.lang.String"></field>
+        <field id="store.store_phone" type="java.lang.String"></field>
+        <field id="store.store_fax" type="java.lang.String"></field>
+        <field id="store.first_opened_date" type="java.sql.Timestamp"></field>
+        <field id="store.last_remodel_date" type="java.sql.Timestamp"></field>
+        <field id="store.store_sqft" type="java.lang.Integer"></field>
+        <field id="store.grocery_sqft" type="java.lang.Integer"></field>
+        <field id="store.frozen_sqft" type="java.lang.Integer"></field>
+        <field id="store.meat_sqft" type="java.lang.Integer"></field>
+        <field id="store.coffee_bar" type="java.lang.Boolean"></field>
+        <field id="store.video_store" type="java.lang.Boolean"></field>
+        <field id="store.salad_bar" type="java.lang.Boolean"></field>
+        <field id="store.prepared_food" type="java.lang.Boolean"></field>
+        <field id="store.florist" type="java.lang.Boolean"></field>
+        <field id="employee.employee_id" type="java.lang.Integer"></field>
+        <field id="employee.full_name" type="java.lang.String"></field>
+        <field id="employee.first_name" type="java.lang.String"></field>
+        <field id="employee.last_name" type="java.lang.String"></field>
+        <field id="employee.position_id" type="java.lang.Integer"></field>
+        <field id="employee.position_title" type="java.lang.String"></field>
+        <field id="employee.store_id" type="java.lang.Integer"></field>
+        <field id="employee.department_id" type="java.lang.Integer"></field>
+        <field id="employee.birth_date" type="java.util.Date"></field>
+        <field id="employee.hire_date" type="java.sql.Timestamp"></field>
+        <field id="employee.end_date" type="java.sql.Timestamp"></field>
+        <field id="employee.salary" type="java.math.BigDecimal"></field>
+        <field id="employee.supervisor_id" type="java.lang.Integer"></field>
+        <field id="employee.education_level" type="java.lang.String"></field>
+        <field id="employee.marital_status" type="java.lang.String"></field>
+        <field id="employee.gender" type="java.lang.String"></field>
+        <field id="employee.management_role" type="java.lang.String"></field>
+        <field id="region.region_id" type="java.lang.Integer"></field>
+        <field id="region.sales_city" type="java.lang.String"></field>
+        <field id="region.sales_state_province" type="java.lang.String"></field>
+        <field id="region.sales_district" type="java.lang.String"></field>
+        <field id="region.sales_region" type="java.lang.String"></field>
+        <field id="region.sales_country" type="java.lang.String"></field>
+        <field id="region.sales_district_id" type="java.lang.Integer"></field>
+        <field id="time_by_day.time_id" type="java.lang.Integer"></field>
+        <field id="time_by_day.the_date" type="java.sql.Timestamp"></field>
+        <field id="time_by_day.the_day" type="java.lang.String"></field>
+        <field id="time_by_day.the_month" type="java.lang.String"></field>
+        <field id="time_by_day.the_year" type="java.lang.Short"></field>
+        <field id="time_by_day.day_of_month" type="java.lang.Short"></field>
+        <field id="time_by_day.week_of_year" type="java.lang.Integer"></field>
+        <field id="time_by_day.month_of_year" type="java.lang.Short"></field>
+        <field id="time_by_day.quarter" type="java.lang.String"></field>
+        <field id="time_by_day.fiscal_period" type="java.lang.String"></field>
+        <field id="time_by_day.day_of_week" type="java.lang.Integer"></field>
+      </fieldList>
+      <joinInfo alias="department" referenceId="department"></joinInfo>
+      <joinList>
+        <join expr="department.department_id == employee.department_id" left="department" right="employee" type="inner" weight="1"></join>
+        <join expr="store.store_id == employee.store_id" left="store" right="employee" type="inner" weight="1"></join>
+        <join expr="sales_fact_1997.time_id == time_by_day.time_id" left="sales_fact_1997" right="time_by_day" type="inner" weight="1"></join>
+        <join expr="sales_fact_1997.store_id == store.store_id" left="sales_fact_1997" right="store" type="inner" weight="1"></join>
+        <join expr="region.region_id == store.region_id" left="region" right="store" type="inner" weight="1"></join>
+      </joinList>
+      <joinOptions></joinOptions>
+      <tableRefList>
+        <tableRef alwaysIncludeTable="false" tableAlias="sales_fact_1997" tableId="sales_fact_1997"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="store" tableId="store"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="department" tableId="department"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="employee" tableId="employee"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="region" tableId="region"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="time_by_day" tableId="time_by_day"></tableRef>
+      </tableRefList>
+    </jdbcTable>
+  </resources>
+</schema>

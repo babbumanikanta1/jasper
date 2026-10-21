@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listOfValues exportedWithPermissions="true">
+    <folder>/public/Samples/Resources/Data_Types</folder>
+    <name>YesOrNoList</name>
+    <version>0</version>
+    <label>Yes or No List</label>
+    <description>Yes or No</description>
+    <creationDate>2026-04-21T17:14:33.371+05:30</creationDate>
+    <updateDate>2012-07-04T01:29:31.520+05:30</updateDate>
+    <item>
+        <itemLabel>yes</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">yes</itemValue>
+    </item>
+    <item>
+        <itemLabel>no</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">no</itemValue>
+    </item>
+</listOfValues>

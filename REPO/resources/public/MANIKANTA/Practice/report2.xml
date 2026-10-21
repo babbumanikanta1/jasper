@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA/Practice</folder>
+    <name>report2</name>
+    <version>1</version>
+    <label>report2</label>
+    <description></description>
+    <creationDate>2026-04-21T18:02:53.872+05:30</creationDate>
+    <updateDate>2026-03-25T14:36:12.852+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/Practice/report2_files</folder>
+            <name>main_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T18:02:53.872+05:30</creationDate>
+            <updateDate>2026-03-25T14:36:12.807+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/Practice/report2_files</folder>
+            <name>country</name>
+            <version>1</version>
+            <label>country</label>
+            <creationDate>2026-04-21T18:02:53.872+05:30</creationDate>
+            <updateDate>2026-03-25T14:36:12.852+05:30</updateDate>
+            <type>4</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/MANIKANTA/Practice/report2_files/country_files</folder>
+                    <name>Query</name>
+                    <version>0</version>
+                    <label>Query</label>
+                    <creationDate>2026-04-21T18:02:53.872+05:30</creationDate>
+                    <updateDate>2026-03-25T14:36:12.852+05:30</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct sales_country as country 
+from region</queryString>
+                    <dataSource>
+                        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>country</queryVisibleColumn>
+            <queryValueColumn>country</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

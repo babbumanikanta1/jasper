@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/</parent>
+    <name>public</name>
+    <label>Public</label>
+    <description></description>
+    <creationDate>2026-04-21T17:14:28.574+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:34.509+05:30</updateDate>
+    <folder>adhoc</folder>
+    <folder>audit</folder>
+    <folder>Completed_Schedules</folder>
+    <folder>Dashboards</folder>
+    <folder>diagnostic</folder>
+    <folder>MANIKANTA</folder>
+    <folder>monitoring</folder>
+    <folder>project_1</folder>
+    <folder>Report_Bursting</folder>
+    <folder>Samples</folder>
+    <folder>templates</folder>
+    <folder>Training_Manikanta</folder>
+    <resource>02__Sales_Mix_by_City</resource>
+    <resource>02._Sales_Mix_by_City_Report</resource>
+    <resource>asddf5</resource>
+    <resource>asdssd</resource>
+    <resource>only_country</resource>
+    <resource>sdfghjk</resource>
+    <resource>updated</resource>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>1</permissionMask>
+        <recipient tenantId="organization_1" recipientType="user">joeuser</recipient>
+    </permission>
+</folder>

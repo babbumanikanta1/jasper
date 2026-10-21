@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/organizations/organization_1/adhoc/topics</folder>
+    <name>CrosstabDemo</name>
+    <version>0</version>
+    <label>foodmart data for crosstab</label>
+    <description>foodmart data for crosstab</description>
+    <creationDate>2026-04-21T17:14:34.949+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:57.004+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="CrosstabDemo.data" xsi:type="fileResource">
+            <folder>/organizations/organization_1/adhoc/topics/CrosstabDemo_files</folder>
+            <name>CrosstabDemo</name>
+            <version>0</version>
+            <label>foodmart data for crosstab</label>
+            <description>foodmart data for crosstab</description>
+            <creationDate>2026-04-21T17:14:34.949+05:30</creationDate>
+            <updateDate>2024-01-09T18:21:57.004+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/organizations/organization_1/analysis/datasources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

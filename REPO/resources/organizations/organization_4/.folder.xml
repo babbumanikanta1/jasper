@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations</parent>
+    <name>organization_4</name>
+    <label>organization_4</label>
+    <description>Folder Template</description>
+    <creationDate>2026-05-29T14:49:44.903+05:30</creationDate>
+    <updateDate>2026-05-29T14:49:45.100+05:30</updateDate>
+    <folder>adhoc</folder>
+    <folder>navi20</folder>
+    <folder>navi21</folder>
+    <folder>navi24</folder>
+    <folder>navi25</folder>
+    <folder>navi30</folder>
+    <folder>navi40</folder>
+    <folder>organizations</folder>
+    <folder>temp</folder>
+    <folder>templates</folder>
+    <folder>tettt</folder>
+    <folder>themes</folder>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

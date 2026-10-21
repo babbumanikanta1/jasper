@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>project_1</name>
+    <label>project_1</label>
+    <creationDate>2026-04-21T18:02:45.346+05:30</creationDate>
+    <updateDate>2026-03-06T13:47:13.552+05:30</updateDate>
+    <resource>countrywise_data</resource>
+    <resource>customer</resource>
+    <resource>customer_3</resource>
+    <resource>customer_pie</resource>
+    <resource>demo</resource>
+    <resource>Main_Project</resource>
+    <resource>Main_sub_report_1</resource>
+    <resource>new_sub</resource>
+    <resource>Test_gropup</resource>
+    <resource>Test_Pie</resource>
+    <resource>Test_Table1</resource>
+    <resource>Test1</resource>
+</folder>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_4</parent>
+    <name>navi30</name>
+    <label>navi30</label>
+    <creationDate>2026-08-11T15:31:05.381+05:30</creationDate>
+    <updateDate>2026-08-11T15:31:05.381+05:30</updateDate>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>30</permissionMask>
+        <recipient tenantId="organization_4" recipientType="user">navi30</recipient>
+    </permission>
+</folder>

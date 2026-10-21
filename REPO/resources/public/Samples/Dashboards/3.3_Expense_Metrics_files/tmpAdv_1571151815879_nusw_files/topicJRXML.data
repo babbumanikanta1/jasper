@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" resourceBundle="supermart_domain" uuid="2475c69b-c96c-47e7-a027-1c9020cfecc0">
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<property name="adhoc.metadata.version" value="155"/>
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="4"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_ecb5599b-8a6f-4476-aa6a-455bebef5da4"/>
+	<parameter name="exp_store__store_contact__store_country_1" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[java.util.Arrays.asList(new Object[]{})]]></defaultValueExpression>
+	</parameter>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="expense_fact.account.account__account_description" />
+    <queryField id="expense_fact.account.account__account_type" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_number" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_street_address" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_city" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_state" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_postal_code" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_country" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_manager" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_phone" />
+    <queryField id="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_fax" />
+    <queryField id="expense_fact.exp_store.exp_store__region.exp_store__region__sales_city" />
+    <queryField id="expense_fact.exp_store.exp_store__region.exp_store__region__sales_state_province" />
+    <queryField id="expense_fact.exp_store.exp_store__region.exp_store__region__sales_district" />
+    <queryField id="expense_fact.exp_store.exp_store__region.exp_store__region__sales_region" />
+    <queryField id="expense_fact.exp_store.exp_store__region.exp_store__region__sales_country" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__first_opened_date" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__last_remodel_date" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__store_sqft" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__grocery_sqft" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__frozen_sqft" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__meat_sqft" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__coffee_bar" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__video_store" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__salad_bar" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__prepared_food" />
+    <queryField id="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__florist" />
+    <queryField id="expense_fact.exp_store.exp_store__store_type" />
+    <queryField id="expense_fact.exp_store.exp_store__store_name" />
+    <queryField id="expense_fact.expense_fact__exp_date" />
+    <queryField id="expense_fact.expense_fact__amount" />
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="expense_fact.expense_fact__exp_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{supermart.expense_fact.exp_date.label}"/>
+		<property name="semantic.item.label" value="expense_fact__exp_date"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/expense_fact__exp_date"/>
+		<property name="resourceId" value="exp_join.expense_fact3.exp_date"/>
+		<property name="semantic.tree.uri" value="/expense_fact/expense_fact__exp_date"/>
+		<property name="semantic.item.desc.id" value="supermart.expense_fact.exp_date.description"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"expense_fact":1,"expense_fact__exp_date":2,"expense_fact__amount":3,"account":4,"exp_store":5,"exp_store__store_contact":6,"exp_store__region":7,"exp_store__store_features":8}]]>
+		</property>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"uri":"/expense_fact","resourceId":"exp_join","label":"Expenses","labelId":"supermart.expense_fact.label","description":"Amount and date of expenses.","descriptionId":"supermart.expense_fact.description"},{"uri":"/expense_fact/account","resourceId":"exp_join","label":"Accounting","labelId":"supermart.account.label","description":"Accounting types and descriptions","descriptionId":"supermart.account.description"},{"uri":"/expense_fact/exp_store","resourceId":"exp_join","label":"Stores","labelId":"supermart.store.label","description":"Stores","descriptionId":"supermart.store.description"},{"uri":"/expense_fact/exp_store/exp_store__store_contact","resourceId":"exp_join","label":"Store Contact","labelId":"supermart.store_contact.label","description":"Store Contact Information","descriptionId":"supermart.store_contact.description"},{"uri":"/expense_fact/exp_store/exp_store__region","resourceId":"exp_join","label":"Regions","labelId":"supermart.region.label","description":"Sales Regions","descriptionId":"supermart.region.description"},{"uri":"/expense_fact/exp_store/exp_store__store_features","resourceId":"exp_join","label":"Store Features","labelId":"supermart.store_features.label","description":"Store Specialty Features and Services","descriptionId":"supermart.store_features.description"}]]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/expense_fact__exp_date"/>
+		<property name="previous.display" value="$R{supermart.expense_fact.exp_date.label}"/>
+		<property name="adhoc.chosen.tree.labels">
+			<![CDATA[[{"uri":"/expense_fact","resourceId":"exp_join","label":"expense_fact","labelId":"supermart.expense_fact.label","descriptionId":"supermart.expense_fact.description"},{"uri":"/expense_fact/account","resourceId":"exp_join","label":"account","labelId":"supermart.account.label","descriptionId":"supermart.account.description"},{"uri":"/expense_fact/exp_store","resourceId":"exp_join","label":"exp_store","labelId":"supermart.store.label","descriptionId":"supermart.store.description"},{"uri":"/expense_fact/exp_store/exp_store__store_contact","resourceId":"exp_join","label":"exp_store__store_contact","labelId":"supermart.store_contact.label","descriptionId":"supermart.store_contact.description"},{"uri":"/expense_fact/exp_store/exp_store__region","resourceId":"exp_join","label":"exp_store__region","labelId":"supermart.region.label","descriptionId":"supermart.region.description"},{"uri":"/expense_fact/exp_store/exp_store__store_features","resourceId":"exp_join","label":"exp_store__store_features","labelId":"supermart.store_features.label","descriptionId":"supermart.store_features.description"}]]]>
+		</property>
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"exp_store__store_features__florist":37,"exp_store__store_contact__store_fax":19,"account__account_description":5,"exp_store__store_features":26,"exp_store__store_features__frozen_sqft":31,"exp_store__store_contact__store_city":13,"exp_store__region__sales_region":24,"exp_store__store_features__grocery_sqft":30,"exp_store":7,"exp_store__store_features__store_sqft":29,"exp_store__store_contact__store_manager":17,"expense_fact__amount":3,"exp_store__store_features__meat_sqft":32,"exp_store__store_type":8,"exp_store__store_name":9,"expense_fact__exp_date":2,"exp_store__region__sales_country":25,"exp_store__store_features__prepared_food":36,"exp_store__store_contact__store_country":16,"exp_store__store_contact__store_phone":18,"exp_store__store_contact__store_number":11,"exp_store__region":20,"exp_store__store_features__coffee_bar":33,"exp_store__store_features__video_store":34,"exp_store__store_features__salad_bar":35,"exp_store__region__sales_state_province":22,"exp_store__store_features__first_opened_date":27,"exp_store__store_contact__store_street_address":12,"exp_store__store_contact__store_postal_code":15,"exp_store__region__sales_district":23,"expense_fact":1,"exp_store__store_features__last_remodel_date":28,"exp_store__store_contact__store_state":14,"exp_store__store_contact":10,"exp_store__region__sales_city":21,"account":4,"account__account_type":6}]]>
+		</property>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.expense_fact__exp_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[Expense Date]]></fieldDescription>
+	</field>
+	<field name="expense_fact.expense_fact__amount" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="$R{supermart.expense_fact.amount.label}"/>
+		<property name="semantic.item.label" value="expense_fact__amount"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/expense_fact__amount"/>
+		<property name="resourceId" value="exp_join.expense_fact3.amount"/>
+		<property name="semantic.tree.uri" value="/expense_fact/expense_fact__amount"/>
+		<property name="semantic.item.desc.id" value="supermart.expense_fact.amount.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/expense_fact__amount"/>
+		<property name="previous.display" value="$R{supermart.expense_fact.amount.label}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.expense_fact__amount)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<fieldDescription><![CDATA[Expense Amount]]></fieldDescription>
+	</field>
+	<field name="expense_fact.account.account__account_description" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.account.account_description.label}"/>
+		<property name="semantic.item.label" value="account__account_description"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/account/account__account_description"/>
+		<property name="resourceId" value="exp_join.account3.account_description"/>
+		<property name="semantic.tree.uri" value="/expense_fact/account/account__account_description"/>
+		<property name="semantic.item.desc.id" value="supermart.account.account_description.description"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/account/account__account_description"/>
+		<property name="previous.display" value="$R{supermart.account.account_description.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.account.account__account_description)"/>
+		<fieldDescription><![CDATA[Asset, liability, income, and expense Account Descriptions]]></fieldDescription>
+	</field>
+	<field name="expense_fact.account.account__account_type" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.account.account_type.label}"/>
+		<property name="semantic.item.label" value="account__account_type"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/account/account__account_type"/>
+		<property name="resourceId" value="exp_join.account3.account_type"/>
+		<property name="semantic.tree.uri" value="/expense_fact/account/account__account_type"/>
+		<property name="semantic.item.desc.id" value="supermart.account.account_type.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/account/account__account_type"/>
+		<property name="previous.display" value="$R{supermart.account.account_type.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.account.account__account_type)"/>
+		<fieldDescription><![CDATA[Account Type (Asset, Liability, Income, Expense)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_type" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_type.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_type"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_type"/>
+		<property name="resourceId" value="exp_join.store3.store_type"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_type"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_type.description"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_type"/>
+		<property name="previous.display" value="$R{supermart.store.store_type.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_type)"/>
+		<fieldDescription><![CDATA[Store Type (HQ, Small, Mid-Size, Deluxe, Gourmet Supermarket)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_name" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_name.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_name"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_name"/>
+		<property name="resourceId" value="exp_join.store3.store_name"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_name"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_name.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_name"/>
+		<property name="previous.display" value="$R{supermart.store.store_name.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_name)"/>
+		<fieldDescription><![CDATA[Store Name (HQ, Store 1 - Store 24)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_number" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{supermart.store.store_number.description}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_number"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_number"/>
+		<property name="resourceId" value="exp_join.store3.store_number"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_number"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_number.description"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_number"/>
+		<property name="previous.display" value="$R{supermart.store.store_number.description}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_number)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[Store Number (1-24)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_street_address" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_street_address.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_street_address"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_street_address"/>
+		<property name="resourceId" value="exp_join.store3.store_street_address"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_street_address"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_street_address.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_street_address"/>
+		<property name="previous.display" value="$R{supermart.store.store_street_address.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_street_address)"/>
+		<fieldDescription><![CDATA[Store Street Address]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_city" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_city.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_city"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_city"/>
+		<property name="resourceId" value="exp_join.store3.store_city"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_city"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_city.description"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_city"/>
+		<property name="previous.display" value="$R{supermart.store.store_city.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_city)"/>
+		<fieldDescription><![CDATA[Store City]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_state" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_state.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_state"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_state"/>
+		<property name="resourceId" value="exp_join.store3.store_state"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_state"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_state.description"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_state"/>
+		<property name="previous.display" value="$R{supermart.store.store_state.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_state)"/>
+		<fieldDescription><![CDATA[Store State/Province]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_postal_code" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_postal_code.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_postal_code"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_postal_code"/>
+		<property name="resourceId" value="exp_join.store3.store_postal_code"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_postal_code"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_postal_code.description"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_postal_code"/>
+		<property name="previous.display" value="$R{supermart.store.store_postal_code.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_postal_code)"/>
+		<fieldDescription><![CDATA[Store Postal Code]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_country" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_country.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_country"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_country"/>
+		<property name="resourceId" value="exp_join.store3.store_country"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_country"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_country.description"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_country"/>
+		<property name="previous.display" value="$R{supermart.store.store_country.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_country)"/>
+		<fieldDescription><![CDATA[Store Country]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_manager" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_manager.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_manager"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_manager"/>
+		<property name="resourceId" value="exp_join.store3.store_manager"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_manager"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_manager.description"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_manager"/>
+		<property name="previous.display" value="$R{supermart.store.store_manager.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_manager)"/>
+		<fieldDescription><![CDATA[Store Manager]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_phone" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_phone.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_phone"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_phone"/>
+		<property name="resourceId" value="exp_join.store3.store_phone"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_phone"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_phone.description"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_phone"/>
+		<property name="previous.display" value="$R{supermart.store.store_phone.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_phone)"/>
+		<fieldDescription><![CDATA[Store Phone]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_fax" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.store.store_fax.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_contact__store_fax"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_fax"/>
+		<property name="resourceId" value="exp_join.store3.store_fax"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_fax"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_fax.description"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_contact/exp_store__store_contact__store_fax"/>
+		<property name="previous.display" value="$R{supermart.store.store_fax.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_contact.exp_store__store_contact__store_fax)"/>
+		<fieldDescription><![CDATA[Store Fax]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__region.exp_store__region__sales_city" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.region.sales_city.label}"/>
+		<property name="semantic.item.label" value="exp_store__region__sales_city"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_city"/>
+		<property name="resourceId" value="exp_join.region3.sales_city"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_city"/>
+		<property name="semantic.item.desc.id" value="supermart.region.sales_city.description"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_city"/>
+		<property name="previous.display" value="$R{supermart.region.sales_city.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__region.exp_store__region__sales_city)"/>
+		<fieldDescription><![CDATA[Sales City]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__region.exp_store__region__sales_state_province" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.region.sales_state_province.label}"/>
+		<property name="semantic.item.label" value="exp_store__region__sales_state_province"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_state_province"/>
+		<property name="resourceId" value="exp_join.region3.sales_state_province"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_state_province"/>
+		<property name="semantic.item.desc.id" value="supermart.region.sales_state_province.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_state_province"/>
+		<property name="previous.display" value="$R{supermart.region.sales_state_province.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__region.exp_store__region__sales_state_province)"/>
+		<fieldDescription><![CDATA[Sales State/Province]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__region.exp_store__region__sales_district" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.region.sales_district.label}"/>
+		<property name="semantic.item.label" value="exp_store__region__sales_district"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_district"/>
+		<property name="resourceId" value="exp_join.region3.sales_district"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_district"/>
+		<property name="semantic.item.desc.id" value="supermart.region.sales_district.description"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_district"/>
+		<property name="previous.display" value="$R{supermart.region.sales_district.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__region.exp_store__region__sales_district)"/>
+		<fieldDescription><![CDATA[Sales District]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__region.exp_store__region__sales_region" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.region.sales_region.label}"/>
+		<property name="semantic.item.label" value="exp_store__region__sales_region"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_region"/>
+		<property name="resourceId" value="exp_join.region3.sales_region"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_region"/>
+		<property name="semantic.item.desc.id" value="supermart.region.sales_region.description"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_region"/>
+		<property name="previous.display" value="$R{supermart.region.sales_region.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__region.exp_store__region__sales_region)"/>
+		<fieldDescription><![CDATA[Sales Region]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__region.exp_store__region__sales_country" class="java.lang.String">
+		<property name="adhoc.display" value="$R{supermart.region.sales_country.label}"/>
+		<property name="semantic.item.label" value="exp_store__region__sales_country"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_country"/>
+		<property name="resourceId" value="exp_join.region3.sales_country"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_country"/>
+		<property name="semantic.item.desc.id" value="supermart.region.sales_country.description"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__region/exp_store__region__sales_country"/>
+		<property name="previous.display" value="$R{supermart.region.sales_country.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__region.exp_store__region__sales_country)"/>
+		<fieldDescription><![CDATA[Sales Country]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__first_opened_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{supermart.store.first_opened_date.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__first_opened_date"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__first_opened_date"/>
+		<property name="resourceId" value="exp_join.store3.first_opened_date"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__first_opened_date"/>
+		<property name="semantic.item.desc.id" value="supermart.store.first_opened_date.description"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__first_opened_date"/>
+		<property name="previous.display" value="$R{supermart.store.first_opened_date.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__first_opened_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[Date Store First Opened]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__last_remodel_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{supermart.store.last_remodel_date.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__last_remodel_date"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__last_remodel_date"/>
+		<property name="resourceId" value="exp_join.store3.last_remodel_date"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__last_remodel_date"/>
+		<property name="semantic.item.desc.id" value="supermart.store.last_remodel_date.description"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__last_remodel_date"/>
+		<property name="previous.display" value="$R{supermart.store.last_remodel_date.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__last_remodel_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[Date Store Last Remodeled]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__store_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{supermart.store.store_sqft.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__store_sqft"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__store_sqft"/>
+		<property name="resourceId" value="exp_join.store3.store_sqft"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__store_sqft"/>
+		<property name="semantic.item.desc.id" value="supermart.store.store_sqft.description"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__store_sqft"/>
+		<property name="previous.display" value="$R{supermart.store.store_sqft.label}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__store_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[Total store size in square feet]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__grocery_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{supermart.store.grocery_sqft.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__grocery_sqft"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__grocery_sqft"/>
+		<property name="resourceId" value="exp_join.store3.grocery_sqft"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__grocery_sqft"/>
+		<property name="semantic.item.desc.id" value="supermart.store.grocery_sqft.description"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__grocery_sqft"/>
+		<property name="previous.display" value="$R{supermart.store.grocery_sqft.label}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__grocery_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[Size of grocery department in square feet]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__frozen_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{supermart.store.frozen_sqft.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__frozen_sqft"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__frozen_sqft"/>
+		<property name="resourceId" value="exp_join.store3.frozen_sqft"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__frozen_sqft"/>
+		<property name="semantic.item.desc.id" value="supermart.store.frozen_sqft.description"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__frozen_sqft"/>
+		<property name="previous.display" value="$R{supermart.store.frozen_sqft.label}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__frozen_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[Size of frozen department in square feet]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__meat_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{supermart.store.meat_sqft.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__meat_sqft"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__meat_sqft"/>
+		<property name="resourceId" value="exp_join.store3.meat_sqft"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__meat_sqft"/>
+		<property name="semantic.item.desc.id" value="supermart.store.meat_sqft.description"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__meat_sqft"/>
+		<property name="previous.display" value="$R{supermart.store.meat_sqft.label}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__meat_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[Size of meat department in square feet]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__coffee_bar" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{supermart.store.coffee_bar.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__coffee_bar"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__coffee_bar"/>
+		<property name="resourceId" value="exp_join.store3.coffee_bar"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__coffee_bar"/>
+		<property name="semantic.item.desc.id" value="supermart.store.coffee_bar.description"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__coffee_bar"/>
+		<property name="previous.display" value="$R{supermart.store.coffee_bar.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__coffee_bar)"/>
+		<fieldDescription><![CDATA[Coffee Bar (No=0 Yes=1)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__video_store" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{supermart.store.video_store.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__video_store"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__video_store"/>
+		<property name="resourceId" value="exp_join.store3.video_store"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__video_store"/>
+		<property name="semantic.item.desc.id" value="supermart.store.video_store.description"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__video_store"/>
+		<property name="previous.display" value="$R{supermart.store.video_store.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__video_store)"/>
+		<fieldDescription><![CDATA[Video Store (No=0 Yes=1)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__salad_bar" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{supermart.store.salad_bar.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__salad_bar"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__salad_bar"/>
+		<property name="resourceId" value="exp_join.store3.salad_bar"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__salad_bar"/>
+		<property name="semantic.item.desc.id" value="supermart.store.salad_bar.description"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__salad_bar"/>
+		<property name="previous.display" value="$R{supermart.store.salad_bar.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__salad_bar)"/>
+		<fieldDescription><![CDATA[Salad Bar (No=0 Yes=1)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__prepared_food" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{supermart.store.prepared_food.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__prepared_food"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__prepared_food"/>
+		<property name="resourceId" value="exp_join.store3.prepared_food"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__prepared_food"/>
+		<property name="semantic.item.desc.id" value="supermart.store.prepared_food.description"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__prepared_food"/>
+		<property name="previous.display" value="$R{supermart.store.prepared_food.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__prepared_food)"/>
+		<fieldDescription><![CDATA[Prepared Food (No=0 Yes=1)]]></fieldDescription>
+	</field>
+	<field name="expense_fact.exp_store.exp_store__store_features.exp_store__store_features__florist" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{supermart.store.florist.label}"/>
+		<property name="semantic.item.label" value="exp_store__store_features__florist"/>
+		<property name="adhoc.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__florist"/>
+		<property name="resourceId" value="exp_join.store3.florist"/>
+		<property name="semantic.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__florist"/>
+		<property name="semantic.item.desc.id" value="supermart.store.florist.description"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/expense_fact/exp_store/exp_store__store_features/exp_store__store_features__florist"/>
+		<property name="previous.display" value="$R{supermart.store.florist.label}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(expense_fact.exp_store.exp_store__store_features.exp_store__store_features__florist)"/>
+		<fieldDescription><![CDATA[Florist (No=0 Yes=1)]]></fieldDescription>
+	</field>
+</jasperReport>

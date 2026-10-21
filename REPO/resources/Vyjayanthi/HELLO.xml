@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/Vyjayanthi</folder>
+    <name>HELLO</name>
+    <version>6</version>
+    <label>HELLO</label>
+    <description></description>
+    <creationDate>2026-10-15T15:13:00.882+05:30</creationDate>
+    <updateDate>2026-10-15T15:23:48.543+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/Vyjayanthi/HELLO_files</folder>
+            <name>main_jrxml</name>
+            <version>12</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-10-15T15:13:00.882+05:30</creationDate>
+            <updateDate>2026-10-15T15:23:48.295+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSource</uri>
+    </dataSource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

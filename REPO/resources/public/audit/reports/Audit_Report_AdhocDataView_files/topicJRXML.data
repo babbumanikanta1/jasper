@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="dae219d1-500b-4d42-9b1a-70e7e26f3150">
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<property name="adhoc.metadata.version" value="298"/>
+	<property name="base.datasource.version" value="5"/>
+	<property name="use.datasource.presentation" value="false"/>
+	<parameter name="resource_org_type_1" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[java.util.Arrays.asList(new Object[]{})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="event_type_1" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[java.util.Arrays.asList(new Object[]{})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="audit_event_date_2" class="net.sf.jasperreports.types.date.DateRange">
+		<defaultValueExpression><![CDATA[com.jaspersoft.jasperserver.api.common.util.rd.DateRangeFactory.getInstance("DAY",java.util.Date.class)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="audit_event_date_1" class="net.sf.jasperreports.types.date.DateRange">
+		<defaultValueExpression><![CDATA[com.jaspersoft.jasperserver.api.common.util.rd.DateRangeFactory.getInstance("MONTH",java.util.Date.class)]]></defaultValueExpression>
+	</parameter>
+	<queryString language="sl">
+		<![CDATA[<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="audit_join1.audit_event_group.audit_event_date" />
+    <queryField id="audit_join1.audit_event_group.audit_event_property_clob_value" />
+    <queryField id="audit_join1.audit_event_group.audit_event_property_type" />
+    <queryField id="audit_join1.audit_event_group.audit_event_property_value" />
+    <queryField id="audit_join1.audit_event_group.audit_event_time" />
+    <queryField id="audit_join1.audit_event_group.event_type" />
+    <queryField id="audit_join1.audit_event_group.request_type" />
+    <queryField id="audit_join1.audit_event_group.resource_org_type" />
+    <queryField id="audit_join1.audit_event_group.resource_org_uri" />
+    <queryField id="audit_join1.user_group.roles_group.externallyDefined1" />
+    <queryField id="audit_join1.user_group.roles_group.rolename" />
+    <queryField id="audit_join1.user_group.roles_group.tenantId1" />
+    <queryField id="audit_join1.user_group.emailAddress" />
+    <queryField id="audit_join1.user_group.enabled" />
+    <queryField id="audit_join1.user_group.externallyDefined" />
+    <queryField id="audit_join1.user_group.fullname" />
+    <queryField id="audit_join1.user_group.previousPasswordChangeTime" />
+    <queryField id="audit_join1.user_group.tenant_id" />
+    <queryField id="audit_join1.user_group.username" />
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="audit_join1.audit_event_group.audit_event_date" class="java.util.Date">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.au_date"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.EVENT_DATE.DESCR"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_date_1"/>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"label":"General Audit","uri":"/audit_join1","labelId":"AUDIT_JOIN1.LABEL","resourceId":"JoinTree_1"},{"label":"Audit Events","uri":"/audit_join1/audit_event_group","labelId":"AUDIT_JOIN1.AUDIT_EVENT_GROUP.LABEL","resourceId":"JoinTree_1"},{"label":"User","uri":"/audit_join1/user_group","labelId":"AUDIT_JOIN1.USER_GROUP.LABEL","resourceId":"JoinTree_1"},{"label":"Role","uri":"/audit_join1/user_group/roles_group","labelId":"AUDIT_JOIN1.ROLES_GROUP.LABEL","resourceId":"JoinTree_1"}]]]>
+		</property>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/audit_event_date"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"audit_event_group":2,"externallyDefined1":21,"tenantId1":23,"audit_join1":1,"roles_group":20,"audit_event_date":3,"audit_event_property_clob_value":4,"event_type":8,"fullname":16,"audit_event_property_value":6,"audit_event_property_type":5,"rolename":22,"resource_org_type":10,"audit_event_time":7,"previousPasswordChangeTime":17,"enabled":14,"request_type":9,"emailAddress":13,"username":19,"externallyDefined":15,"tenant_id":18,"resource_org_uri":11,"user_group":12}]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.audit_event_date)"/>
+		<property name="adhoc.display" value="Date"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="audit_event_date"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/audit_event_date"/>
+		<property name="defaultMask" value="short,hide"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.audit_event_date]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.audit_event_property_clob_value" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditeventproperty.clob_value"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.PROPERTY_CLOB_VALUE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_clob_value"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.audit_event_property_clob_value)"/>
+		<property name="adhoc.display" value="Prop Long Value"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="audit_event_property_clob_value"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_clob_value"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.audit_event_property_clob_value]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.audit_event_property_type" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditeventproperty.property_type"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.PROPERTY_TYPE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_type"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.audit_event_property_type)"/>
+		<property name="adhoc.display" value="Prop Type"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="audit_event_property_type"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_type"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.audit_event_property_type]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.audit_event_property_value" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditeventproperty.value"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.PROPERTY_VALUE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_value"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.audit_event_property_value)"/>
+		<property name="adhoc.display" value="Prop Value"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="audit_event_property_value"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/audit_event_property_value"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.audit_event_property_value]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.audit_event_time" class="java.sql.Timestamp">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.au_time"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.EVENT_TIME.DESCR"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/audit_event_time"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.audit_event_time)"/>
+		<property name="adhoc.display" value="Time"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="audit_event_time"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/audit_event_time"/>
+		<property name="defaultMask" value="HH:mm:ss"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.audit_event_time]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.event_type" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.event_type"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.EVENT_TYPE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/event_type"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.event_type)"/>
+		<property name="adhoc.display" value="Event Type"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="event_type"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/event_type"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.event_type]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.request_type" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.request_type"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.REQUEST_TYPE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/request_type"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.request_type)"/>
+		<property name="adhoc.display" value="Request Type"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="request_type"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/request_type"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.request_type]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.resource_org_type" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.resource_type"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.RESOURCE_TYPE.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/resource_org_type"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.resource_org_type)"/>
+		<property name="adhoc.display" value="Resource Type"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="resource_org_type"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/resource_org_type"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.resource_org_type]]></fieldDescription>
+	</field>
+	<field name="audit_join1.audit_event_group.resource_org_uri" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.orguri"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.AUDIT_EVENT_GROUP.RESOURCE_URI.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/audit_event_group/resource_org_uri"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.audit_event_group.resource_org_uri)"/>
+		<property name="adhoc.display" value="Resource URI"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="resource_org_uri"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/audit_event_group/resource_org_uri"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.audit_event_group.resource_org_uri]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.emailAddress" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiuser.emailAddress"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.EMAIL.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/emailAddress"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.emailAddress)"/>
+		<property name="adhoc.display" value="E-mail"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="emailAddress"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/emailAddress"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.emailAddress]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.enabled" class="java.lang.Boolean">
+		<property name="resourceId" value="JoinTree_1.jiuser.enabled"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.ENABLED.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/enabled"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.enabled)"/>
+		<property name="adhoc.display" value="Enabled"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="enabled"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/enabled"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.enabled]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.externallyDefined" class="java.lang.Boolean">
+		<property name="resourceId" value="JoinTree_1.jiuser.externallyDefined"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.EXTERNALLY_DEFINED.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/externallyDefined"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.externallyDefined)"/>
+		<property name="adhoc.display" value="External"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="externallyDefined"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/externallyDefined"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.externallyDefined]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.fullname" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiuser.fullname"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.FULLNAME.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/fullname"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.fullname)"/>
+		<property name="adhoc.display" value="Full Name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="fullname"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/fullname"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.fullname]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.previousPasswordChangeTime" class="java.sql.Timestamp">
+		<property name="resourceId" value="JoinTree_1.jiuser.previousPasswordChangeTime"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.PASSWORD_CHANGE_TIME.DESCR"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/previousPasswordChangeTime"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.previousPasswordChangeTime)"/>
+		<property name="adhoc.display" value="Password Changed"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="previousPasswordChangeTime"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/previousPasswordChangeTime"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.previousPasswordChangeTime]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.tenant_id" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.tenant_id"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.TENANT_ID.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/tenant_id"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.tenant_id)"/>
+		<property name="adhoc.display" value="Organization"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="tenant_id"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/tenant_id"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.tenant_id]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.username" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jiauditevent.username"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.USER_GROUP.USERNAME.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/username"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.username)"/>
+		<property name="adhoc.display" value="User Name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="username"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/username"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.username]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.roles_group.externallyDefined1" class="java.lang.Boolean">
+		<property name="resourceId" value="JoinTree_1.jirole.externallyDefined"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.ROLES_GROUP.EXTERNALLY_DEFINED.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/roles_group/externallyDefined1"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.roles_group.externallyDefined1)"/>
+		<property name="adhoc.display" value="External"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="externallyDefined"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/roles_group/externallyDefined1"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.roles_group.externallyDefined1]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.roles_group.rolename" class="java.lang.String">
+		<property name="resourceId" value="JoinTree_1.jirole.rolename"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.ROLES_GROUP.ROLENAME.DESCR"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/roles_group/rolename"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(audit_join1.user_group.roles_group.rolename)"/>
+		<property name="adhoc.display" value="Role Name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="rolename"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/roles_group/rolename"/>
+		<property name="defaultMask"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.roles_group.rolename]]></fieldDescription>
+	</field>
+	<field name="audit_join1.user_group.roles_group.tenantId1" class="java.lang.Long">
+		<property name="resourceId" value="JoinTree_1.jirole.tenantId"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="semantic.item.desc.id" value="AUDIT_JOIN1.ROLES_GROUP.TENANT_ID.DESCR"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="semantic.tree.uri" value="/audit_join1/user_group/roles_group/tenantId1"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="aggregateType" value="java.math.BigInteger"/>
+		<property name="aggregateExpression" value="Sum(audit_join1.user_group.roles_group.tenantId1)"/>
+		<property name="adhoc.display" value="Organization"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="tenantId"/>
+		<property name="adhoc.tree.uri" value="/audit_join1/user_group/roles_group/tenantId1"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[audit_join1.user_group.roles_group.tenantId1]]></fieldDescription>
+	</field>
+	<field name="CalculatedFieldPropValue" class="java.lang.String">
+		<property name="aggregateExpression" value="CountAll(IF(not IsNull(audit_join1.audit_event_group.audit_event_property_value), audit_join1.audit_event_group.audit_event_property_value, audit_join1.audit_event_group.audit_event_property_clob_value))"/>
+		<property name="adhoc.display" value="Calculated Field Prop Value"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="adhoc.expression" value="IF(not IsNull(audit_join1.audit_event_group.audit_event_property_value), audit_join1.audit_event_group.audit_event_property_value, audit_join1.audit_event_group.audit_event_property_clob_value)"/>
+		<property name="defaultMaskId"/>
+		<property name="defaultMask"/>
+		<property name="aggregate" value="false"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+</jasperReport>

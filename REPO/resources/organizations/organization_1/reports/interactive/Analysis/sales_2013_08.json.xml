@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentResource exportedWithPermissions="true" dataFile="sales_2013_08.json">
+    <folder>/organizations/organization_1/reports/interactive/Analysis</folder>
+    <name>sales_2013_08.json</name>
+    <version>0</version>
+    <label>sales_2013_08.json</label>
+    <creationDate>2026-04-21T17:14:36.464+05:30</creationDate>
+    <updateDate>2015-04-28T19:31:14.225+05:30</updateDate>
+    <fileType>json</fileType>
+</contentResource>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="c0eab782-8270-437e-8667-170c603ac31a">
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<property name="adhoc.metadata.version" value="55"/>
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="0"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_c11e0edc-fd13-4e60-9381-26d180f72e51"/>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="Full_Location"></queryField>
+    <queryField id="customer_id"></queryField>
+    <queryField id="fname"></queryField>
+    <queryField id="lname"></queryField>
+    <queryField id="the_day"></queryField>
+    <queryField id="the_month"></queryField>
+    <queryField id="the_year"></queryField>
+    <queryField id="store_sales"></queryField>
+    <queryField id="unit_sales"></queryField>
+    <queryField id="gross_progit"></queryField>
+    <queryField id="profit_margin"></queryField>
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="Full_Location" class="java.lang.String">
+		<property name="adhoc.display" value="Full_Location"/>
+		<property name="semantic.item.label" value="Full_Location"/>
+		<property name="adhoc.tree.uri" value="/Full_Location"/>
+		<property name="resourceId" value="JoinTree_1.Full_Location"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/Full_Location"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"Full_Location":1,"customer_id":2,"fname":3,"lname":4,"the_day":5,"the_month":6,"the_year":7,"store_sales":8,"unit_sales":9,"gross_progit":10,"profit_margin":11,"NewSet1":12,"NewSet2":13,"NewSet3":14}]]>
+		</property>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"uri":"/NewSet1","resourceId":"JoinTree_1","label":"customer_details"},{"uri":"/NewSet2","resourceId":"JoinTree_1","label":"Time_dimensions"},{"uri":"/NewSet3","resourceId":"JoinTree_1","label":"NewSet3"}]]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/Full_Location"/>
+		<property name="previous.display" value="Full_Location"/>
+		<property name="adhoc.chosen.tree.labels" value="[]"/>
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"the_month":6,"fname":3,"lname":4,"unit_sales":9,"the_year":7,"store_sales":8,"gross_progit":10,"the_day":5,"profit_margin":11,"customer_id":2,"Full_Location":1}]]>
+		</property>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+	</field>
+	<field name="customer_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="customer_id"/>
+		<property name="semantic.item.label" value="customer_id"/>
+		<property name="adhoc.tree.uri" value="/customer_id"/>
+		<property name="resourceId" value="JoinTree_1.customer.customer_id"/>
+		<property name="defaultAgg" value="CountDistinct"/>
+		<property name="semantic.tree.uri" value="/customer_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateExpression" value="CountDistinct(customer_id)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/customer_id"/>
+		<property name="previous.display" value="customer_id"/>
+		<property name="defaultMask" value="#,##0"/>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<property name="adhoc.display" value="fname"/>
+		<property name="semantic.item.label" value="fname"/>
+		<property name="adhoc.tree.uri" value="/fname"/>
+		<property name="resourceId" value="JoinTree_1.customer.fname"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/fname"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/fname"/>
+		<property name="previous.display" value="fname"/>
+	</field>
+	<field name="lname" class="java.lang.String">
+		<property name="adhoc.display" value="lname"/>
+		<property name="semantic.item.label" value="lname"/>
+		<property name="adhoc.tree.uri" value="/lname"/>
+		<property name="resourceId" value="JoinTree_1.customer.lname"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/lname"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/lname"/>
+		<property name="previous.display" value="lname"/>
+	</field>
+	<field name="the_day" class="java.lang.String">
+		<property name="adhoc.display" value="the_day"/>
+		<property name="semantic.item.label" value="the_day"/>
+		<property name="adhoc.tree.uri" value="/the_day"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_day"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/the_day"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/the_day"/>
+		<property name="previous.display" value="the_day"/>
+	</field>
+	<field name="the_month" class="java.lang.String">
+		<property name="adhoc.display" value="the_month"/>
+		<property name="semantic.item.label" value="the_month"/>
+		<property name="adhoc.tree.uri" value="/the_month"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_month"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/the_month"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/the_month"/>
+		<property name="previous.display" value="the_month"/>
+	</field>
+	<field name="the_year" class="java.lang.Short">
+		<property name="adhoc.display" value="the_year"/>
+		<property name="semantic.item.label" value="the_year"/>
+		<property name="adhoc.tree.uri" value="/the_year"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_year"/>
+		<property name="defaultAgg" value="None"/>
+		<property name="semantic.tree.uri" value="/the_year"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateExpression" value="null"/>
+		<property name="aggregateType" value="java.lang.Object"/>
+		<property name="adhoc.chosen.tree.uri" value="/the_year"/>
+		<property name="previous.display" value="the_year"/>
+		<property name="defaultMask" value="#,##0"/>
+	</field>
+	<field name="store_sales" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="store_sales"/>
+		<property name="semantic.item.label" value="store_sales"/>
+		<property name="adhoc.tree.uri" value="/store_sales"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.store_sales"/>
+		<property name="semantic.tree.uri" value="/store_sales"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/store_sales"/>
+		<property name="previous.display" value="store_sales"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store_sales)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+	<field name="unit_sales" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="unit_sales"/>
+		<property name="semantic.item.label" value="unit_sales"/>
+		<property name="adhoc.tree.uri" value="/unit_sales"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.unit_sales"/>
+		<property name="semantic.tree.uri" value="/unit_sales"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/unit_sales"/>
+		<property name="previous.display" value="unit_sales"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(unit_sales)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+	<field name="gross_progit" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="gross_progit"/>
+		<property name="semantic.item.label" value="gross_progit"/>
+		<property name="adhoc.tree.uri" value="/gross_progit"/>
+		<property name="resourceId" value="JoinTree_1.gross_progit"/>
+		<property name="semantic.tree.uri" value="/gross_progit"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/gross_progit"/>
+		<property name="previous.display" value="gross_progit"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(gross_progit)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+	<field name="profit_margin" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="profit_margin"/>
+		<property name="semantic.item.label" value="profit_margin"/>
+		<property name="adhoc.tree.uri" value="/profit_margin"/>
+		<property name="resourceId" value="JoinTree_1.profit_margin"/>
+		<property name="defaultAgg" value="Average"/>
+		<property name="semantic.tree.uri" value="/profit_margin"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateExpression" value="Average(profit_margin)"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/profit_margin"/>
+		<property name="previous.display" value="profit_margin"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+</jasperReport>

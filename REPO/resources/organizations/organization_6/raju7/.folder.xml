@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_6</parent>
+    <name>raju7</name>
+    <label>raju7</label>
+    <creationDate>2026-08-12T10:24:40.788+05:30</creationDate>
+    <updateDate>2026-08-12T10:24:40.788+05:30</updateDate>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

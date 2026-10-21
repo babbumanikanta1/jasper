@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>Blank_A4_4</name>
+    <version>2</version>
+    <label>Blank_A4_4</label>
+    <description></description>
+    <creationDate>2026-06-16T17:40:17.353+05:30</creationDate>
+    <updateDate>2026-06-16T17:50:08.879+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/Blank_A4_4_files</folder>
+            <name>main_jrxml</name>
+            <version>4</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-06-16T17:40:17.353+05:30</creationDate>
+            <updateDate>2026-06-16T17:50:08.825+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

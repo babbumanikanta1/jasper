@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Assignment_7" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="171fc114-894c-4b82-80b2-cf5196408911">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart Data Source"/>
+	<property name="ireport.jasperserver.url" value="https://localhost:8443/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/MANIKANTA/Assignment_7_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/MANIKANTA/Assignment_7"/>
+	<scriptlet name="Scriptlet_1" class="assign.numToWord">
+		<scriptletDescription><![CDATA[]]></scriptletDescription>
+	</scriptlet>
+	<parameter name="entNumber" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select 1]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="544" height="43" forecolor="#030202" backcolor="#B59796" uuid="042d9637-829f-4194-b07a-6e1a0976473c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Number to Word Conversion "]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<textField textAdjust="ScaleFont">
+				<reportElement mode="Opaque" x="0" y="0" width="544" height="60" forecolor="#FCFAFA" backcolor="#050505" uuid="8fcc92e0-b03a-47a2-8bbc-5cecd1092a7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Scriptlet_1_SCRIPTLET}.conversion()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

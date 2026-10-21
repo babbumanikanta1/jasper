@@ -1,0 +1,10 @@
+/*elid*/
+svg circle {
+	fill: #F000FF;
+}
+
+
+
+#reportContainer div {
+	left: -100px !important;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1</parent>
+    <name>Domains</name>
+    <label>Domains</label>
+    <description>Domains Folder</description>
+    <creationDate>2026-04-21T17:14:28.949+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:58.481+05:30</updateDate>
+    <resource>Simple_Domain</resource>
+    <resource>supermartDomain</resource>
+    <resource>virtualDSDomain</resource>
+</folder>

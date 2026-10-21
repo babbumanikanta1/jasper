@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="FoodmartSchemaUpper.data">
+    <folder>/organizations/organization_1/analysis/schemas</folder>
+    <name>FoodmartSchemaUpper</name>
+    <version>0</version>
+    <label>Foodmart Schema Uppercase</label>
+    <description>Foodmart Analysis Schema Uppercase</description>
+    <creationDate>2026-04-21T17:14:35.277+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:29.562+05:30</updateDate>
+    <fileType>olapMondrianSchema</fileType>
+</fileResource>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbcDataSource exportedWithPermissions="true">
+    <folder>/public/Samples/Data_Sources</folder>
+    <name>FoodmartDataSource</name>
+    <version>1</version>
+    <label>Foodmart Data Source</label>
+    <description>Foodmart Data Source</description>
+    <creationDate>2026-04-21T17:14:32.558+05:30</creationDate>
+    <updateDate>2026-07-24T16:00:33.782+05:30</updateDate>
+    <driver>org.postgresql.Driver</driver>
+    <connectionUrl>jdbc:postgresql://127.0.01:5432/foodmart?defaultAutoCommit=true</connectionUrl>
+    <connectionUser>postgres</connectionUser>
+    <connectionPassword>ENC&lt;4A5253495600000010C9B91A1A936571E14D5C30DD9F4C95C01A4320F42DCBA9694B405EF82C2D425C&gt;</connectionPassword>
+    <timezone></timezone>
+</jdbcDataSource>

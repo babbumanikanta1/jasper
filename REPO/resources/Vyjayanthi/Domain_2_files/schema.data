@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3">
+  <dataIslands>
+    <itemGroup id="JoinTree_4" label="JoinTree_4" resourceId="JoinTree_4"></itemGroup>
+  </dataIslands>
+  <dataSources>
+    <jdbcDataSource id="sugarcrmJNDI">
+      <schemaMap>
+        <entry key="public">
+          <string>public</string>
+        </entry>
+        <entry key="defaultSchema">
+          <string></string>
+        </entry>
+      </schemaMap>
+    </jdbcDataSource>
+  </dataSources>
+  <itemGroups>
+    <itemGroup id="NewSet1" label="Accounts Info" resourceId="JoinTree_4">
+      <items>
+        <item id="name" label="acccount_name" resourceId="JoinTree_4.accounts.name"></item>
+        <item id="billing_address_city" label="billing_address_city" resourceId="JoinTree_4.accounts.billing_address_city"></item>
+      </items>
+    </itemGroup>
+    <itemGroup id="NewSet2" label="opp_metrics" resourceId="JoinTree_4">
+      <items>
+        <item id="amount" label="opp_value" resourceId="JoinTree_4.opportunities.amount"></item>
+        <item id="date_closed" label="date_closed" resourceId="JoinTree_4.opportunities.date_closed"></item>
+        <item id="sales_stage" label="sales_stage" resourceId="JoinTree_4.opportunities.sales_stage"></item>
+      </items>
+    </itemGroup>
+  </itemGroups>
+  <resources>
+    <jdbcTable id="accounts" datasourceId="sugarcrmJNDI" datasourceTableName="accounts" schemaAlias="public">
+      <fieldList>
+        <field id="id" type="java.lang.String"></field>
+        <field id="date_entered" type="java.sql.Timestamp"></field>
+        <field id="date_modified" type="java.sql.Timestamp"></field>
+        <field id="modified_user_id" type="java.lang.String"></field>
+        <field id="assigned_user_id" type="java.lang.String"></field>
+        <field id="created_by" type="java.lang.String"></field>
+        <field id="name" type="java.lang.String"></field>
+        <field id="parent_id" type="java.lang.String"></field>
+        <field id="account_type" type="java.lang.String"></field>
+        <field id="industry" type="java.lang.String"></field>
+        <field id="annual_revenue" type="java.lang.String"></field>
+        <field id="phone_fax" type="java.lang.String"></field>
+        <field id="billing_address_street" type="java.lang.String"></field>
+        <field id="billing_address_city" type="java.lang.String"></field>
+        <field id="billing_address_state" type="java.lang.String"></field>
+        <field id="billing_address_postalcode" type="java.lang.String"></field>
+        <field id="billing_address_country" type="java.lang.String"></field>
+        <field id="description" type="java.lang.String"></field>
+        <field id="rating" type="java.lang.String"></field>
+        <field id="phone_office" type="java.lang.String"></field>
+        <field id="phone_alternate" type="java.lang.String"></field>
+        <field id="email1" type="java.lang.String"></field>
+        <field id="email2" type="java.lang.String"></field>
+        <field id="website" type="java.lang.String"></field>
+        <field id="ownership" type="java.lang.String"></field>
+        <field id="employees" type="java.lang.String"></field>
+        <field id="sic_code" type="java.lang.String"></field>
+        <field id="ticker_symbol" type="java.lang.String"></field>
+        <field id="shipping_address_street" type="java.lang.String"></field>
+        <field id="shipping_address_city" type="java.lang.String"></field>
+        <field id="shipping_address_state" type="java.lang.String"></field>
+        <field id="shipping_address_postalcode" type="java.lang.String"></field>
+        <field id="shipping_address_country" type="java.lang.String"></field>
+        <field id="deleted" type="java.lang.Short"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="opportunities" datasourceId="sugarcrmJNDI" datasourceTableName="opportunities" schemaAlias="public">
+      <fieldList>
+        <field id="id" type="java.lang.String"></field>
+        <field id="date_entered" type="java.sql.Timestamp"></field>
+        <field id="date_modified" type="java.sql.Timestamp"></field>
+        <field id="modified_user_id" type="java.lang.String"></field>
+        <field id="assigned_user_id" type="java.lang.String"></field>
+        <field id="created_by" type="java.lang.String"></field>
+        <field id="deleted" type="java.lang.Short"></field>
+        <field id="name" type="java.lang.String"></field>
+        <field id="opportunity_type" type="java.lang.String"></field>
+        <field id="lead_source" type="java.lang.String"></field>
+        <field id="amount" type="java.lang.Double"></field>
+        <field id="amount_backup" type="java.lang.String"></field>
+        <field id="amount_usdollar" type="java.lang.Double"></field>
+        <field id="currency_id" type="java.lang.String"></field>
+        <field id="date_closed" type="java.util.Date"></field>
+        <field id="next_step" type="java.lang.String"></field>
+        <field id="sales_stage" type="java.lang.String"></field>
+        <field id="probability" type="java.lang.Double"></field>
+        <field id="description" type="java.lang.String"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="users" datasourceId="sugarcrmJNDI" datasourceTableName="users" schemaAlias="public">
+      <fieldList>
+        <field id="id" type="java.lang.String"></field>
+        <field id="user_name" type="java.lang.String"></field>
+        <field id="user_password" type="java.lang.String"></field>
+        <field id="user_hash" type="java.lang.String"></field>
+        <field id="first_name" type="java.lang.String"></field>
+        <field id="last_name" type="java.lang.String"></field>
+        <field id="reports_to_id" type="java.lang.String"></field>
+        <field id="is_admin" type="java.lang.String"></field>
+        <field id="receive_notifications" type="java.lang.String"></field>
+        <field id="description" type="java.lang.String"></field>
+        <field id="date_entered" type="java.sql.Timestamp"></field>
+        <field id="date_modified" type="java.sql.Timestamp"></field>
+        <field id="modified_user_id" type="java.lang.String"></field>
+        <field id="created_by" type="java.lang.String"></field>
+        <field id="title" type="java.lang.String"></field>
+        <field id="department" type="java.lang.String"></field>
+        <field id="phone_home" type="java.lang.String"></field>
+        <field id="phone_mobile" type="java.lang.String"></field>
+        <field id="phone_work" type="java.lang.String"></field>
+        <field id="phone_other" type="java.lang.String"></field>
+        <field id="phone_fax" type="java.lang.String"></field>
+        <field id="email1" type="java.lang.String"></field>
+        <field id="email2" type="java.lang.String"></field>
+        <field id="status" type="java.lang.String"></field>
+        <field id="address_street" type="java.lang.String"></field>
+        <field id="address_city" type="java.lang.String"></field>
+        <field id="address_state" type="java.lang.String"></field>
+        <field id="address_country" type="java.lang.String"></field>
+        <field id="address_postalcode" type="java.lang.String"></field>
+        <field id="user_preferences" type="java.lang.String"></field>
+        <field id="deleted" type="java.lang.Short"></field>
+        <field id="portal_only" type="java.lang.Short"></field>
+        <field id="employee_status" type="java.lang.String"></field>
+        <field id="messenger_id" type="java.lang.String"></field>
+        <field id="messenger_type" type="java.lang.String"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="JoinTree_4" datasourceId="sugarcrmJNDI" datasourceTableName="accounts" schemaAlias="public">
+      <fieldList>
+        <field id="accounts.id" type="java.lang.String"></field>
+        <field id="accounts.date_entered" type="java.sql.Timestamp"></field>
+        <field id="accounts.date_modified" type="java.sql.Timestamp"></field>
+        <field id="accounts.modified_user_id" type="java.lang.String"></field>
+        <field id="accounts.assigned_user_id" type="java.lang.String"></field>
+        <field id="accounts.created_by" type="java.lang.String"></field>
+        <field id="accounts.name" type="java.lang.String"></field>
+        <field id="accounts.parent_id" type="java.lang.String"></field>
+        <field id="accounts.account_type" type="java.lang.String"></field>
+        <field id="accounts.industry" type="java.lang.String"></field>
+        <field id="accounts.annual_revenue" type="java.lang.String"></field>
+        <field id="accounts.phone_fax" type="java.lang.String"></field>
+        <field id="accounts.billing_address_street" type="java.lang.String"></field>
+        <field id="accounts.billing_address_city" type="java.lang.String"></field>
+        <field id="accounts.billing_address_state" type="java.lang.String"></field>
+        <field id="accounts.billing_address_postalcode" type="java.lang.String"></field>
+        <field id="accounts.billing_address_country" type="java.lang.String"></field>
+        <field id="accounts.description" type="java.lang.String"></field>
+        <field id="accounts.rating" type="java.lang.String"></field>
+        <field id="accounts.phone_office" type="java.lang.String"></field>
+        <field id="accounts.phone_alternate" type="java.lang.String"></field>
+        <field id="accounts.email1" type="java.lang.String"></field>
+        <field id="accounts.email2" type="java.lang.String"></field>
+        <field id="accounts.website" type="java.lang.String"></field>
+        <field id="accounts.ownership" type="java.lang.String"></field>
+        <field id="accounts.employees" type="java.lang.String"></field>
+        <field id="accounts.sic_code" type="java.lang.String"></field>
+        <field id="accounts.ticker_symbol" type="java.lang.String"></field>
+        <field id="accounts.shipping_address_street" type="java.lang.String"></field>
+        <field id="accounts.shipping_address_city" type="java.lang.String"></field>
+        <field id="accounts.shipping_address_state" type="java.lang.String"></field>
+        <field id="accounts.shipping_address_postalcode" type="java.lang.String"></field>
+        <field id="accounts.shipping_address_country" type="java.lang.String"></field>
+        <field id="accounts.deleted" type="java.lang.Short"></field>
+        <field id="opportunities.id" type="java.lang.String"></field>
+        <field id="opportunities.date_entered" type="java.sql.Timestamp"></field>
+        <field id="opportunities.date_modified" type="java.sql.Timestamp"></field>
+        <field id="opportunities.modified_user_id" type="java.lang.String"></field>
+        <field id="opportunities.assigned_user_id" type="java.lang.String"></field>
+        <field id="opportunities.created_by" type="java.lang.String"></field>
+        <field id="opportunities.deleted" type="java.lang.Short"></field>
+        <field id="opportunities.name" type="java.lang.String"></field>
+        <field id="opportunities.opportunity_type" type="java.lang.String"></field>
+        <field id="opportunities.lead_source" type="java.lang.String"></field>
+        <field id="opportunities.amount" type="java.lang.Double"></field>
+        <field id="opportunities.amount_backup" type="java.lang.String"></field>
+        <field id="opportunities.amount_usdollar" type="java.lang.Double"></field>
+        <field id="opportunities.currency_id" type="java.lang.String"></field>
+        <field id="opportunities.date_closed" type="java.util.Date"></field>
+        <field id="opportunities.next_step" type="java.lang.String"></field>
+        <field id="opportunities.sales_stage" type="java.lang.String"></field>
+        <field id="opportunities.probability" type="java.lang.Double"></field>
+        <field id="opportunities.description" type="java.lang.String"></field>
+        <field id="users.id" type="java.lang.String"></field>
+        <field id="users.user_name" type="java.lang.String"></field>
+        <field id="users.user_password" type="java.lang.String"></field>
+        <field id="users.user_hash" type="java.lang.String"></field>
+        <field id="users.first_name" type="java.lang.String"></field>
+        <field id="users.last_name" type="java.lang.String"></field>
+        <field id="users.reports_to_id" type="java.lang.String"></field>
+        <field id="users.is_admin" type="java.lang.String"></field>
+        <field id="users.receive_notifications" type="java.lang.String"></field>
+        <field id="users.description" type="java.lang.String"></field>
+        <field id="users.date_entered" type="java.sql.Timestamp"></field>
+        <field id="users.date_modified" type="java.sql.Timestamp"></field>
+        <field id="users.modified_user_id" type="java.lang.String"></field>
+        <field id="users.created_by" type="java.lang.String"></field>
+        <field id="users.title" type="java.lang.String"></field>
+        <field id="users.department" type="java.lang.String"></field>
+        <field id="users.phone_home" type="java.lang.String"></field>
+        <field id="users.phone_mobile" type="java.lang.String"></field>
+        <field id="users.phone_work" type="java.lang.String"></field>
+        <field id="users.phone_other" type="java.lang.String"></field>
+        <field id="users.phone_fax" type="java.lang.String"></field>
+        <field id="users.email1" type="java.lang.String"></field>
+        <field id="users.email2" type="java.lang.String"></field>
+        <field id="users.status" type="java.lang.String"></field>
+        <field id="users.address_street" type="java.lang.String"></field>
+        <field id="users.address_city" type="java.lang.String"></field>
+        <field id="users.address_state" type="java.lang.String"></field>
+        <field id="users.address_country" type="java.lang.String"></field>
+        <field id="users.address_postalcode" type="java.lang.String"></field>
+        <field id="users.user_preferences" type="java.lang.String"></field>
+        <field id="users.deleted" type="java.lang.Short"></field>
+        <field id="users.portal_only" type="java.lang.Short"></field>
+        <field id="users.employee_status" type="java.lang.String"></field>
+        <field id="users.messenger_id" type="java.lang.String"></field>
+        <field id="users.messenger_type" type="java.lang.String"></field>
+      </fieldList>
+      <joinInfo alias="accounts" referenceId="accounts"></joinInfo>
+      <joinList>
+        <join expr="accounts.id == opportunities.id" left="accounts" right="opportunities" type="inner" weight="1"></join>
+        <join expr="opportunities.assigned_user_id == users.id" left="opportunities" right="users" type="inner" weight="1"></join>
+      </joinList>
+      <joinOptions></joinOptions>
+      <tableRefList>
+        <tableRef alwaysIncludeTable="false" tableAlias="accounts" tableId="accounts"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="opportunities" tableId="opportunities"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="users" tableId="users"></tableRef>
+      </tableRefList>
+    </jdbcTable>
+  </resources>
+</schema>

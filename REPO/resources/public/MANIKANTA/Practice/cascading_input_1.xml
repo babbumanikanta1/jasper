@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA/Practice</folder>
+    <name>cascading_input_1</name>
+    <version>1</version>
+    <label>report1</label>
+    <description></description>
+    <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+    <updateDate>2026-03-25T14:40:35.514+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/Practice/cascading_input_1_files</folder>
+            <name>main_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+            <updateDate>2026-03-25T14:40:35.446+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/Practice/cascading_input_1_files</folder>
+            <name>country_id</name>
+            <version>1</version>
+            <label>country_id</label>
+            <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+            <updateDate>2026-03-25T14:40:35.514+05:30</updateDate>
+            <type>4</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/MANIKANTA/Practice/cascading_input_1_files/country_id_files</folder>
+                    <name>Query</name>
+                    <version>0</version>
+                    <label>Query</label>
+                    <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+                    <updateDate>2026-03-25T14:40:35.514+05:30</updateDate>
+                    <language>sql</language>
+                    <queryString>select country as country_id from customer</queryString>
+                    <dataSource>
+                        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>country_id</queryVisibleColumn>
+            <queryValueColumn>country_id</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/Practice/cascading_input_1_files</folder>
+            <name>city_id</name>
+            <version>1</version>
+            <label>city_id</label>
+            <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+            <updateDate>2026-03-25T14:40:35.514+05:30</updateDate>
+            <type>7</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/MANIKANTA/Practice/cascading_input_1_files/city_id_files</folder>
+                    <name>Query</name>
+                    <version>0</version>
+                    <label>Query</label>
+                    <creationDate>2026-04-21T18:02:53.689+05:30</creationDate>
+                    <updateDate>2026-03-25T14:40:35.514+05:30</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct city as city_id from customer where country = $P{country_id}</queryString>
+                    <dataSource>
+                        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>city_id</queryVisibleColumn>
+            <queryValueColumn>city_id</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

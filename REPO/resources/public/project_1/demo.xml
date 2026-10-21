@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/project_1</folder>
+    <name>demo</name>
+    <version>0</version>
+    <label>demo</label>
+    <description>demo table the using local data source (CSV)</description>
+    <creationDate>2026-04-21T18:02:45.463+05:30</creationDate>
+    <updateDate>2026-03-05T11:14:14.706+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/project_1/demo_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T18:02:45.463+05:30</creationDate>
+            <updateDate>2026-03-09T11:44:36.562+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

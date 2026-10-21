@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xmlDataAdapter class="net.sf.jasperreports.data.xml.XmlDataAdapterImpl">
+	<name>testing</name>
+	<dataFile type="repositoryDataLocation">
+		<location>repo:/public/MANIKANTA/fortest.xml</location>
+	</dataFile>
+	<selectExpression></selectExpression>
+	<useConnection>true</useConnection>
+	<locale>en_IN</locale>
+	<timeZone>Asia/Calcutta</timeZone>
+	<namespaceAware>false</namespaceAware>
+</xmlDataAdapter>

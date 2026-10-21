@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Trigger" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b517dee3-b25e-40ed-b3e8-e4a8a769972a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sugarcrm"/>
+	<property name="ireport.jasperserver.url" value="https://localhost:8443/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/Report_Bursting/Trigger_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/Report_Bursting/Trigger"/>
+	<scriptlet name="Scriptlet_1" class="com.jaspersoft.jasperreports.jrs.bursting.BurstingScriptlet">
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.output.formats" value="PDF"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.source.report.uri" value="/public/Report_Bursting/Report_Target"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.repository.folder.uri" value="/public/Report_Bursting"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.enabled_customSimpleMode" value="true"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.cc.addresses" value="babbumanikanta@gmail.com"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.subject" value="Report Bursting Example"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.label" value="ShipPostalCode Based"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.message.text" value="hello"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.enabled_customSimpleMode" value="true"/>
+		<property name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.result.send.type" value="SEND_ATTACHMENT"/>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.enabled"><![CDATA[true]]></propertyExpression>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.job.source.parameter.PP"><![CDATA[$F{shipcity}]]></propertyExpression>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.enabled"><![CDATA[true]]></propertyExpression>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.job.base.output.filename"><![CDATA["Result_" + $F{shipcity}]]></propertyExpression>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.job.mail.to.addresses"><![CDATA[$F{shipcity}.equals("Aachen") ? "kmanikanta@defteam.co" :
+$F{shipcity}.equals("Albuquerque") ? "manikantajpd@gmail.com" :
+$F{shipcity}.equals("Anchorage") ? "manikantajlpd@gmail.com" :
+"abcbankwebsite@gmail.com"]]></propertyExpression>
+		<propertyExpression name="com.jaspersoft.jasperreports.jrs.bursting.server.data.adapter"><![CDATA["/ForREPORTBURSTING.jrdax"]]></propertyExpression>
+	</scriptlet>
+	<queryString language="SQL">
+		<![CDATA[select distinct shipcity
+from orders
+order by shipcity asc
+limit 3
+
+
+]]>
+	</queryString>
+	<field name="shipcity" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipcity"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipcity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="279" y="0" width="92" height="30" uuid="ec67e03d-a075-495d-b128-575adb5e09b9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b236d56b-6262-423e-b2cc-8d83a47d2d51"/>
+				</reportElement>
+				<text><![CDATA[shipcity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="279" y="0" width="92" height="30" uuid="4ee83b83-0c48-491c-97a1-987af18bff9c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b236d56b-6262-423e-b2cc-8d83a47d2d51"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{shipcity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

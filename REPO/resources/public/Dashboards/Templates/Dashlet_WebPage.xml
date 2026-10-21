@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Dashboards/Templates</folder>
+    <name>Dashlet_WebPage</name>
+    <version>0</version>
+    <label>Web Page Dashlet Template</label>
+    <creationDate>2026-04-21T17:14:31.012+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:35.211+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Dashlet_WebPage.jrxml.data" xsi:type="fileResource">
+            <folder>/public/Dashboards/Templates/Dashlet_WebPage_files</folder>
+            <name>Dashlet_WebPage.jrxml</name>
+            <version>0</version>
+            <label>Dashlet_WebPage.jrxml</label>
+            <creationDate>2026-04-21T17:14:31.012+05:30</creationDate>
+            <updateDate>2024-01-09T18:21:35.211+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

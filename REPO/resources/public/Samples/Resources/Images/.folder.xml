@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Samples/Resources</parent>
+    <name>Images</name>
+    <label>Images</label>
+    <description>Images</description>
+    <creationDate>2026-04-21T17:14:29.496+05:30</creationDate>
+    <updateDate>2012-10-15T21:56:23.117+05:30</updateDate>
+    <resource>BombCandle.jpeg</resource>
+    <resource>BombDrink.jpeg</resource>
+    <resource>BombPop.jpeg</resource>
+    <resource>Canada.png</resource>
+    <resource>Customers.png</resource>
+    <resource>drinks.jpg</resource>
+    <resource>Food.jpg</resource>
+    <resource>Green</resource>
+    <resource>ico-library.jpg</resource>
+    <resource>Jaspersoft_logo.png</resource>
+    <resource>logo.png</resource>
+    <resource>Mexico.png</resource>
+    <resource>no_blue</resource>
+    <resource>no.png</resource>
+    <resource>noGreen.png</resource>
+    <resource>NonConsume.jpg</resource>
+    <resource>Red</resource>
+    <resource>USA.png</resource>
+    <resource>Yellow</resource>
+    <resource>yes_blue</resource>
+    <resource>yes.png</resource>
+    <resource>yesGreen.png</resource>
+</folder>

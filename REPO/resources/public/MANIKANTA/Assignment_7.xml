@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>Assignment_7</name>
+    <version>15</version>
+    <label>Assignment_7</label>
+    <description></description>
+    <creationDate>2026-05-27T11:36:38.166+05:30</creationDate>
+    <updateDate>2026-05-27T15:33:55.559+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/Assignment_7_files</folder>
+            <name>main_jrxml</name>
+            <version>15</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-05-27T12:29:37.753+05:30</creationDate>
+            <updateDate>2026-05-27T15:32:41.273+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/Assignment_7_files</folder>
+            <name>entNumber</name>
+            <version>5</version>
+            <label>entNumber</label>
+            <creationDate>2026-05-27T15:32:41.415+05:30</creationDate>
+            <updateDate>2026-05-27T17:24:44.293+05:30</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/MANIKANTA/Assignment_7_files/entNumber_files</folder>
+                    <name>myDatatype</name>
+                    <version>1</version>
+                    <label>myDatatype</label>
+                    <description></description>
+                    <creationDate>2026-05-27T17:24:44.293+05:30</creationDate>
+                    <updateDate>2026-05-27T17:24:44.293+05:30</updateDate>
+                    <type>2</type>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

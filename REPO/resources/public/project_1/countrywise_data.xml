@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/project_1</folder>
+    <name>countrywise_data</name>
+    <version>0</version>
+    <label>countrywise_data</label>
+    <description>Table, with hyperlinks to view customer count in each country.</description>
+    <creationDate>2026-04-21T18:02:45.377+05:30</creationDate>
+    <updateDate>2026-03-09T15:34:17.905+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/project_1/countrywise_data_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T18:02:45.377+05:30</creationDate>
+            <updateDate>2026-03-09T15:34:17.868+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

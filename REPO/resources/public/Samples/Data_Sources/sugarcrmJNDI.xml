@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiJdbcDataSource exportedWithPermissions="true">
+    <folder>/public/Samples/Data_Sources</folder>
+    <name>sugarcrmJNDI</name>
+    <version>1</version>
+    <label>sugarcrmJNDI</label>
+    <creationDate>2026-04-21T18:11:38.254+05:30</creationDate>
+    <updateDate>2026-03-27T10:00:48.089+05:30</updateDate>
+    <jndiName>jdbc/sugarcrm</jndiName>
+    <timezone></timezone>
+</jndiJdbcDataSource>

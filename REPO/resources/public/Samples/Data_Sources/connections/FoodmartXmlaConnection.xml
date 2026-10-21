@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlaConnection exportedWithPermissions="true">
+    <folder>/public/Samples/Data_Sources/connections</folder>
+    <name>FoodmartXmlaConnection</name>
+    <version>0</version>
+    <label>Foodmart XML/A Connection</label>
+    <description>Foodmart XML/A Connection</description>
+    <creationDate>2026-04-21T17:14:35.871+05:30</creationDate>
+    <updateDate>2012-10-16T01:46:38.514+05:30</updateDate>
+    <connectionURL>http://localhost:8080/jasperserver-pro/xmla</connectionURL>
+    <dataSource>Provider=Mondrian;DataSource=JRS</dataSource>
+    <catalog>Foodmart</catalog>
+    <connectionUser>jasperadmin|organization_1</connectionUser>
+    <connectionPassword>ENC&lt;4A525349560000001044DB30F603870797D98BCD49D5B54D605BA7F2D326F2F1A4ABF907D3F62C6820&gt;</connectionPassword>
+</xmlaConnection>

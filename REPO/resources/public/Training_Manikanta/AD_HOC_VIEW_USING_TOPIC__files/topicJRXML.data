@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="acf48b0d-2bd5-459b-bc47-bff9de21b8d6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sugarcrm"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/public/adhoc/topics/CUSTOM_TOPIC"/>
+	<property name="adhoc.metadata.version" value="42"/>
+	<property name="base.datasource.version" value="0"/>
+	<property name="use.datasource.presentation" value="false"/>
+	<property name="adhoc.topic.escape.variable.chars" value=" -:,"/>
+	<queryString language="SQL">
+		<![CDATA[select * from orders]]>
+	</queryString>
+	<field name="orderid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="orderid"/>
+		<property name="com.jaspersoft.studio.field.label" value="orderid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="orderid"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(orderid)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="customerid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="customerid"/>
+		<property name="com.jaspersoft.studio.field.label" value="customerid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="customerid"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(customerid)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="employeeid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="employeeid"/>
+		<property name="com.jaspersoft.studio.field.label" value="employeeid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="employeeid"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employeeid)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="orderdate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="orderdate"/>
+		<property name="com.jaspersoft.studio.field.label" value="orderdate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="orderdate"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(orderdate)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="requireddate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="requireddate"/>
+		<property name="com.jaspersoft.studio.field.label" value="requireddate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="requireddate"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(requireddate)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shippeddate" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="shippeddate"/>
+		<property name="com.jaspersoft.studio.field.label" value="shippeddate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shippeddate"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shippeddate)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shipvia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="shipvia"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipvia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipvia"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(shipvia)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="freight" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="freight"/>
+		<property name="com.jaspersoft.studio.field.label" value="freight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="freight"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(freight)"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+	</field>
+	<field name="shipname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipname"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipname"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shipname)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shipaddress" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipaddress"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipaddress"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipaddress"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shipaddress)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shipcity" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipcity"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipcity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipcity"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shipcity)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shipregion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipregion"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipregion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipregion"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shipregion)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shippostalcode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shippostalcode"/>
+		<property name="com.jaspersoft.studio.field.label" value="shippostalcode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shippostalcode"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shippostalcode)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+	<field name="shipcountry" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shipcountry"/>
+		<property name="com.jaspersoft.studio.field.label" value="shipcountry"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+		<property name="adhoc.display" value="shipcountry"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(shipcountry)"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+	</field>
+</jasperReport>

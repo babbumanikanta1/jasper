@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Report_Bursting</folder>
+    <name>Trigger</name>
+    <version>29</version>
+    <label>Trigger</label>
+    <description></description>
+    <creationDate>2026-07-02T10:30:01.009+05:30</creationDate>
+    <updateDate>2026-07-02T13:06:34.321+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Report_Bursting/Trigger_files</folder>
+            <name>main_jrxml</name>
+            <version>58</version>
+            <label>main_jrxml</label>
+            <creationDate>2026-07-02T10:30:01.009+05:30</creationDate>
+            <updateDate>2026-07-02T13:06:34.285+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/sugarcrmJNDI</uri>
+    </dataSource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

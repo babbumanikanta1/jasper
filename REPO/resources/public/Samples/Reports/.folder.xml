@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Samples</parent>
+    <name>Reports</name>
+    <label>Reports</label>
+    <description>Reports</description>
+    <creationDate>2026-04-21T17:14:29.168+05:30</creationDate>
+    <updateDate>2012-10-15T21:55:29.630+05:30</updateDate>
+    <resource>01._Geographic_Results_by_Segment_Report</resource>
+    <resource>02._Sales_Mix_by_City_Report</resource>
+    <resource>03._Store_Segment_Performance_Report</resource>
+    <resource>04._Product_Results_by_Store_Type_Report</resource>
+    <resource>08.UnitSalesDetailReport</resource>
+    <resource>14._World_Map</resource>
+    <resource>17._Report_Workbook</resource>
+    <resource>20.3_SalesPerCityReport</resource>
+    <resource>9.CustomerDetailReport</resource>
+    <resource>9.CustomerDetailReport-202606261232.pdf</resource>
+    <resource>AccountList</resource>
+    <resource>AllAccounts</resource>
+    <resource>Cascading_Report_2_Updated</resource>
+    <resource>Cascading_Report_2_Updated.pdf</resource>
+    <resource>Cities</resource>
+    <resource>ProfitDetailReport</resource>
+    <resource>PromotionDetailsReport</resource>
+    <resource>RevenueDetailReport</resource>
+    <resource>SalesByMonthReport</resource>
+    <resource>State_Performance</resource>
+    <resource>StoreDetails</resource>
+</folder>

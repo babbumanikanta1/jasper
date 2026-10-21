@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations</parent>
+    <name>organization_6</name>
+    <label>organization_6</label>
+    <description>Folder Template</description>
+    <creationDate>2026-08-12T10:23:21.934+05:30</creationDate>
+    <updateDate>2026-08-12T10:23:22.110+05:30</updateDate>
+    <folder>adhoc</folder>
+    <folder>organizations</folder>
+    <folder>raju7</folder>
+    <folder>temp</folder>
+    <folder>templates</folder>
+    <folder>themes</folder>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

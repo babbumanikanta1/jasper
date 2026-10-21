@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="4a52fc74-ff7b-4ce3-845d-8d3c3ab9b269">
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="3"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_1c1eb0b3-5f43-46b2-9985-3970775e1909"/>
+	<property name="adhoc.metadata.version" value="48"/>
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="audit_event_id"></queryField>
+    <queryField id="job_id"></queryField>
+    <queryField id="schedule_execution_id"></queryField>
+    <queryField id="execution_ids"></queryField>
+    <queryField id="job_label"></queryField>
+    <queryField id="job_desc"></queryField>
+    <queryField id="resource_name"></queryField>
+    <queryField id="relative_uri"></queryField>
+    <queryField id="username"></queryField>
+    <queryField id="organization_id"></queryField>
+    <queryField id="organization"></queryField>
+    <queryField id="start_time"></queryField>
+    <queryField id="completed_time"></queryField>
+    <queryField id="data_prep_time"></queryField>
+    <queryField id="rpt_rendering_time"></queryField>
+    <queryField id="execution_time"></queryField>
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="audit_event_id" class="java.lang.Long">
+		<property name="adhoc.display" value="Audit Event ID"/>
+		<property name="semantic.item.label" value="Audit Event ID"/>
+		<property name="adhoc.tree.uri" value="/audit_event_id"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.audit_event_id"/>
+		<property name="semantic.tree.uri" value="/audit_event_id"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"audit_event_id":1,"job_id":2,"schedule_execution_id":3,"execution_ids":4,"job_label":5,"job_desc":6,"resource_name":7,"relative_uri":8,"username":9,"organization_id":10,"organization":11,"start_time":12,"completed_time":13,"data_prep_time":14,"rpt_rendering_time":15,"execution_time":16}]]>
+		</property>
+		<property name="adhoc.tree.labels" value="[]"/>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.math.BigInteger"/>
+		<property name="adhoc.chosen.tree.uri" value="/audit_event_id"/>
+		<property name="previous.display" value="Audit Event ID"/>
+		<property name="adhoc.chosen.tree.labels" value="[]"/>
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"data_prep_time":14,"job_label":5,"job_desc":6,"execution_ids":4,"execution_time":16,"schedule_execution_id":3,"start_time":12,"completed_time":13,"rpt_rendering_time":15,"job_id":2,"relative_uri":8,"organization_id":10,"organization":11,"audit_event_id":1,"resource_name":7,"username":9}]]>
+		</property>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(audit_event_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+	</field>
+	<field name="job_id" class="java.lang.String">
+		<property name="adhoc.display" value="Job ID"/>
+		<property name="semantic.item.label" value="Job ID"/>
+		<property name="adhoc.tree.uri" value="/job_id"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.job_id"/>
+		<property name="semantic.tree.uri" value="/job_id"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/job_id"/>
+		<property name="previous.display" value="Job ID"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(job_id)"/>
+	</field>
+	<field name="schedule_execution_id" class="java.lang.String">
+		<property name="adhoc.display" value="Schedule ID"/>
+		<property name="semantic.item.label" value="Schedule ID"/>
+		<property name="adhoc.tree.uri" value="/schedule_execution_id"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.schedule_execution_id"/>
+		<property name="semantic.tree.uri" value="/schedule_execution_id"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/schedule_execution_id"/>
+		<property name="previous.display" value="Schedule ID"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(schedule_execution_id)"/>
+	</field>
+	<field name="execution_ids" class="java.lang.String">
+		<property name="adhoc.display" value="Execution ID(s)"/>
+		<property name="semantic.item.label" value="Execution ID(s)"/>
+		<property name="adhoc.tree.uri" value="/execution_ids"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.execution_ids"/>
+		<property name="semantic.tree.uri" value="/execution_ids"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/execution_ids"/>
+		<property name="previous.display" value="Execution ID(s)"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(execution_ids)"/>
+	</field>
+	<field name="job_label" class="java.lang.String">
+		<property name="adhoc.display" value="Job Name"/>
+		<property name="semantic.item.label" value="Job Name"/>
+		<property name="adhoc.tree.uri" value="/job_label"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.job_label"/>
+		<property name="semantic.tree.uri" value="/job_label"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/job_label"/>
+		<property name="previous.display" value="Job Name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(job_label)"/>
+	</field>
+	<field name="job_desc" class="java.lang.String">
+		<property name="adhoc.display" value="Job Description"/>
+		<property name="semantic.item.label" value="Job Description"/>
+		<property name="adhoc.tree.uri" value="/job_desc"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.job_desc"/>
+		<property name="semantic.tree.uri" value="/job_desc"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/job_desc"/>
+		<property name="previous.display" value="Job Description"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(job_desc)"/>
+	</field>
+	<field name="resource_name" class="java.lang.String">
+		<property name="adhoc.display" value="Resource"/>
+		<property name="semantic.item.label" value="Resource"/>
+		<property name="adhoc.tree.uri" value="/resource_name"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.resource_name"/>
+		<property name="semantic.tree.uri" value="/resource_name"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/resource_name"/>
+		<property name="previous.display" value="Resource"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(resource_name)"/>
+	</field>
+	<field name="relative_uri" class="java.lang.String">
+		<property name="adhoc.display" value="URL"/>
+		<property name="semantic.item.label" value="URL"/>
+		<property name="adhoc.tree.uri" value="/relative_uri"/>
+		<property name="resourceId" value="JoinTree_1.relative_uri"/>
+		<property name="semantic.tree.uri" value="/relative_uri"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/relative_uri"/>
+		<property name="previous.display" value="URL"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(relative_uri)"/>
+	</field>
+	<field name="username" class="java.lang.String">
+		<property name="adhoc.display" value="User"/>
+		<property name="semantic.item.label" value="User"/>
+		<property name="adhoc.tree.uri" value="/username"/>
+		<property name="resourceId" value="JoinTree_1.jiauditevent.username"/>
+		<property name="semantic.tree.uri" value="/username"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/username"/>
+		<property name="previous.display" value="User"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(username)"/>
+	</field>
+	<field name="organization_id" class="java.lang.String">
+		<property name="adhoc.display" value="Organization ID"/>
+		<property name="semantic.item.label" value="Organization ID"/>
+		<property name="adhoc.tree.uri" value="/organization_id"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.organization_id"/>
+		<property name="semantic.tree.uri" value="/organization_id"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/organization_id"/>
+		<property name="previous.display" value="Organization ID"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(organization_id)"/>
+	</field>
+	<field name="organization" class="java.lang.String">
+		<property name="adhoc.display" value="Organization"/>
+		<property name="semantic.item.label" value="Organization"/>
+		<property name="adhoc.tree.uri" value="/organization"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.organization"/>
+		<property name="semantic.tree.uri" value="/organization"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/organization"/>
+		<property name="previous.display" value="Organization"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(organization)"/>
+	</field>
+	<field name="start_time" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="Start Time"/>
+		<property name="semantic.item.label" value="Start Time"/>
+		<property name="adhoc.tree.uri" value="/start_time"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.start_time"/>
+		<property name="semantic.tree.uri" value="/start_time"/>
+		<property name="semantic.tree.sort.order" value="11"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/start_time"/>
+		<property name="previous.display" value="Start Time"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(start_time)"/>
+		<property name="defaultMask" value="medium,hide"/>
+	</field>
+	<field name="completed_time" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="End Time"/>
+		<property name="semantic.item.label" value="End Time"/>
+		<property name="adhoc.tree.uri" value="/completed_time"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.completed_time"/>
+		<property name="semantic.tree.uri" value="/completed_time"/>
+		<property name="semantic.tree.sort.order" value="12"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/completed_time"/>
+		<property name="previous.display" value="End Time"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(completed_time)"/>
+		<property name="defaultMask" value="medium,hide"/>
+	</field>
+	<field name="data_prep_time" class="java.lang.String">
+		<property name="adhoc.display" value="Data Preparation Time (ms)"/>
+		<property name="semantic.item.label" value="Data Preparation Time (ms)"/>
+		<property name="adhoc.tree.uri" value="/data_prep_time"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.data_prep_time"/>
+		<property name="semantic.tree.uri" value="/data_prep_time"/>
+		<property name="semantic.tree.sort.order" value="13"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/data_prep_time"/>
+		<property name="previous.display" value="Data Preparation Time (ms)"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(data_prep_time)"/>
+	</field>
+	<field name="rpt_rendering_time" class="java.lang.String">
+		<property name="adhoc.display" value="Report Fill Time (ms)"/>
+		<property name="semantic.item.label" value="Report Fill Time (ms)"/>
+		<property name="adhoc.tree.uri" value="/rpt_rendering_time"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.rpt_rendering_time"/>
+		<property name="semantic.tree.uri" value="/rpt_rendering_time"/>
+		<property name="semantic.tree.sort.order" value="14"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/rpt_rendering_time"/>
+		<property name="previous.display" value="Report Fill Time (ms)"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(rpt_rendering_time)"/>
+	</field>
+	<field name="execution_time" class="java.lang.String">
+		<property name="adhoc.display" value="Run Time (ms)"/>
+		<property name="semantic.item.label" value="Run Time (ms)"/>
+		<property name="adhoc.tree.uri" value="/execution_time"/>
+		<property name="resourceId" value="JoinTree_1.audit_properties_derived_table.execution_time"/>
+		<property name="semantic.tree.uri" value="/execution_time"/>
+		<property name="semantic.tree.sort.order" value="15"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/execution_time"/>
+		<property name="previous.display" value="Run Time (ms)"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(execution_time)"/>
+	</field>
+</jasperReport>

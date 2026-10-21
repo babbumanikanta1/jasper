@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes</parent>
+    <name>logo_replace</name>
+    <label>logo_replace</label>
+    <description></description>
+    <creationDate>2026-04-21T18:05:41.089+05:30</creationDate>
+    <updateDate>2026-04-21T18:07:17.405+05:30</updateDate>
+    <resource>bgimage.png</resource>
+    <resource>overrides_custom.css</resource>
+    <resource>power.png</resource>
+    <resource>youtube.png</resource>
+</folder>

@@ -1,0 +1,63 @@
+{
+  "company": "ABC Technologies",
+  "reportDate": "2026-06-16",
+  "orders": [
+    {
+      "orderId": 1001,
+      "customerName": "John Smith",
+      "city": "New York",
+      "orderDate": "2026-06-01",
+      "totalAmount": 1250.50,
+      "items": [
+        {
+          "productId": "P101",
+          "productName": "Laptop",
+          "quantity": 1,
+          "unitPrice": 1000.00
+        },
+        {
+          "productId": "P102",
+          "productName": "Mouse",
+          "quantity": 2,
+          "unitPrice": 125.25
+        }
+      ]
+    },
+    {
+      "orderId": 1002,
+      "customerName": "Emma Johnson",
+      "city": "Chicago",
+      "orderDate": "2026-06-05",
+      "totalAmount": 850.00,
+      "items": [
+        {
+          "productId": "P103",
+          "productName": "Monitor",
+          "quantity": 2,
+          "unitPrice": 425.00
+        }
+      ]
+    },
+    {
+      "orderId": 1003,
+      "customerName": "Michael Brown",
+      "city": "Dallas",
+      "orderDate": "2026-06-08",
+      "totalAmount": 450.75,
+      "items": [
+        {
+          "productId": "P104",
+          "productName": "Keyboard",
+          "quantity": 3,
+          "unitPrice": 75.25
+        },
+        {
+          "productId": "P105",
+          "productName": "Webcam",
+          "quantity": 1,
+          "unitPrice": 225.00
+        }
+      ]
+    }
+  ]
+}

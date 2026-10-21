@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HELLO" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f4c5523-ae8b-4a9e-98d9-7ddcd720891b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/Vyjayanthi/HELLO_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Vyjayanthi/HELLO"/>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="store_id" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="store_id"/>
+		<fieldDescription><![CDATA[store_id]]></fieldDescription>
+	</field>
+	<field name="store_name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="store_name"/>
+		<fieldDescription><![CDATA[store_name]]></fieldDescription>
+	</field>
+	<field name="latitude" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="latitude"/>
+		<fieldDescription><![CDATA[latitude]]></fieldDescription>
+	</field>
+	<field name="longitude" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="longitude"/>
+		<fieldDescription><![CDATA[longitude]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

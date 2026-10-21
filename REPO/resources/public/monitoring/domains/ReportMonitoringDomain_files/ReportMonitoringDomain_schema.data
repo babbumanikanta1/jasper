@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2005-2023. Cloud Software Group, Inc. All Rights Reserved. Confidential & Proprietary.
+  ~ Licensed pursuant to commercial Cloud Software Group, Inc End User License Agreement.
+  -->
+
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0">
+  <dataSources>
+    <jdbcDataSource id="ReportMonitoringDataSource">
+      <schemaMap>
+        <entry key="defaultSchema">
+          <string>public</string>
+        </entry>
+        <entry key="schema1">
+          <string>public</string>
+        </entry>
+      </schemaMap>
+    </jdbcDataSource>
+  </dataSources>
+  <itemGroups>
+    <itemGroup description="jireportmonitoringfact" descriptionId="" id="jireportmonitoringfact" label="jireportmonitoringfact" labelId="" resourceId="public_jireportmonitoringfact">
+      <items>
+        <item defaultMask="0" description="date_day" descriptionId="" dimensionOrMeasure="Dimension" id="date_day" label="Day" labelId="" resourceId="public_jireportmonitoringfact.date_day" />
+        <item defaultMask="0" description="date_month" descriptionId="" dimensionOrMeasure="Dimension" id="date_month" label="Month" labelId="" resourceId="public_jireportmonitoringfact.date_month" />
+        <item defaultMask="0" description="date_year" descriptionId="" dimensionOrMeasure="Dimension" id="date_year" label="Year" labelId="" resourceId="public_jireportmonitoringfact.date_year" />
+        <item description="editing_action" descriptionId="" dimensionOrMeasure="Dimension" id="editing_action" label="Editing Action" labelId="" resourceId="public_jireportmonitoringfact.editing_action" />
+        <item description="event_context" descriptionId="" dimensionOrMeasure="Dimension" id="event_context" label="Event Context" labelId="" resourceId="public_jireportmonitoringfact.event_context" />
+        <item description="event_type" descriptionId="" dimensionOrMeasure="Dimension" id="event_type" label="Event Type" labelId="" resourceId="public_jireportmonitoringfact.event_type" />
+        <item defaultMask="0" description="id" descriptionId="" dimensionOrMeasure="Dimension" id="id" label="id" labelId="" resourceId="public_jireportmonitoringfact.id" />
+        <item defaultAgg="Average" defaultMask="#,##0" description="query_execution_time" descriptionId="" dimensionOrMeasure="Measure" id="query_execution_time" label="Query Execution Time" labelId="" resourceId="public_jireportmonitoringfact.query_execution_time" />
+        <item defaultAgg="Average" defaultMask="#,##0" description="report_rendering_time" descriptionId="" dimensionOrMeasure="Measure" id="report_rendering_time" label="Report Rendering Time" labelId="" resourceId="public_jireportmonitoringfact.report_rendering_time" />
+        <item description="report_uri" descriptionId="" dimensionOrMeasure="Dimension" id="report_uri" label="Report URI" labelId="" resourceId="public_jireportmonitoringfact.report_uri" />
+        <item defaultMask="0" description="time_hour" descriptionId="" dimensionOrMeasure="Dimension" id="time_hour" label="Hour" labelId="" resourceId="public_jireportmonitoringfact.time_hour" />
+        <item defaultMask="0" description="time_minute" descriptionId="" dimensionOrMeasure="Dimension" id="time_minute" label="Minute" labelId="" resourceId="public_jireportmonitoringfact.time_minute" />
+        <item defaultMask="medium,medium" description="time_stamp" descriptionId="" dimensionOrMeasure="Measure" id="time_stamp" label="Time Stamp" labelId="" resourceId="public_jireportmonitoringfact.time_stamp" />
+        <item defaultAgg="Average" defaultMask="#,##0" description="total_report_execution_time" descriptionId="" dimensionOrMeasure="Measure" id="total_report_execution_time" label="Total Report Execution Time" labelId="" resourceId="public_jireportmonitoringfact.total_report_execution_time" />
+        <item description="user_name" descriptionId="" dimensionOrMeasure="Dimension" id="user_name" label="User Name" labelId="" resourceId="public_jireportmonitoringfact.user_name" />
+        <item description="user_organization" descriptionId="" dimensionOrMeasure="Dimension" id="user_organization" label="User Organization" labelId="" resourceId="public_jireportmonitoringfact.user_organization" />
+      </items>
+    </itemGroup>
+  </itemGroups>
+  <resources>
+    <jdbcTable id="public_jireportmonitoringfact" datasourceId="ReportMonitoringDataSource" tableName="schema1.jireportmonitoringfact">
+      <fieldList>
+        <field id="date_day" fieldDBName="date_day" type="java.lang.Short" />
+        <field id="date_month" fieldDBName="date_month" type="java.lang.Short" />
+        <field id="date_year" fieldDBName="date_year" type="java.lang.Short" />
+        <field id="editing_action" fieldDBName="editing_action" type="java.lang.String" />
+        <field id="event_context" fieldDBName="event_context" type="java.lang.String" />
+        <field id="event_type" fieldDBName="event_type" type="java.lang.String" />
+        <field id="id" fieldDBName="id" type="java.lang.Long" />
+        <field id="query_execution_time" fieldDBName="query_execution_time" type="java.lang.Integer" />
+        <field id="report_rendering_time" fieldDBName="report_rendering_time" type="java.lang.Integer" />
+        <field id="report_uri" fieldDBName="report_uri" type="java.lang.String" />
+        <field id="time_hour" fieldDBName="time_hour" type="java.lang.Short" />
+        <field id="time_minute" fieldDBName="time_minute" type="java.lang.Short" />
+        <field id="time_stamp" fieldDBName="time_stamp" type="java.sql.Timestamp" />
+        <field id="total_report_execution_time" fieldDBName="total_report_execution_time" type="java.lang.Integer" />
+        <field id="user_name" fieldDBName="user_name" type="java.lang.String" />
+        <field id="user_organization" fieldDBName="user_organization" type="java.lang.String" />
+      </fieldList>
+    </jdbcTable>
+  </resources>
+</schema>
+

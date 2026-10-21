@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Samples/Resources/Extras</folder>
+    <name>BlankBackground</name>
+    <version>0</version>
+    <label>BlankBackground</label>
+    <creationDate>2026-04-21T17:14:35.886+05:30</creationDate>
+    <updateDate>2013-09-06T16:26:37.606+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Samples/Resources/Extras/BlankBackground_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T17:14:35.886+05:30</creationDate>
+            <updateDate>2013-09-04T19:03:15.556+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>
