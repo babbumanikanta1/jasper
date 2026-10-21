@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 7.3.0.final using JasperReports Library version 6.8.1-SNAPSHOT-1ebbe47629f595df82c137d4edda18ac1dafc9f1  -->
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Interactive_Sales_Report" pageWidth="622" pageHeight="792" columnWidth="582" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="feb927b2-fc3c-4ca6-92f1-77b7d9a4a5bb">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -284,7 +284,7 @@ order by
 				</textField>
 			</frame>
 			<componentElement>
-				<reportElement x="0" y="104" width="572" height="182" uuid="d83a6d56-8791-4d81-a91a-962b32697d31">
+				<reportElement x="0" y="104" width="550" height="182" uuid="d83a6d56-8791-4d81-a91a-962b32697d31">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
