@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="77aa489f-0300-4538-8ff0-3757f4463379">
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="6"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_41de5331-655e-4dec-aea3-c41617aadca2"/>
+	<property name="adhoc.metadata.version" value="45"/>
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="NewSet1.name"></queryField>
+    <queryField id="NewSet1.billing_address_city"></queryField>
+    <queryField id="NewSet1.industry"></queryField>
+    <queryField id="NewSet1.username"></queryField>
+    <queryField id="NewSet1.deal_size"></queryField>
+    <queryField id="NewSet2.name_1"></queryField>
+    <queryField id="NewSet2.sales_stage"></queryField>
+    <queryField id="NewSet2.lead_source"></queryField>
+    <queryField id="NewSet2.Deal_Age"></queryField>
+    <queryField id="NewSet3.amount"></queryField>
+    <queryField id="NewSet3.Revenue"></queryField>
+    <queryField id="NewSet3.currency_id"></queryField>
+    <queryField id="NewSet4.date_closed"></queryField>
+    <queryField id="NewSet4.Quarter"></queryField>
+    <queryField id="NewSet4.date_entered"></queryField>
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="NewSet1.name" class="java.lang.String">
+		<property name="adhoc.display" value="name"/>
+		<property name="semantic.item.label" value="name"/>
+		<property name="adhoc.tree.uri" value="/NewSet1/name"/>
+		<property name="resourceId" value="JoinTree_1.accounts.name"/>
+		<property name="semantic.tree.uri" value="/NewSet1/name"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"NewSet1":1,"name":2,"billing_address_city":3,"industry":4,"username":5,"deal_size":6,"NewSet2":7,"name_1":8,"sales_stage":9,"lead_source":10,"Deal_Age":11,"NewSet3":12,"amount":13,"Revenue":14,"currency_id":15,"NewSet4":16,"date_closed":17,"Quarter":18,"date_entered":19}]]>
+		</property>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"uri":"/NewSet1","resourceId":"JoinTree_1","label":"Account Info"},{"uri":"/NewSet2","resourceId":"JoinTree_1","label":"Opportunity Details"},{"uri":"/NewSet3","resourceId":"JoinTree_1","label":"Financials"},{"uri":"/NewSet4","resourceId":"JoinTree_1","label":"Time Dimensions"}]]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet1/name"/>
+		<property name="previous.display" value="name"/>
+		<property name="adhoc.chosen.tree.labels">
+			<![CDATA[[{"uri":"/NewSet1","resourceId":"JoinTree_1","label":"Account Info"},{"uri":"/NewSet2","resourceId":"JoinTree_1","label":"Opportunity Details"},{"uri":"/NewSet3","resourceId":"JoinTree_1","label":"Financials"},{"uri":"/NewSet4","resourceId":"JoinTree_1","label":"Time Dimensions"}]]]>
+		</property>
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"Quarter":18,"billing_address_city":3,"NewSet4":16,"name_1":8,"NewSet3":12,"amount":13,"NewSet2":7,"Deal_Age":11,"lead_source":10,"industry":4,"sales_stage":9,"date_closed":17,"name":2,"date_entered":19,"Revenue":14,"NewSet1":1,"deal_size":6,"currency_id":15,"username":5}]]>
+		</property>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet1.name)"/>
+	</field>
+	<field name="NewSet1.billing_address_city" class="java.lang.String">
+		<property name="adhoc.display" value="billing_address_city"/>
+		<property name="semantic.item.label" value="billing_address_city"/>
+		<property name="adhoc.tree.uri" value="/NewSet1/billing_address_city"/>
+		<property name="resourceId" value="JoinTree_1.accounts.billing_address_city"/>
+		<property name="semantic.tree.uri" value="/NewSet1/billing_address_city"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet1/billing_address_city"/>
+		<property name="previous.display" value="billing_address_city"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet1.billing_address_city)"/>
+	</field>
+	<field name="NewSet1.industry" class="java.lang.String">
+		<property name="adhoc.display" value="industry"/>
+		<property name="semantic.item.label" value="industry"/>
+		<property name="adhoc.tree.uri" value="/NewSet1/industry"/>
+		<property name="resourceId" value="JoinTree_1.accounts.industry"/>
+		<property name="semantic.tree.uri" value="/NewSet1/industry"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet1/industry"/>
+		<property name="previous.display" value="industry"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet1.industry)"/>
+	</field>
+	<field name="NewSet1.username" class="java.lang.String">
+		<property name="adhoc.display" value="username"/>
+		<property name="semantic.item.label" value="username"/>
+		<property name="adhoc.tree.uri" value="/NewSet1/username"/>
+		<property name="resourceId" value="JoinTree_1.username"/>
+		<property name="semantic.tree.uri" value="/NewSet1/username"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet1/username"/>
+		<property name="previous.display" value="username"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet1.username)"/>
+	</field>
+	<field name="NewSet1.deal_size" class="java.lang.String">
+		<property name="adhoc.display" value="deal_size"/>
+		<property name="semantic.item.label" value="deal_size"/>
+		<property name="adhoc.tree.uri" value="/NewSet1/deal_size"/>
+		<property name="resourceId" value="JoinTree_1.deal_size"/>
+		<property name="semantic.tree.uri" value="/NewSet1/deal_size"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet1/deal_size"/>
+		<property name="previous.display" value="deal_size"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet1.deal_size)"/>
+	</field>
+	<field name="NewSet2.name_1" class="java.lang.String">
+		<property name="adhoc.display" value="name"/>
+		<property name="semantic.item.label" value="name"/>
+		<property name="adhoc.tree.uri" value="/NewSet2/name_1"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.name"/>
+		<property name="semantic.tree.uri" value="/NewSet2/name_1"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet2/name_1"/>
+		<property name="previous.display" value="name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet2.name_1)"/>
+	</field>
+	<field name="NewSet2.sales_stage" class="java.lang.String">
+		<property name="adhoc.display" value="sales_stage"/>
+		<property name="semantic.item.label" value="sales_stage"/>
+		<property name="adhoc.tree.uri" value="/NewSet2/sales_stage"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.sales_stage"/>
+		<property name="semantic.tree.uri" value="/NewSet2/sales_stage"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet2/sales_stage"/>
+		<property name="previous.display" value="sales_stage"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet2.sales_stage)"/>
+	</field>
+	<field name="NewSet2.lead_source" class="java.lang.String">
+		<property name="adhoc.display" value="lead_source"/>
+		<property name="semantic.item.label" value="lead_source"/>
+		<property name="adhoc.tree.uri" value="/NewSet2/lead_source"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.lead_source"/>
+		<property name="semantic.tree.uri" value="/NewSet2/lead_source"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet2/lead_source"/>
+		<property name="previous.display" value="lead_source"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet2.lead_source)"/>
+	</field>
+	<field name="NewSet2.Deal_Age" class="java.lang.String">
+		<property name="adhoc.display" value="Deal_Age"/>
+		<property name="semantic.item.label" value="Deal_Age"/>
+		<property name="adhoc.tree.uri" value="/NewSet2/Deal_Age"/>
+		<property name="resourceId" value="JoinTree_1.Deal_Age"/>
+		<property name="semantic.tree.uri" value="/NewSet2/Deal_Age"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet2/Deal_Age"/>
+		<property name="previous.display" value="Deal_Age"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet2.Deal_Age)"/>
+	</field>
+	<field name="NewSet3.amount" class="java.lang.Double">
+		<property name="adhoc.display" value="amount"/>
+		<property name="semantic.item.label" value="amount"/>
+		<property name="adhoc.tree.uri" value="/NewSet3/amount"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.amount"/>
+		<property name="semantic.tree.uri" value="/NewSet3/amount"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet3/amount"/>
+		<property name="previous.display" value="amount"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(NewSet3.amount)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+	<field name="NewSet3.Revenue" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="Revenue"/>
+		<property name="semantic.item.label" value="Revenue"/>
+		<property name="adhoc.tree.uri" value="/NewSet3/Revenue"/>
+		<property name="resourceId" value="JoinTree_1.Revenue"/>
+		<property name="semantic.tree.uri" value="/NewSet3/Revenue"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet3/Revenue"/>
+		<property name="previous.display" value="Revenue"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(NewSet3.Revenue)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+	</field>
+	<field name="NewSet3.currency_id" class="java.lang.String">
+		<property name="adhoc.display" value="currency_id"/>
+		<property name="semantic.item.label" value="currency_id"/>
+		<property name="adhoc.tree.uri" value="/NewSet3/currency_id"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.currency_id"/>
+		<property name="semantic.tree.uri" value="/NewSet3/currency_id"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet3/currency_id"/>
+		<property name="previous.display" value="currency_id"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet3.currency_id)"/>
+	</field>
+	<field name="NewSet4.date_closed" class="java.util.Date">
+		<property name="adhoc.display" value="date_closed"/>
+		<property name="semantic.item.label" value="date_closed"/>
+		<property name="adhoc.tree.uri" value="/NewSet4/date_closed"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.date_closed"/>
+		<property name="semantic.tree.uri" value="/NewSet4/date_closed"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_date_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet4/date_closed"/>
+		<property name="previous.display" value="date_closed"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet4.date_closed)"/>
+		<property name="defaultMask" value="medium,hide"/>
+	</field>
+	<field name="NewSet4.Quarter" class="java.lang.String">
+		<property name="adhoc.display" value="Quarter"/>
+		<property name="semantic.item.label" value="Quarter"/>
+		<property name="adhoc.tree.uri" value="/NewSet4/Quarter"/>
+		<property name="resourceId" value="JoinTree_1.Quarter"/>
+		<property name="semantic.tree.uri" value="/NewSet4/Quarter"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet4/Quarter"/>
+		<property name="previous.display" value="Quarter"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet4.Quarter)"/>
+	</field>
+	<field name="NewSet4.date_entered" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="date_entered"/>
+		<property name="semantic.item.label" value="date_entered"/>
+		<property name="adhoc.tree.uri" value="/NewSet4/date_entered"/>
+		<property name="resourceId" value="JoinTree_1.opportunities.date_entered"/>
+		<property name="semantic.tree.uri" value="/NewSet4/date_entered"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/NewSet4/date_entered"/>
+		<property name="previous.display" value="date_entered"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(NewSet4.date_entered)"/>
+		<property name="defaultMask" value="medium,hide"/>
+	</field>
+</jasperReport>

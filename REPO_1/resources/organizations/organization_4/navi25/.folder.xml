@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_4</parent>
+    <name>navi25</name>
+    <label>navi25</label>
+    <description>Default user folder</description>
+    <creationDate>2026-08-13T12:41:41.317+05:30</creationDate>
+    <updateDate>2026-08-13T12:41:41.317+05:30</updateDate>
+    <permission>
+        <permissionMask>30</permissionMask>
+        <recipient tenantId="organization_4" recipientType="user">navi25</recipient>
+    </permission>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

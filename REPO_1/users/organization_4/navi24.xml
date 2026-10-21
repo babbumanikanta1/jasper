@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>navi24</username>
+    <fullName>navi24</fullName>
+    <password>ENC&lt;4A525349560000001057E6771039B7C0A1E57BF171494B0A894A682CDA4349EF24A1945A0D948D12FD&gt;</password>
+    <externallyDefined>true</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_ADMINISTRATOR</role>
+    <role>ROLE_USER</role>
+    <tenantId>organization_4</tenantId>
+</user>

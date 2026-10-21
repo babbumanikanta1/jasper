@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>anonymousUser</username>
+    <fullName>anonymousUser</fullName>
+    <password>ENC&lt;4A525349560000001087D1AF34CEA03EFEBF10827E570C885E2FD98B5066E8E99315E3065507576604&gt;</password>
+    <externallyDefined>false</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_ANONYMOUS</role>
+    <previousPasswordChangeTime>2024-01-09T18:18:57.717+05:30</previousPasswordChangeTime>
+</user>

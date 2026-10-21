@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes</parent>
+    <name>jasper_dark</name>
+    <label>jasper_dark</label>
+    <creationDate>2026-04-21T17:14:28.840+05:30</creationDate>
+    <updateDate>2024-01-09T18:19:40.538+05:30</updateDate>
+    <folder>images</folder>
+    <resource>overrides_custom.css</resource>
+</folder>

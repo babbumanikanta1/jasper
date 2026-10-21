@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="a6f7e4df-f5cd-4e6a-bbb5-5121b265f603">
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="1"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_fe6e87ef-7ef8-43eb-aa2f-7e4d9aad3601"/>
+	<property name="adhoc.metadata.version" value="48"/>
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="jireportmonitoringfact.date_day" />
+    <queryField id="jireportmonitoringfact.date_month" />
+    <queryField id="jireportmonitoringfact.date_year" />
+    <queryField id="jireportmonitoringfact.editing_action" />
+    <queryField id="jireportmonitoringfact.event_context" />
+    <queryField id="jireportmonitoringfact.event_type" />
+    <queryField id="jireportmonitoringfact.id" />
+    <queryField id="jireportmonitoringfact.query_execution_time" />
+    <queryField id="jireportmonitoringfact.report_rendering_time" />
+    <queryField id="jireportmonitoringfact.report_uri" />
+    <queryField id="jireportmonitoringfact.time_hour" />
+    <queryField id="jireportmonitoringfact.time_minute" />
+    <queryField id="jireportmonitoringfact.time_stamp" />
+    <queryField id="jireportmonitoringfact.total_report_execution_time" />
+    <queryField id="jireportmonitoringfact.user_name" />
+    <queryField id="jireportmonitoringfact.user_organization" />
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="jireportmonitoringfact.date_day" class="java.lang.Short">
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"total_report_execution_time":15,"date_year":4,"report_uri":11,"date_month":3,"time_minute":13,"time_stamp":14,"user_organization":17,"user_name":16,"date_day":2,"event_context":6,"editing_action":5,"query_execution_time":9,"event_type":7,"report_rendering_time":10,"id":8,"time_hour":12,"jireportmonitoringfact":1}]]>
+		</property>
+		<property name="resourceId" value="public_jireportmonitoringfact.date_day"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/date_day"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="adhoc.chosen.tree.labels">
+			<![CDATA[[{"uri":"/jireportmonitoringfact","resourceId":"public_jireportmonitoringfact","label":"jireportmonitoringfact","description":"jireportmonitoringfact","descriptionId":""}]]]>
+		</property>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"uri":"/jireportmonitoringfact","resourceId":"public_jireportmonitoringfact","label":"jireportmonitoringfact","labelId":"","description":"jireportmonitoringfact","descriptionId":""}]]]>
+		</property>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/date_day"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"jireportmonitoringfact":1,"date_day":2,"date_month":3,"date_year":4,"editing_action":5,"event_context":6,"event_type":7,"id":8,"query_execution_time":9,"report_rendering_time":10,"report_uri":11,"time_hour":12,"time_minute":13,"time_stamp":14,"total_report_execution_time":15,"user_name":16,"user_organization":17}]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.date_day)"/>
+		<property name="previous.display" value="Day"/>
+		<property name="adhoc.display" value="Day"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+		<property name="semantic.item.desc" value="date_day"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/date_day"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="Day"/>
+		<fieldDescription><![CDATA[date_day]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.date_month" class="java.lang.Short">
+		<property name="resourceId" value="public_jireportmonitoringfact.date_month"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/date_month"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/date_month"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.date_month)"/>
+		<property name="previous.display" value="Month"/>
+		<property name="adhoc.display" value="Month"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="date_month"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/date_month"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="Month"/>
+		<fieldDescription><![CDATA[date_month]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.date_year" class="java.lang.Short">
+		<property name="resourceId" value="public_jireportmonitoringfact.date_year"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/date_year"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/date_year"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.date_year)"/>
+		<property name="previous.display" value="Year"/>
+		<property name="adhoc.display" value="Year"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="date_year"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/date_year"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="Year"/>
+		<fieldDescription><![CDATA[date_year]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.editing_action" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.editing_action"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/editing_action"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/editing_action"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.editing_action)"/>
+		<property name="previous.display" value="Editing Action"/>
+		<property name="adhoc.display" value="Editing Action"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="editing_action"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/editing_action"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="Editing Action"/>
+		<fieldDescription><![CDATA[editing_action]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.event_context" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.event_context"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/event_context"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/event_context"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.event_context)"/>
+		<property name="previous.display" value="Event Context"/>
+		<property name="adhoc.display" value="Event Context"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="event_context"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/event_context"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="Event Context"/>
+		<fieldDescription><![CDATA[event_context]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.event_type" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.event_type"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/event_type"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/event_type"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.event_type)"/>
+		<property name="previous.display" value="Event Type"/>
+		<property name="adhoc.display" value="Event Type"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="event_type"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/event_type"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="Event Type"/>
+		<fieldDescription><![CDATA[event_type]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.id" class="java.lang.Long">
+		<property name="resourceId" value="public_jireportmonitoringfact.id"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/id"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/id"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="aggregateType" value="java.math.BigInteger"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.id)"/>
+		<property name="previous.display" value="id"/>
+		<property name="adhoc.display" value="id"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="id"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/id"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="id"/>
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.query_execution_time" class="java.lang.Integer">
+		<property name="resourceId" value="public_jireportmonitoringfact.query_execution_time"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/query_execution_time"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/query_execution_time"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="aggregateType" value="java.lang.Double"/>
+		<property name="aggregateExpression" value="Average(jireportmonitoringfact.query_execution_time)"/>
+		<property name="previous.display" value="Query Execution Time"/>
+		<property name="adhoc.display" value="Query Execution Time"/>
+		<property name="defaultAgg" value="Average"/>
+		<property name="semantic.item.desc" value="query_execution_time"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/query_execution_time"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="semantic.item.label" value="Query Execution Time"/>
+		<fieldDescription><![CDATA[query_execution_time]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.report_rendering_time" class="java.lang.Integer">
+		<property name="resourceId" value="public_jireportmonitoringfact.report_rendering_time"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/report_rendering_time"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/report_rendering_time"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="aggregateType" value="java.lang.Double"/>
+		<property name="aggregateExpression" value="Average(jireportmonitoringfact.report_rendering_time)"/>
+		<property name="previous.display" value="Report Rendering Time"/>
+		<property name="adhoc.display" value="Report Rendering Time"/>
+		<property name="defaultAgg" value="Average"/>
+		<property name="semantic.item.desc" value="report_rendering_time"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/report_rendering_time"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="semantic.item.label" value="Report Rendering Time"/>
+		<fieldDescription><![CDATA[report_rendering_time]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.report_uri" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.report_uri"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/report_uri"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/report_uri"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.report_uri)"/>
+		<property name="previous.display" value="Report URI"/>
+		<property name="adhoc.display" value="Report URI"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="report_uri"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/report_uri"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="Report URI"/>
+		<fieldDescription><![CDATA[report_uri]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.time_hour" class="java.lang.Short">
+		<property name="resourceId" value="public_jireportmonitoringfact.time_hour"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/time_hour"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/time_hour"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.time_hour)"/>
+		<property name="previous.display" value="Hour"/>
+		<property name="adhoc.display" value="Hour"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="time_hour"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/time_hour"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="Hour"/>
+		<fieldDescription><![CDATA[time_hour]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.time_minute" class="java.lang.Short">
+		<property name="resourceId" value="public_jireportmonitoringfact.time_minute"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/time_minute"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_1"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/time_minute"/>
+		<property name="semantic.tree.sort.order" value="11"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="Sum(jireportmonitoringfact.time_minute)"/>
+		<property name="previous.display" value="Minute"/>
+		<property name="adhoc.display" value="Minute"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="semantic.item.desc" value="time_minute"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/time_minute"/>
+		<property name="defaultMask" value="0"/>
+		<property name="semantic.item.label" value="Minute"/>
+		<fieldDescription><![CDATA[time_minute]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.time_stamp" class="java.sql.Timestamp">
+		<property name="resourceId" value="public_jireportmonitoringfact.time_stamp"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/time_stamp"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_3"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/time_stamp"/>
+		<property name="semantic.tree.sort.order" value="12"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.time_stamp)"/>
+		<property name="previous.display" value="Time Stamp"/>
+		<property name="adhoc.display" value="Time Stamp"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="time_stamp"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/time_stamp"/>
+		<property name="defaultMask" value="medium,medium"/>
+		<property name="semantic.item.label" value="Time Stamp"/>
+		<fieldDescription><![CDATA[time_stamp]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.total_report_execution_time" class="java.lang.Integer">
+		<property name="resourceId" value="public_jireportmonitoringfact.total_report_execution_time"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/total_report_execution_time"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/total_report_execution_time"/>
+		<property name="semantic.tree.sort.order" value="13"/>
+		<property name="aggregateType" value="java.lang.Double"/>
+		<property name="aggregateExpression" value="Average(jireportmonitoringfact.total_report_execution_time)"/>
+		<property name="previous.display" value="Total Report Execution Time"/>
+		<property name="adhoc.display" value="Total Report Execution Time"/>
+		<property name="defaultAgg" value="Average"/>
+		<property name="semantic.item.desc" value="total_report_execution_time"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/total_report_execution_time"/>
+		<property name="defaultMask" value="#,##0"/>
+		<property name="semantic.item.label" value="Total Report Execution Time"/>
+		<fieldDescription><![CDATA[total_report_execution_time]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.user_name" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.user_name"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/user_name"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/user_name"/>
+		<property name="semantic.tree.sort.order" value="14"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.user_name)"/>
+		<property name="previous.display" value="User Name"/>
+		<property name="adhoc.display" value="User Name"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="user_name"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/user_name"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="User Name"/>
+		<fieldDescription><![CDATA[user_name]]></fieldDescription>
+	</field>
+	<field name="jireportmonitoringfact.user_organization" class="java.lang.String">
+		<property name="resourceId" value="public_jireportmonitoringfact.user_organization"/>
+		<property name="adhoc.chosen.tree.uri" value="/jireportmonitoringfact/user_organization"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="defaultMaskId"/>
+		<property name="semantic.tree.uri" value="/jireportmonitoringfact/user_organization"/>
+		<property name="semantic.tree.sort.order" value="15"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="aggregateExpression" value="CountAll(jireportmonitoringfact.user_organization)"/>
+		<property name="previous.display" value="User Organization"/>
+		<property name="adhoc.display" value="User Organization"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="semantic.item.desc" value="user_organization"/>
+		<property name="adhoc.tree.uri" value="/jireportmonitoringfact/user_organization"/>
+		<property name="defaultMask"/>
+		<property name="semantic.item.label" value="User Organization"/>
+		<fieldDescription><![CDATA[user_organization]]></fieldDescription>
+	</field>
+</jasperReport>

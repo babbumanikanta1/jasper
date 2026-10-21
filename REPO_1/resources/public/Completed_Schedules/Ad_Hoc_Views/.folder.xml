@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Completed_Schedules</parent>
+    <name>Ad_Hoc_Views</name>
+    <label>Ad Hoc Views</label>
+    <description>Ad Hoc Views</description>
+    <creationDate>2026-04-21T17:14:29.074+05:30</creationDate>
+    <updateDate>2022-05-04T06:06:16.177+05:30</updateDate>
+    <resource>Failed_Reports_Ad_Hoc_View</resource>
+    <resource>Output_Formats_Ad_Hoc_View</resource>
+    <resource>Query_Details_Ad_Hoc_View</resource>
+    <resource>Successful_Reports_Ad_Hoc_View</resource>
+</folder>

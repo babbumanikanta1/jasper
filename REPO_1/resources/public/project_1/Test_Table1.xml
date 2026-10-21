@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/project_1</folder>
+    <name>Test_Table1</name>
+    <version>0</version>
+    <label>Test_Table1</label>
+    <description>Using table component designed sales table and styled using style attributes</description>
+    <creationDate>2026-04-21T18:02:45.591+05:30</creationDate>
+    <updateDate>2026-03-05T17:39:03.604+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/project_1/Test_Table1_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-04-21T18:02:45.591+05:30</creationDate>
+            <updateDate>2026-03-09T11:44:36.562+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

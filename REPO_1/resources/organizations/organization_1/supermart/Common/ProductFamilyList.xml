@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listOfValues exportedWithPermissions="true">
+    <folder>/organizations/organization_1/supermart/Common</folder>
+    <name>ProductFamilyList</name>
+    <version>0</version>
+    <label>Product Family List</label>
+    <description>Displays Food, Drink, Non-Consumable</description>
+    <creationDate>2026-04-21T17:14:35.043+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:57.391+05:30</updateDate>
+    <item>
+        <itemLabel>Food</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">Food</itemValue>
+    </item>
+    <item>
+        <itemLabel>Drink</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">Drink</itemValue>
+    </item>
+    <item>
+        <itemLabel>Non-Consumable</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">Non-Consumable</itemValue>
+    </item>
+</listOfValues>

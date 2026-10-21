@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/MANIKANTA</parent>
+    <name>Practice</name>
+    <label>Practice</label>
+    <description></description>
+    <creationDate>2026-04-21T18:01:05.883+05:30</creationDate>
+    <updateDate>2026-03-10T09:31:03.241+05:30</updateDate>
+    <resource>cascading_input_1</resource>
+    <resource>report2</resource>
+    <resource>report3</resource>
+    <resource>sales_domain</resource>
+</folder>

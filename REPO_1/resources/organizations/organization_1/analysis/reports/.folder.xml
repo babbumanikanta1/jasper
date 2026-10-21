@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/analysis</parent>
+    <name>reports</name>
+    <label>Analysis Reports</label>
+    <creationDate>2026-04-21T17:14:29.293+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:31.066+05:30</updateDate>
+    <resource>EmployeeAccounts</resource>
+    <resource>Employees</resource>
+    <resource>FoodmartSalesMondrianReport</resource>
+</folder>

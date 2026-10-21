@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/</parent>
+    <name>Vyjayanthi</name>
+    <label>Vyjayanthi</label>
+    <description></description>
+    <creationDate>2026-04-21T18:11:38.232+05:30</creationDate>
+    <updateDate>2026-04-01T09:56:55.023+05:30</updateDate>
+    <resource>Ad_Hoc_View_1</resource>
+    <resource>Domain_1</resource>
+    <resource>Domain_2</resource>
+    <resource>HELLO</resource>
+    <resource>My_Adhoc_1</resource>
+    <resource>sales_domain</resource>
+</folder>

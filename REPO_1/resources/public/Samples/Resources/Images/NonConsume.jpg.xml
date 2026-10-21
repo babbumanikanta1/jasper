@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="NonConsume.jpg.data">
+    <folder>/public/Samples/Resources/Images</folder>
+    <name>NonConsume.jpg</name>
+    <version>0</version>
+    <label>NonConsume.jpg</label>
+    <description>Image for Sample Dashboard</description>
+    <creationDate>2026-04-21T17:14:36.011+05:30</creationDate>
+    <updateDate>2016-03-02T23:51:48.812+05:30</updateDate>
+    <fileType>img</fileType>
+</fileResource>

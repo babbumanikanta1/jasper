@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semanticLayerDataSource exportedWithPermissions="true">
+    <folder>/public/MANIKANTA/Practice</folder>
+    <name>sales_domain</name>
+    <version>0</version>
+    <label>sales_domain</label>
+    <creationDate>2026-04-21T18:11:38.326+05:30</creationDate>
+    <updateDate>2026-03-26T16:26:49.068+05:30</updateDate>
+    <schema>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="schema.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/Practice/sales_domain_files</folder>
+            <name>schema</name>
+            <version>0</version>
+            <label>schema</label>
+            <description>schema</description>
+            <creationDate>2026-04-21T18:11:38.326+05:30</creationDate>
+            <updateDate>2026-03-26T16:26:49.068+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </schema>
+    <dataSource>
+        <alias>FoodmartDataSourceJNDI</alias>
+        <dataSourceReference>
+            <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+        </dataSourceReference>
+    </dataSource>
+</semanticLayerDataSource>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_4/themes/default</parent>
+    <name>dashboard</name>
+    <label>dashboard</label>
+    <creationDate>2026-04-21T17:14:29.184+05:30</creationDate>
+    <updateDate>2024-01-09T18:19:00.626+05:30</updateDate>
+    <resource>canvas.css</resource>
+    <resource>designer.css</resource>
+    <resource>toolbar.css</resource>
+    <resource>viewer.css</resource>
+</folder>

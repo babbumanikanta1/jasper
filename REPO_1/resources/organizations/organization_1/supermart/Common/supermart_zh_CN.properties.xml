@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="supermart_zh_CN.properties.data">
+    <folder>/organizations/organization_1/supermart/Common</folder>
+    <name>supermart_zh_CN.properties</name>
+    <version>0</version>
+    <label>supermart_zh_CN.properties</label>
+    <description>Chinese resource bundle</description>
+    <creationDate>2026-04-21T17:14:35.090+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:57.588+05:30</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

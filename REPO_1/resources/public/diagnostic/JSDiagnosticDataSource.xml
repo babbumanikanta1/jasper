@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customDataSource exportedWithPermissions="true">
+    <folder>/public/diagnostic</folder>
+    <name>JSDiagnosticDataSource</name>
+    <version>0</version>
+    <label>Diagnostic Data Source</label>
+    <description></description>
+    <creationDate>2026-04-21T17:14:29.699+05:30</creationDate>
+    <updateDate>2012-09-06T18:52:12.774+05:30</updateDate>
+    <serviceClass>com.jaspersoft.jasperserver.api.logging.diagnostic.datasource.DiagnosticCustomDataSourceService</serviceClass>
+    <property>
+        <key>_cds_name</key>
+        <value>diagnosticCustomDataSource</value>
+    </property>
+</customDataSource>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<role>
+    <name>ROLE_ADMINISTRATOR</name>
+    <tenantId>organization_4</tenantId>
+    <externallyDefined>true</externallyDefined>
+</role>

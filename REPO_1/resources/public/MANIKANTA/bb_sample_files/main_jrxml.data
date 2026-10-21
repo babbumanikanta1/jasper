@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TOI_Circle_test" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31c5bd3e-7f1a-4ab1-b4e4-a617f592984c">
+	<property name="ireport.jasperserver.url" value="https://localhost:8443/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MANIKANTA/bb_sample_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MANIKANTA/bb_sample"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.ji.adhoc" value="1"/>
+	<property name="com.jaspersoft.ji.adhoc.new" value="true"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.table.flattened.data.set" value="true"/>
+	<parameter name="Parameter1" class="java.util.ArrayList" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.util.ArrayList(java.util.Arrays.asList(new String[]{"USA", "Canada","Mexico"}))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Count" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM (
+    SELECT
+        c.country,
+        c.fullname,
+        SUM(s.store_sales) AS sales,
+        ROW_NUMBER() OVER (
+            PARTITION BY c.country
+            ORDER BY SUM(s.store_sales) DESC
+        ) rn
+    FROM customer c
+    JOIN sales_fact_1998 s
+        ON c.customer_id = s.customer_id
+       where 1=1 and  $X{IN, c.country, Parameter1}
+    GROUP BY c.country, c.fullname
+) x
+WHERE rn <= $P{Count}]]>
+	</queryString>
+	<field name="country" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="country"/>
+		<property name="com.jaspersoft.studio.field.label" value="country"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="fullname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.label" value="fullname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="sales" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="sales"/>
+		<property name="com.jaspersoft.studio.field.label" value="sales"/>
+	</field>
+	<field name="rn" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="rn"/>
+		<property name="com.jaspersoft.studio.field.label" value="rn"/>
+	</field>
+	<title>
+		<band height="416" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="40" width="555" height="376" uuid="fbb36477-0a3a-4763-98ce-94237b08671e"/>
+				<cvc:customvisualization xmlns:cvc="http://www.jaspersoft.com/cvcomponent" xsi:schemaLocation="http://www.jaspersoft.com/cvcomponent http://www.jaspersoft.com/cvcomponent/component.xsd" evaluationTime="Report">
+					<cvc:itemProperty name="script" value="cvc_bubble.min.js"/>
+					<cvc:itemProperty name="module" value="bb"/>
+					<cvc:itemProperty name="css" value="cvc_bubble.css"/>
+					<cvc:cvData>
+						<dataset/>
+						<cvc:item>
+							<cvc:itemProperty name="name">
+								<valueExpression><![CDATA[$F{fullname}]]></valueExpression>
+							</cvc:itemProperty>
+							<cvc:itemProperty name="rn">
+								<valueExpression><![CDATA[$F{rn}]]></valueExpression>
+							</cvc:itemProperty>
+							<cvc:itemProperty name="country">
+								<valueExpression><![CDATA[$F{country}]]></valueExpression>
+							</cvc:itemProperty>
+							<cvc:itemProperty name="value">
+								<valueExpression><![CDATA[$F{sales}]]></valueExpression>
+							</cvc:itemProperty>
+						</cvc:item>
+					</cvc:cvData>
+				</cvc:customvisualization>
+			</componentElement>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="40" forecolor="#EDE6E6" backcolor="#241A1A" uuid="467ac0df-0f90-46db-a348-31fc8f244316"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Packed Bubble Chart Showing the Top "+$P{Count}+" Customers by Sales for Each Country"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

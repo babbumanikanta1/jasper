@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/org21</parent>
+    <name>organizations</name>
+    <label>Organizations</label>
+    <description> </description>
+    <creationDate>2026-09-28T15:29:09.316+05:30</creationDate>
+    <updateDate>2026-09-28T15:29:09.316+05:30</updateDate>
+    <folder>org_template</folder>
+</folder>

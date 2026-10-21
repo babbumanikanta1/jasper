@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/deftem</parent>
+    <name>adam</name>
+    <label>adam</label>
+    <creationDate>2026-08-11T13:58:01.118+05:30</creationDate>
+    <updateDate>2026-08-11T13:58:01.118+05:30</updateDate>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>30</permissionMask>
+        <recipient tenantId="deftem" recipientType="user">adam</recipient>
+    </permission>
+</folder>

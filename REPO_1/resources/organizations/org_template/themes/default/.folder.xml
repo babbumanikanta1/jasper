@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/org_template/themes</parent>
+    <name>default</name>
+    <label>default</label>
+    <description>default</description>
+    <creationDate>2026-04-21T17:14:29.246+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:31.970+05:30</updateDate>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_SUPERUSER</recipient>
+    </permission>
+</folder>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>eve11</username>
+    <fullName>eve11</fullName>
+    <password>ENC&lt;4A5253495600000010E6FBCCC4F0942C7E9A3E7AF2856459CE01F57F570BC5067CC526785D71F927D7&gt;</password>
+    <email></email>
+    <externallyDefined>false</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_USER</role>
+    <previousPasswordChangeTime>2026-08-12T16:44:14.290+05:30</previousPasswordChangeTime>
+    <tenantId>organization_6</tenantId>
+</user>

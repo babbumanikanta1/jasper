@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>MANIKANTA</name>
+    <label>MANIKANTA</label>
+    <creationDate>2026-04-21T18:01:05.867+05:30</creationDate>
+    <updateDate>2026-03-04T15:17:27.109+05:30</updateDate>
+    <folder>Practice</folder>
+    <resource>08.Un-202606261549.pdf</resource>
+    <resource>assi_7_1_</resource>
+    <resource>Assignment_7</resource>
+    <resource>bb_sample</resource>
+    <resource>Blank_A4_4</resource>
+    <resource>CVC_sample</resource>
+    <resource>d3Circle_sample</resource>
+    <resource>DataAdapter</resource>
+    <resource>dataset1.json</resource>
+    <resource>forJAVATESTING-2026.pdf</resource>
+    <resource>fortest.xml</resource>
+    <resource>FORTESTINABCDATE-PM.pdf</resource>
+    <resource>fortestJAVA-202606241552.pdf</resource>
+    <resource>JServerAssignment_1</resource>
+    <resource>pie_sample</resource>
+    <resource>testing</resource>
+</folder>

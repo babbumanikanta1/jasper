@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semanticLayerDataSource exportedWithPermissions="true">
+    <folder>/Vyjayanthi</folder>
+    <name>Domain_1</name>
+    <version>0</version>
+    <label>Domain_1</label>
+    <description>Using sugarcrm database with table accounts, opportunities, user.</description>
+    <creationDate>2026-04-21T18:11:38.258+05:30</creationDate>
+    <updateDate>2026-04-01T12:48:03.263+05:30</updateDate>
+    <schema>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="schema.data" xsi:type="fileResource">
+            <folder>/Vyjayanthi/Domain_1_files</folder>
+            <name>schema</name>
+            <version>0</version>
+            <label>schema</label>
+            <description>schema</description>
+            <creationDate>2026-04-21T18:11:38.258+05:30</creationDate>
+            <updateDate>2026-04-01T10:35:47.768+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </schema>
+    <dataSource>
+        <alias>sugarcrmJNDI</alias>
+        <dataSourceReference>
+            <uri>/public/Samples/Data_Sources/sugarcrmJNDI</uri>
+        </dataSourceReference>
+    </dataSource>
+</semanticLayerDataSource>

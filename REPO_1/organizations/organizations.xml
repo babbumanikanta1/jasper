@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization>
+    <id>organizations</id>
+    <alias>organizations</alias>
+    <tenantName>root</tenantName>
+    <tenantDesc>organizations</tenantDesc>
+    <tenantNote> </tenantNote>
+    <tenantUri>/</tenantUri>
+    <tenantFolderUri>/</tenantFolderUri>
+    <attribute>
+        <name>domainWhitelist</name>
+        <permissions>
+            <permissionMask>1</permissionMask>
+            <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+        </permissions>
+        <value>*</value>
+    </attribute>
+    <attribute>
+        <name>log4j.package%20com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJobRepositoryDestination</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.package%20com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJob</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJob</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJobRepositoryDestination</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.engine.alerting.quartz.ReportExecutionAlerting</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.engine.scheduling.quartz.ReportExecutionJob</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.remote.services.impl.RunReportServiceImpl</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.company.cleanup.TempCleanupJob</name>
+        <value>WARN</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.ji.adhoc.service.TableAdhocComponentCreator</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.war.common.JSSwitchUserProcessingFilter</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.security.JrsAuthenticationSuccessHandler</name>
+        <value>DEBUG</value>
+    </attribute>
+    <attribute>
+        <name>log4j.com.jaspersoft.jasperserver.api.security.externalAuth.processors.ExternalUserFolderProcessor</name>
+        <value>DEBUG</value>
+    </attribute>
+    <theme>default</theme>
+</organization>

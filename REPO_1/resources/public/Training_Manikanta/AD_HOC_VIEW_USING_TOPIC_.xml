@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhocDataView exportedWithPermissions="true">
+    <folder>/public/Training_Manikanta</folder>
+    <name>AD_HOC_VIEW_USING_TOPIC_</name>
+    <version>0</version>
+    <label>AD_HOC_VIEW(USING_TOPIC)</label>
+    <description>THIS AD_HOC_VIEW IS GENERATED USING TOPIC AS DATA SOURCE(WHICH IS DERIVED FROM THE JASPER STUDIO).</description>
+    <creationDate>2026-04-21T18:03:40.804+05:30</creationDate>
+    <updateDate>2026-04-07T14:53:25.309+05:30</updateDate>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/sugarcrmJNDI</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="topicJRXML.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/AD_HOC_VIEW_USING_TOPIC__files</folder>
+            <name>topicJRXML</name>
+            <version>0</version>
+            <label>topicJRXML</label>
+            <creationDate>2026-04-21T18:03:40.804+05:30</creationDate>
+            <updateDate>2026-04-07T14:51:45.748+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="stateXML.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/AD_HOC_VIEW_USING_TOPIC__files</folder>
+            <name>stateXML</name>
+            <version>0</version>
+            <label>stateXML</label>
+            <creationDate>2026-04-21T18:03:40.804+05:30</creationDate>
+            <updateDate>2026-04-07T14:51:45.748+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</adhocDataView>

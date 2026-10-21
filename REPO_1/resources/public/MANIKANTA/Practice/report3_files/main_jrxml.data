@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="faeb15a6-8eb0-4d8e-99c5-0c975ec218bc">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart Data Source"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/MANIKANTA/Practice/report3_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/MANIKANTA/Practice/report3"/>
+	<parameter name="country" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    c.city AS City,
+    SUM(s.store_sales) AS Total_Sales,
+    SUM(s.store_cost) AS Total_Cost,
+    SUM(s.store_sales - s.store_cost) AS Profit
+FROM 
+    sales_fact_1998 s
+JOIN 
+    customer c ON s.customer_id = c.customer_id
+WHERE 
+    c.country = $P{country}
+GROUP BY 
+    c.city
+ORDER BY 
+    Total_Sales DESC
+    limit 5;]]>
+	</queryString>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="city"/>
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="total_sales" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_sales"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_sales"/>
+	</field>
+	<field name="total_cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_cost"/>
+	</field>
+	<field name="profit" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="profit"/>
+		<property name="com.jaspersoft.studio.field.label" value="profit"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="30" uuid="9c4f7d1e-f2f7-4dba-925a-18398f2fba31"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Top Five Cities Sales Data Country : "+$P{country}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="240" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="240" uuid="c534c135-4d8a-4710-a1a7-599269d52391"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="StackedBar">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="title.text" value=""/>
+						<hc:chartProperty name="credits.enabled" value="false"/>
+						<hc:chartProperty name="credits.href" value=""/>
+						<hc:chartProperty name="credits.text" value=""/>
+						<hc:chartProperty name="yAxis.title.text" value=""/>
+						<hc:chartProperty name="chart.zoomType" value="xy"/>
+						<hc:chartProperty name="com.jaspersoft.studio.highcharts.dataconfiguration.simple" value="true"/>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="Level1">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.lang.Comparable">
+									<bucketExpression><![CDATA[$F{city}]]></bucketExpression>
+									<labelExpression><![CDATA[$F{city}]]></labelExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns"/>
+						<multiAxisMeasure name="Measure1" class="java.lang.Number" calculation="Nothing">
+							<labelExpression><![CDATA["Profit"]]></labelExpression>
+							<valueExpression><![CDATA[$F{profit}]]></valueExpression>
+						</multiAxisMeasure>
+						<multiAxisMeasure name="Measure2" class="java.lang.Number" calculation="Nothing">
+							<labelExpression><![CDATA["Total Cost"]]></labelExpression>
+							<valueExpression><![CDATA[$F{total_cost}]]></valueExpression>
+						</multiAxisMeasure>
+						<multiAxisMeasure name="Measure3" class="java.lang.Number" calculation="Nothing">
+							<labelExpression><![CDATA["Total Sales"]]></labelExpression>
+							<valueExpression><![CDATA[$F{total_sales}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

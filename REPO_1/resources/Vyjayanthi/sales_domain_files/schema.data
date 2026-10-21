@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3">
+  <dataIslands>
+    <itemGroup id="JoinTree_1" label="JoinTree_1" resourceId="JoinTree_1"></itemGroup>
+  </dataIslands>
+  <dataSources>
+    <jdbcDataSource id="FoodmartDataSourceJNDI">
+      <schemaMap>
+        <entry key="public">
+          <string>public</string>
+        </entry>
+        <entry key="defaultSchema">
+          <string></string>
+        </entry>
+      </schemaMap>
+    </jdbcDataSource>
+  </dataSources>
+  <itemGroups>
+    <itemGroup id="NewSet1" label="customer_details" resourceId="JoinTree_1"></itemGroup>
+    <itemGroup id="NewSet2" label="Time_dimensions" resourceId="JoinTree_1"></itemGroup>
+    <itemGroup id="NewSet3" label="NewSet3" resourceId="JoinTree_1"></itemGroup>
+  </itemGroups>
+  <items>
+    <item defaultAgg="None" id="Full_Location" label="Full_Location" resourceId="JoinTree_1.Full_Location"></item>
+    <item defaultAgg="CountDistinct" dimensionOrMeasure="Dimension" id="customer_id" label="customer_id" resourceId="JoinTree_1.customer.customer_id"></item>
+    <item defaultAgg="None" id="fname" label="fname" resourceId="JoinTree_1.customer.fname"></item>
+    <item defaultAgg="None" id="lname" label="lname" resourceId="JoinTree_1.customer.lname"></item>
+    <item defaultAgg="None" id="the_day" label="the_day" resourceId="JoinTree_1.time_by_day.the_day"></item>
+    <item defaultAgg="None" id="the_month" label="the_month" resourceId="JoinTree_1.time_by_day.the_month"></item>
+    <item defaultAgg="None" dimensionOrMeasure="Dimension" id="the_year" label="the_year" resourceId="JoinTree_1.time_by_day.the_year"></item>
+    <item id="store_sales" label="store_sales" resourceId="JoinTree_1.sales_fact_1997.store_sales"></item>
+    <item id="unit_sales" label="unit_sales" resourceId="JoinTree_1.sales_fact_1997.unit_sales"></item>
+    <item id="gross_progit" label="gross_progit" resourceId="JoinTree_1.gross_progit"></item>
+    <item defaultAgg="Average" id="profit_margin" label="profit_margin" resourceId="JoinTree_1.profit_margin"></item>
+  </items>
+  <resources>
+    <jdbcTable id="time_by_day" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="time_by_day" schemaAlias="public">
+      <fieldList>
+        <field id="time_id" type="java.lang.Integer"></field>
+        <field id="the_date" type="java.sql.Timestamp"></field>
+        <field id="the_day" type="java.lang.String"></field>
+        <field id="the_month" type="java.lang.String"></field>
+        <field id="the_year" type="java.lang.Short"></field>
+        <field id="day_of_month" type="java.lang.Short"></field>
+        <field id="week_of_year" type="java.lang.Integer"></field>
+        <field id="month_of_year" type="java.lang.Short"></field>
+        <field id="quarter" type="java.lang.String"></field>
+        <field id="fiscal_period" type="java.lang.String"></field>
+        <field id="day_of_week" type="java.lang.Integer"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="sales_fact_1997" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="sales_fact_1997" schemaAlias="public">
+      <fieldList>
+        <field id="product_id" type="java.lang.Integer"></field>
+        <field id="time_id" type="java.lang.Integer"></field>
+        <field id="customer_id" type="java.lang.Integer"></field>
+        <field id="promotion_id" type="java.lang.Integer"></field>
+        <field id="store_id" type="java.lang.Integer"></field>
+        <field id="store_sales" type="java.math.BigDecimal"></field>
+        <field id="store_cost" type="java.math.BigDecimal"></field>
+        <field id="unit_sales" type="java.math.BigDecimal"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="customer" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="customer" schemaAlias="public">
+      <fieldList>
+        <field id="customer_id" type="java.lang.Integer"></field>
+        <field id="account_num" type="java.lang.Long"></field>
+        <field id="lname" type="java.lang.String"></field>
+        <field id="fname" type="java.lang.String"></field>
+        <field id="mi" type="java.lang.String"></field>
+        <field id="address1" type="java.lang.String"></field>
+        <field id="address2" type="java.lang.String"></field>
+        <field id="address3" type="java.lang.String"></field>
+        <field id="address4" type="java.lang.String"></field>
+        <field id="city" type="java.lang.String"></field>
+        <field id="state_province" type="java.lang.String"></field>
+        <field id="postal_code" type="java.lang.String"></field>
+        <field id="country" type="java.lang.String"></field>
+        <field id="customer_region_id" type="java.lang.Integer"></field>
+        <field id="phone1" type="java.lang.String"></field>
+        <field id="phone2" type="java.lang.String"></field>
+        <field id="birthdate" type="java.util.Date"></field>
+        <field id="marital_status" type="java.lang.String"></field>
+        <field id="yearly_income" type="java.lang.String"></field>
+        <field id="gender" type="java.lang.String"></field>
+        <field id="total_children" type="java.lang.Short"></field>
+        <field id="num_children_at_home" type="java.lang.Short"></field>
+        <field id="education" type="java.lang.String"></field>
+        <field id="date_accnt_opened" type="java.util.Date"></field>
+        <field id="member_card" type="java.lang.String"></field>
+        <field id="occupation" type="java.lang.String"></field>
+        <field id="houseowner" type="java.lang.String"></field>
+        <field id="num_cars_owned" type="java.lang.Integer"></field>
+        <field id="fullname" type="java.lang.String"></field>
+      </fieldList>
+    </jdbcTable>
+    <jdbcQuery id="vip_customers" datasourceId="FoodmartDataSourceJNDI">
+      <fieldList>
+        <field id="customer_id" type="java.lang.Integer"></field>
+        <field id="total_units" type="java.math.BigDecimal"></field>
+      </fieldList>
+      <query>SELECT customer_id, SUM(unit_sales) as total_units
+FROM sales_fact_1997
+GROUP BY customer_id
+HAVING SUM(unit_sales) &gt; 50</query>
+    </jdbcQuery>
+    <jdbcTable id="JoinTree_1" datasourceId="FoodmartDataSourceJNDI" datasourceTableName="sales_fact_1997" schemaAlias="public">
+      <fieldList>
+        <field id="sales_fact_1997.product_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.time_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.customer_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.promotion_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.store_id" type="java.lang.Integer"></field>
+        <field id="sales_fact_1997.store_sales" type="java.math.BigDecimal"></field>
+        <field id="sales_fact_1997.store_cost" type="java.math.BigDecimal"></field>
+        <field id="sales_fact_1997.unit_sales" type="java.math.BigDecimal"></field>
+        <field id="customer.customer_id" type="java.lang.Integer"></field>
+        <field id="customer.account_num" type="java.lang.Long"></field>
+        <field id="customer.lname" type="java.lang.String"></field>
+        <field id="customer.fname" type="java.lang.String"></field>
+        <field id="customer.mi" type="java.lang.String"></field>
+        <field id="customer.address1" type="java.lang.String"></field>
+        <field id="customer.address2" type="java.lang.String"></field>
+        <field id="customer.address3" type="java.lang.String"></field>
+        <field id="customer.address4" type="java.lang.String"></field>
+        <field id="customer.city" type="java.lang.String"></field>
+        <field id="customer.state_province" type="java.lang.String"></field>
+        <field id="customer.postal_code" type="java.lang.String"></field>
+        <field id="customer.country" type="java.lang.String"></field>
+        <field id="customer.customer_region_id" type="java.lang.Integer"></field>
+        <field id="customer.phone1" type="java.lang.String"></field>
+        <field id="customer.phone2" type="java.lang.String"></field>
+        <field id="customer.birthdate" type="java.util.Date"></field>
+        <field id="customer.marital_status" type="java.lang.String"></field>
+        <field id="customer.yearly_income" type="java.lang.String"></field>
+        <field id="customer.gender" type="java.lang.String"></field>
+        <field id="customer.total_children" type="java.lang.Short"></field>
+        <field id="customer.num_children_at_home" type="java.lang.Short"></field>
+        <field id="customer.education" type="java.lang.String"></field>
+        <field id="customer.date_accnt_opened" type="java.util.Date"></field>
+        <field id="customer.member_card" type="java.lang.String"></field>
+        <field id="customer.occupation" type="java.lang.String"></field>
+        <field id="customer.houseowner" type="java.lang.String"></field>
+        <field id="customer.num_cars_owned" type="java.lang.Integer"></field>
+        <field id="customer.fullname" type="java.lang.String"></field>
+        <field id="time_by_day.time_id" type="java.lang.Integer"></field>
+        <field id="time_by_day.the_date" type="java.sql.Timestamp"></field>
+        <field id="time_by_day.the_day" type="java.lang.String"></field>
+        <field id="time_by_day.the_month" type="java.lang.String"></field>
+        <field id="time_by_day.the_year" type="java.lang.Short"></field>
+        <field id="time_by_day.day_of_month" type="java.lang.Short"></field>
+        <field id="time_by_day.week_of_year" type="java.lang.Integer"></field>
+        <field id="time_by_day.month_of_year" type="java.lang.Short"></field>
+        <field id="time_by_day.quarter" type="java.lang.String"></field>
+        <field id="time_by_day.fiscal_period" type="java.lang.String"></field>
+        <field id="time_by_day.day_of_week" type="java.lang.Integer"></field>
+        <field id="vip_customers.customer_id" type="java.lang.Integer"></field>
+        <field id="vip_customers.total_units" type="java.math.BigDecimal"></field>
+        <field id="gross_progit" dataSetExpression="sales_fact_1997.store_sales - sales_fact_1997.store_cost" type="java.math.BigDecimal"></field>
+        <field id="profit_margin" dataSetExpression="gross_progit/sales_fact_1997.store_sales" type="java.math.BigDecimal"></field>
+        <field id="Full_Location" dataSetExpression="concat(customer.city, ' ,  ',customer.country)" type="java.lang.String"></field>
+      </fieldList>
+      <joinInfo alias="sales_fact_1997" referenceId="sales_fact_1997"></joinInfo>
+      <joinList>
+        <join expr="sales_fact_1997.customer_id == customer.customer_id" left="sales_fact_1997" right="customer" type="inner" weight="1"></join>
+        <join expr="sales_fact_1997.time_id == time_by_day.time_id" left="sales_fact_1997" right="time_by_day" type="inner" weight="1"></join>
+        <join expr="customer.customer_id == vip_customers.customer_id" left="customer" right="vip_customers" type="inner" weight="1"></join>
+      </joinList>
+      <joinOptions></joinOptions>
+      <tableRefList>
+        <tableRef alwaysIncludeTable="false" tableAlias="sales_fact_1997" tableId="sales_fact_1997"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="vip_customers" tableId="vip_customers"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="time_by_day" tableId="time_by_day"></tableRef>
+        <tableRef alwaysIncludeTable="false" tableAlias="customer" tableId="customer"></tableRef>
+      </tableRefList>
+    </jdbcTable>
+  </resources>
+</schema>

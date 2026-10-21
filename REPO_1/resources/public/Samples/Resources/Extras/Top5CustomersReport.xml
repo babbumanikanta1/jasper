@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="Top5CustomersReport.data">
+    <folder>/public/Samples/Resources/Extras</folder>
+    <name>Top5CustomersReport</name>
+    <version>0</version>
+    <label>Top5CustomersReport</label>
+    <description>Subreport for Top Fives Report. Parameterized on month. Links to details.</description>
+    <creationDate>2026-04-21T17:14:35.918+05:30</creationDate>
+    <updateDate>2013-09-16T16:58:33.073+05:30</updateDate>
+    <fileType>jrxml</fileType>
+</fileResource>

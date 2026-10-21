@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiJdbcDataSource exportedWithPermissions="true">
+    <folder>/public/monitoring/datasources</folder>
+    <name>ReportMonitoringDataSource</name>
+    <version>0</version>
+    <label>Report Monitoring Data Source</label>
+    <description>Report Monitoring Data Source</description>
+    <creationDate>2026-04-21T17:14:31.012+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:54.399+05:30</updateDate>
+    <jndiName>jdbc/jasperserverAudit</jndiName>
+</jndiJdbcDataSource>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations</parent>
+    <name>org21</name>
+    <label>org21</label>
+    <description>Folder Template</description>
+    <creationDate>2026-09-28T15:29:09.023+05:30</creationDate>
+    <updateDate>2026-09-28T15:29:09.256+05:30</updateDate>
+    <folder>adhoc</folder>
+    <folder>organizations</folder>
+    <folder>temp</folder>
+    <folder>templates</folder>
+    <folder>themes</folder>
+</folder>

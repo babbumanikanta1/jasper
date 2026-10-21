@@ -1,0 +1,19 @@
+#
+# Copyright (C) 2005-2023. Cloud Software Group, Inc. All Rights Reserved. Confidential & Proprietary.
+# Licensed pursuant to commercial Cloud Software Group, Inc End User License Agreement.
+#
+
+ShippedDate=Versanddatum
+ShipCountry=Versandland 
+RequiredDate=Gew\u00fcnschter Termin 
+CustomerID=Kunden-ID
+OrderId=Bestell-ID 
+ShipName=Versandname
+ShipVia=Versand \u00fcber
+OrderDate=Bestelldatum
+ShipCity=Versandort
+ShipAddress=Versandadresse
+EmployeeID=Mitarbeiter-ID
+ShipRegion=Versandregion
+Freight=Fracht
+

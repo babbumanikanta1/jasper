@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization>
+    <id>deftem</id>
+    <alias>deftem</alias>
+    <parentId>organizations</parentId>
+    <tenantName>deftem</tenantName>
+    <tenantDesc> </tenantDesc>
+    <tenantUri>/deftem</tenantUri>
+    <tenantFolderUri>/organizations/deftem</tenantFolderUri>
+    <theme>default</theme>
+</organization>

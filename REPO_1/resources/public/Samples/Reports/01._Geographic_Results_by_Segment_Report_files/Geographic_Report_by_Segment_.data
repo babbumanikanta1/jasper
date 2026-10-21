@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.3.0.final using JasperReports Library version 6.8.1-SNAPSHOT-1ebbe47629f595df82c137d4edda18ac1dafc9f1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Geographic_Report_by_Segment" pageWidth="690" pageHeight="735" columnWidth="595" leftMargin="15" rightMargin="15" topMargin="10" bottomMargin="10" resourceBundle="Geographic_Report" whenResourceMissingType="Key" uuid="2c7d6d22-22a0-4a27-aa8d-73150768984d">
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="ireport.jasperserver.url" value="http://infra-platforms-phase2-5940-yplakosh.pfa.jaspersoft.com:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/Samples/Reports/01._Geographic_Results_by_Segment_Report"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/Samples/Reports/01._Geographic_Results_by_Segment_Report_files/Geographic_Report_by_Segment_"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="foodmart"/>
+	<property name="net.sf.jasperreports.export.pdf.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.docx.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.xlsx.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.pptx.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.odt.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.ods.exclude.key.mapCvc"/>
+	<property name="net.sf.jasperreports.export.rtf.exclude.key.mapCvc"/>
+	<property name="com.jaspersoft.studio.report.unit.description" value="Sample Report containing hyperlinks and a map"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<template><![CDATA["repo:Geographic_ReportStyles.jrtx"]]></template>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<bottomPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset" uuid="9a2a43a3-7e27-46bb-8c73-355f971b2096">
+		<parameter name="Country" class="java.lang.String" isForPrompting="false"/>
+		<parameter name="CountryIsNull" class="java.lang.Integer" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{Country} == null ? 1 : 0]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT
+	promotion.promotion_id AS promotion_promotion_id,
+	promotion.promotion_name AS promotion_promotion_name,
+	SUM(sf.store_sales) AS revenue,
+	SUM(sf.unit_sales) AS unit_sales,
+	customer.country as country 	
+FROM
+	(SELECT * FROM sales_fact_1997 UNION ALL SELECT * FROM sales_fact_1998) sf
+	INNER JOIN customer customer ON sf.customer_id = customer.customer_id 
+	INNER JOIN promotion promotion ON sf.promotion_id = promotion.promotion_id
+	INNER JOIN time_by_day time_by_day ON sf.time_id = time_by_day.time_id
+WHERE customer.country = $P{Country} OR 1 = $P{CountryIsNull}
+GROUP BY
+	customer.country, 	
+	promotion.promotion_id,
+	promotion.promotion_name
+HAVING
+	promotion.promotion_name <> 'No Promotion'
+ORDER BY
+	revenue desc]]>
+		</queryString>
+		<field name="promotion_promotion_name" class="java.lang.String"/>
+		<field name="revenue" class="java.lang.Double"/>
+		<field name="promotion_promotion_id" class="java.lang.Integer"/>
+		<field name="unit_sales" class="java.lang.Integer"/>
+		<variable name="ArrowUp" class="java.lang.Boolean">
+			<variableExpression><![CDATA[$F{unit_sales} > 2200]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="Chart Dataset" uuid="f96669a0-b42d-4665-823d-c662493fbfe7">
+		<parameter name="promotion_id" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT 
+promotion.promotion_name as promotion_promotion_name,
+promotion.promotion_id as promotion_promotion_id,
+sf.store_sales as revenue
+FROM (SELECT * FROM sales_fact_1997 UNION ALL SELECT * FROM sales_fact_1998) sf
+INNER JOIN customer customer ON sf.customer_id = customer.customer_id 
+INNER JOIN promotion promotion ON sf.promotion_id = promotion.promotion_id 
+WHERE sf.promotion_id = $P{promotion_id} 
+GROUP BY
+	promotion.promotion_id,
+	promotion.promotion_name,
+	sf.store_sales
+HAVING
+	promotion.promotion_name <> 'No Promotion'
+ORDER BY promotion_promotion_name]]>
+		</queryString>
+		<field name="promotion_promotion_name" class="java.lang.String"/>
+		<field name="revenue" class="java.lang.Double"/>
+		<field name="promotion_promotion_id" class="java.lang.Integer"/>
+		<group name="promotion_promotion_name">
+			<groupExpression><![CDATA[$F{promotion_promotion_name}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="Country" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT 
+		COUNT(*) AS customers, 
+		AVG(a.ave_revenue) AS ave_revenue, 
+		SUM(a.total_revenue) AS total_revenue, 
+		SUM(a.unit_sales) AS unit_sales
+FROM
+(SELECT 
+AVG(sf.store_sales) AS ave_revenue, 
+SUM(sf.store_sales) AS total_revenue,
+SUM(sf.unit_sales) AS unit_sales 
+FROM (SELECT * FROM sales_fact_1997 UNION ALL SELECT * FROM sales_fact_1998) sf
+INNER JOIN customer customer ON sf.customer_id = customer.customer_id
+GROUP BY customer.customer_id) a]]>
+	</queryString>
+	<field name="customers" class="java.math.BigDecimal"/>
+	<field name="ave_revenue" class="java.lang.Double"/>
+	<field name="total_revenue" class="java.lang.Double"/>
+	<field name="unit_sales" class="java.lang.Integer"/>
+	<summary>
+		<band height="715" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="120" height="70" backcolor="#9BD9E9" uuid="de221a53-18f9-4c6e-8aa7-9679fe1c6b08"/>
+				<textField pattern="#,##0">
+					<reportElement x="0" y="0" width="110" height="50" uuid="0bef6586-5b60-4a38-b0f8-2ba5fbf0ec18">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="32" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{customers}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="50" width="110" height="20" uuid="991d5b6f-b441-480a-ae34-28cebff54a59">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{customers}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="130" y="0" width="109" height="70" backcolor="#9BD9E9" uuid="5fa18657-a134-4328-ad94-a475187b6d5d"/>
+				<textField pattern="$#,##0">
+					<reportElement x="0" y="0" width="99" height="50" uuid="54f2fae8-a6b7-436c-95fe-22c56e3de278">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="32" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ave_revenue}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="50" width="99" height="20" uuid="bef45b0c-cbb2-4599-9506-d40e670c2eaa">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{ave.revenue}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="250" y="0" width="220" height="70" backcolor="#9BD9E9" uuid="d5a3b9bc-add5-40bb-9c4c-d36b31e9666e"/>
+				<textField pattern="$#,##0">
+					<reportElement x="0" y="0" width="210" height="50" uuid="955444a3-b227-4e04-b7b9-8731a975e9bc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="32" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{total_revenue}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="50" width="210" height="20" uuid="56211788-0d2f-4e20-9231-649c17ca9a55">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="rgba(0, 0, 0, 0.0)"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{total.revenue}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="480" y="0" width="180" height="70" backcolor="#9BD9E9" uuid="71649c19-fdcb-4feb-8bf9-4499bc2f21ab"/>
+				<textField pattern="#,##0">
+					<reportElement x="0" y="0" width="169" height="50" uuid="464ba02b-cbd9-4519-acfe-dc81933947f5">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="32" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{unit_sales}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="50" width="169" height="20" uuid="fc6ac354-1ef1-41f9-a63e-873e9f937cc9">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$R{transactions}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="100" width="250" height="20" uuid="13f5c9ac-e21c-4cae-82cc-5cf113a7e6b2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{Country} != null]]></printWhenExpression>
+				</reportElement>
+				<image hyperlinkType="ReportExecution">
+					<reportElement mode="Opaque" x="0" y="0" width="20" height="20" backcolor="#DDDDDD" uuid="e878f1e4-e995-450a-b2f0-1e5ba5fe100a">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA["repo:undo.png"]]></imageExpression>
+					<hyperlinkParameter name="_report">
+						<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/01._Geographic_Results_by_Segment_Report"]]></hyperlinkParameterExpression>
+					</hyperlinkParameter>
+				</image>
+				<textField>
+					<reportElement x="30" y="0" width="120" height="20" uuid="d244ea16-48d3-4f55-837c-8691db6a092e">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Country}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<subreport>
+				<reportElement x="0" y="165" width="250" height="260" uuid="6fe74b1d-11fb-4b6e-bc05-eda58ea21aee">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<subreportParameter name="Country">
+					<subreportParameterExpression><![CDATA[$P{Country}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_MAX_COUNT">
+					<subreportParameterExpression><![CDATA[5]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["repo:Top5CustomersReport.jrxml"]]></subreportExpression>
+			</subreport>
+			<image>
+				<reportElement x="272" y="100" width="390" height="390" uuid="ca29f458-9e56-4017-b65d-8de18ac7470e"/>
+				<imageExpression><![CDATA["repo:map.png"]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement key="mapCvc" x="270" y="100" width="390" height="390" uuid="ba29f458-9e56-4017-b65d-8de18ac7470e">
+					<property name="cv.keepTemporaryFiles" value="true"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<cvc:customvisualization xmlns:cvc="http://www.jaspersoft.com/cvcomponent" xsi:schemaLocation="http://www.jaspersoft.com/cvcomponent http://www.jaspersoft.com/cvcomponent/component.xsd" evaluationTime="Report">
+					<cvc:itemProperty name="module" value="leafletcountries"/>
+					<cvc:itemProperty name="css" value="leaflet.css"/>
+					<cvc:itemProperty name="script" value="leafletcountries.js"/>
+					<cvc:itemProperty name="renderAsPng" value="true"/>
+					<cvc:itemProperty name="render-timeout" value="15000"/>
+					<cvc:itemProperty name="render-zoom-factor" value="1"/>
+					<cvc:itemProperty name="lat" value="39.8282"/>
+					<cvc:itemProperty name="lon" value="-98.5795"/>
+					<cvc:itemProperty name="zoom" value="3"/>
+					<cvc:itemProperty name="showCountries" value="true"/>
+					<cvc:itemProperty name="countriesClickEnabled" value="true"/>
+				</cvc:customvisualization>
+			</componentElement>
+			<componentElement>
+				<reportElement x="0" y="520" width="660" height="165" uuid="73b58295-5b18-4cc7-a7f2-1fffcb53d9ed">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset" uuid="2593a77d-5d20-4ca2-9a06-1b1f3e530315">
+						<datasetParameter name="Country">
+							<datasetParameterExpression><![CDATA[$P{Country}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="REPORT_MAX_COUNT">
+							<datasetParameterExpression><![CDATA[5]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="190" uuid="f5223cf5-d32d-484c-8cb5-27129b5d275e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+							<textField>
+								<reportElement x="0" y="0" width="190" height="25" uuid="35812ff6-44d8-4b27-959b-23d51ea530fc"/>
+								<box>
+									<bottomPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{top.promotions}]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA[$R{Top5.Tooltip.DetailAllPromotions}]]></hyperlinkTooltipExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField isBlankWhenNull="false" hyperlinkType="ReportExecution" hyperlinkTarget="Blank">
+								<reportElement key="Name" mode="Opaque" x="0" y="0" width="190" height="23" uuid="62c1ee0d-0043-4a1b-be96-69b3a1af1215">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{promotion_promotion_name}]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA[msg($R{Top5.Tooltip.Detail}, $F{promotion_promotion_name})]]></hyperlinkTooltipExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/PromotionDetailsReport"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="promotionId">
+									<hyperlinkParameterExpression><![CDATA[$F{promotion_promotion_id}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="7ac300e9-d1fd-41fe-b663-8f0840065017">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<textField>
+								<reportElement stretchType="ContainerHeight" x="0" y="0" width="40" height="23" forecolor="#19AF54" uuid="500b7cd0-b4c0-4ee2-9b64-12dc892e0fb5">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[$V{ArrowUp}]]></printWhenExpression>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA["\u25b2"]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement stretchType="ContainerHeight" mode="Opaque" x="0" y="0" width="40" height="23" forecolor="#FC0D1B" uuid="600b7cd0-b4c0-4ee2-9b64-12dc892e0fb5">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<printWhenExpression><![CDATA[!$V{ArrowUp}]]></printWhenExpression>
+								</reportElement>
+								<textElement verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA["\u25bc"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="140" uuid="5a65fc6d-72b9-45bc-bd59-60171d22ca09">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<box>
+								<bottomPen lineWidth="1.0"/>
+							</box>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<componentElement>
+								<reportElement mode="Opaque" x="0" y="0" width="140" height="23" uuid="44a0d8c4-2f76-49f3-8bcc-4d4d17ebcab0">
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.jasperreports.highcharts.interactive" value="false"/>
+								</reportElement>
+								<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Area">
+									<hc:chartSetting name="default">
+										<hc:chartProperty name="chart.marginTop">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.marginBottom">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.marginLeft">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="title.text">
+											<hc:propertyExpression><![CDATA[null]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="title.text">
+											<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="subtitle.text">
+											<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="xAxis.visible">
+											<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="yAxis.visible">
+											<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="legend.enabled">
+											<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="credits.enabled">
+											<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="plotOptions.area.marker.radius">
+											<hc:propertyExpression><![CDATA[1.5]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="plotOptions.series.color">
+											<hc:propertyExpression><![CDATA["#CCCCDD"]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="plotOptions.series.enableMouseTracking">
+											<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.spacingTop_measureUnit" value="{&quot;key&quot;:&quot;px&quot;,&quot;name&quot;:&quot;px&quot;}"/>
+										<hc:chartProperty name="chart.spacingTop_customSimpleMode" value="true"/>
+										<hc:chartProperty name="chart.spacingTop">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.spacingBottom_measureUnit" value="{&quot;key&quot;:&quot;px&quot;,&quot;name&quot;:&quot;px&quot;}"/>
+										<hc:chartProperty name="chart.spacingBottom_customSimpleMode" value="true"/>
+										<hc:chartProperty name="chart.spacingBottom">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.spacingLeft_measureUnit" value="{&quot;key&quot;:&quot;px&quot;,&quot;name&quot;:&quot;px&quot;}"/>
+										<hc:chartProperty name="chart.spacingLeft_customSimpleMode" value="true"/>
+										<hc:chartProperty name="chart.spacingLeft">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="chart.spacingRight_measureUnit" value="{&quot;key&quot;:&quot;px&quot;,&quot;name&quot;:&quot;px&quot;}"/>
+										<hc:chartProperty name="chart.spacingRight_customSimpleMode" value="true"/>
+										<hc:chartProperty name="chart.spacingRight">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+										<hc:chartProperty name="plotOptions.series.animationLimit_customSimpleMode" value="true"/>
+										<hc:chartProperty name="plotOptions.area.animation.duration_customSimpleMode" value="true"/>
+										<hc:chartProperty name="plotOptions.area.animation.duration">
+											<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+										</hc:chartProperty>
+									</hc:chartSetting>
+									<multiAxisData>
+										<multiAxisDataset>
+											<dataset>
+												<datasetRun subDataset="Chart Dataset" uuid="6efbf27e-c02a-4b7b-8cbe-c34fd6d8085f">
+													<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+													<datasetParameter name="promotion_id">
+														<datasetParameterExpression><![CDATA[$F{promotion_promotion_id}]]></datasetParameterExpression>
+													</datasetParameter>
+													<datasetParameter name="REPORT_MAX_COUNT">
+														<datasetParameterExpression><![CDATA[5]]></datasetParameterExpression>
+													</datasetParameter>
+												</datasetRun>
+											</dataset>
+										</multiAxisDataset>
+										<dataAxis axis="Rows">
+											<axisLevel name="rownum">
+												<labelExpression><![CDATA["Rownum"]]></labelExpression>
+												<axisLevelBucket class="java.lang.String">
+													<bucketExpression><![CDATA[$V{promotion_promotion_name_COUNT}]]></bucketExpression>
+												</axisLevelBucket>
+											</axisLevel>
+										</dataAxis>
+										<dataAxis axis="Columns"/>
+										<multiAxisMeasure name="Sales" class="java.lang.Double" calculation="Sum">
+											<labelExpression><![CDATA["revenue"]]></labelExpression>
+											<valueExpression><![CDATA[$F{revenue}]]></valueExpression>
+										</multiAxisMeasure>
+									</multiAxisData>
+								</hc:chart>
+							</componentElement>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="6ace9b5f-1212-4ea4-a8ca-f3bb6d780e60">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="80" height="25" uuid="06197c38-134e-463b-9b46-15ac5f2ad0a1"/>
+								<box>
+									<bottomPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{popularity}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement stretchType="ElementGroupHeight" mode="Opaque" x="0" y="0" width="80" height="23" forecolor="#FDBF2C" uuid="3af46134-bdc9-42de-b57c-1e12961d8aa4">
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA["\u2605\u2605\u2605".substring(0, $F{unit_sales}/1000 + 1)]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="1a7212d4-11ba-4570-a717-be9728470372">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="105" height="25" uuid="8341979d-00b3-4a52-84be-e6cf78e991c1"/>
+								<box>
+									<bottomPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{transactions}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField pattern="#,##0">
+								<reportElement key="Sales" mode="Opaque" x="0" y="0" width="105" height="23" forecolor="#58595B" uuid="255b37e8-89ee-43f3-9b7a-60ed1cd64be1">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{unit_sales}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="4a0c9bc3-f305-4e6e-9178-4ec11e15a1fa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="25" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="105" height="25" uuid="1d8a7da8-f647-493b-ac91-909dc9d0848b"/>
+								<box>
+									<bottomPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$R{revenue}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="23">
+							<textField pattern="$#,##0">
+								<reportElement key="Sales" mode="Opaque" x="0" y="0" width="105" height="23" forecolor="#58595B" uuid="c208f847-98d3-4f29-ab3e-5444e360fde5">
+									<property name="local_mesure_unity" value="pixel"/>
+									<property name="local_mesure_unitx" value="pixel"/>
+									<property name="local_mesure_unitwidth" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{revenue}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<image hyperlinkType="ReportExecution">
+				<reportElement mode="Transparent" x="270" y="99" width="1" height="1" uuid="c28414c5-5e97-4742-bd0b-abc179f357a4">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="jr.map.link.Canada"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:1pixel.transparent.gif"]]></imageExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/01._Geographic_Results_by_Segment_Report"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="Country">
+					<hyperlinkParameterExpression><![CDATA["Canada"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</image>
+			<image hyperlinkType="ReportExecution">
+				<reportElement mode="Transparent" x="271" y="99" width="1" height="1" uuid="7203b98a-2509-4513-b379-3ec1e2ce5799">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="jr.map.link.United States of America"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:1pixel.transparent.gif"]]></imageExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/01._Geographic_Results_by_Segment_Report"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="Country">
+					<hyperlinkParameterExpression><![CDATA["USA"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</image>
+			<image hyperlinkType="ReportExecution">
+				<reportElement mode="Transparent" x="272" y="99" width="1" height="1" uuid="b8796e07-5d35-4105-ad7b-2c3ff65892d3">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="net.sf.jasperreports.export.html.id" value="jr.map.link.Mexico"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:1pixel.transparent.gif"]]></imageExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/01._Geographic_Results_by_Segment_Report"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="Country">
+					<hyperlinkParameterExpression><![CDATA["Mexico"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

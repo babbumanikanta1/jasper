@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="supermart_es.properties.data">
+    <folder>/organizations/organization_1/supermart/Common</folder>
+    <name>supermart_es.properties</name>
+    <version>0</version>
+    <label>supermart_es.properties</label>
+    <description>Spanish resource bundle</description>
+    <creationDate>2026-04-21T17:14:35.074+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:57.520+05:30</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

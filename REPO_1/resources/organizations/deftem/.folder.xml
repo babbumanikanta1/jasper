@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations</parent>
+    <name>deftem</name>
+    <label>deftem</label>
+    <description>Folder Template</description>
+    <creationDate>2026-08-10T17:56:40.281+05:30</creationDate>
+    <updateDate>2026-08-10T17:56:40.410+05:30</updateDate>
+    <folder>adam</folder>
+    <folder>adhoc</folder>
+    <folder>joeuser</folder>
+    <folder>organizations</folder>
+    <folder>temp</folder>
+    <folder>templates</folder>
+    <folder>themes</folder>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

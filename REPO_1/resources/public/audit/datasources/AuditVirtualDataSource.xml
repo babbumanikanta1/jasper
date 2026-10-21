@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<virtualDataSource exportedWithPermissions="true">
+    <folder>/public/audit/datasources</folder>
+    <name>AuditVirtualDataSource</name>
+    <version>0</version>
+    <label>AuditVirtualDataSource</label>
+    <description>Audit Virtual DataSource</description>
+    <creationDate>2026-04-21T17:14:30.402+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:49.554+05:30</updateDate>
+    <dataSource>
+        <alias>AuditDataSource</alias>
+        <dataSourceReference>
+            <uri>/public/audit/datasources/AuditDataSource</uri>
+        </dataSourceReference>
+    </dataSource>
+    <dataSource>
+        <alias>JasperserverDataSource</alias>
+        <dataSourceReference>
+            <uri>/public/audit/datasources/JasperserverDataSource</uri>
+        </dataSourceReference>
+    </dataSource>
+</virtualDataSource>

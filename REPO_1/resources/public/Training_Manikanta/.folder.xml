@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>Training_Manikanta</name>
+    <label>Training_Manikanta</label>
+    <description></description>
+    <creationDate>2026-04-21T18:03:34.333+05:30</creationDate>
+    <updateDate>2026-04-07T09:59:47.257+05:30</updateDate>
+    <folder>For_ticket</folder>
+    <resource>AD_HOC_VIEW_USING_TOPIC_</resource>
+    <resource>BucketDashExample</resource>
+    <resource>BucketDemo</resource>
+    <resource>FoodMart_Domain_updated</resource>
+    <resource>ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC</resource>
+    <resource>SECURITY_AND_LOCALE_AD_HOC_Report</resource>
+    <resource>TargetBucketDemo</resource>
+    <resource>Ticket_Handling_sample</resource>
+    <resource>TicketsASS_15_1_</resource>
+</folder>

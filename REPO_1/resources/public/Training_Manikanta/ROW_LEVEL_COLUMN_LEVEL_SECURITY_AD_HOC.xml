@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhocDataView exportedWithPermissions="true">
+    <folder>/public/Training_Manikanta</folder>
+    <name>ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC</name>
+    <version>2</version>
+    <label>SECURITY_AND_LOCALE_AD_HOC</label>
+    <description>IMPLEMENTED ROW LEVEL AND COLUMN LEVEL SECURITY USING DOMAIN
+XML(CONFUGURATION).INCLUDED MULTIPLE LANGUAGE SUPPORT USING LOCALE.</description>
+    <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+    <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+    <dataSource>
+        <uri>/public/Training_Manikanta/FoodMart_Domain_updated</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodmart_domain_updated_fr.properties.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>foodmart_domain_updated_fr.properties</name>
+            <version>1</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodmart_domain_updated_pt_BR.properties.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>foodmart_domain_updated_pt_BR.properties</name>
+            <version>1</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodmart_domain_updated_it.properties.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>foodmart_domain_updated_it.properties</name>
+            <version>1</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodmart_domain_updated_ja.properties.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>foodmart_domain_updated_ja.properties</name>
+            <version>1</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodmart_domain_updated.properties.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>foodmart_domain_updated.properties</name>
+            <version>1</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="topicJRXML.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>topicJRXML</name>
+            <version>1</version>
+            <label>topicJRXML</label>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="stateXML.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/ROW_LEVEL_COLUMN_LEVEL_SECURITY_AD_HOC_files</folder>
+            <name>stateXML</name>
+            <version>1</version>
+            <label>stateXML</label>
+            <creationDate>2026-06-04T10:28:47.110+05:30</creationDate>
+            <updateDate>2026-04-07T10:55:11.556+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</adhocDataView>

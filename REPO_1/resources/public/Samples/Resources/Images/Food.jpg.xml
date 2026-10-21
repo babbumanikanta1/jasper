@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="Food.jpg.data">
+    <folder>/public/Samples/Resources/Images</folder>
+    <name>Food.jpg</name>
+    <version>0</version>
+    <label>Food.jpg</label>
+    <description>Image for Sample Dashboard</description>
+    <creationDate>2026-04-21T17:14:35.980+05:30</creationDate>
+    <updateDate>2016-03-02T23:51:15.306+05:30</updateDate>
+    <fileType>img</fileType>
+</fileResource>

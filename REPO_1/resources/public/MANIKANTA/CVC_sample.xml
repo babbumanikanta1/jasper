@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>CVC_sample</name>
+    <version>12</version>
+    <label>CVC_sample</label>
+    <description></description>
+    <creationDate>2026-06-04T15:20:53.459+05:30</creationDate>
+    <updateDate>2026-06-05T11:03:22.490+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/CVC_sample_files</folder>
+            <name>main_jrxml</name>
+            <version>3</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-06-05T10:55:43.487+05:30</creationDate>
+            <updateDate>2026-06-05T11:03:22.345+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="CVC.css.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/CVC_sample_files</folder>
+            <name>CVC.css</name>
+            <version>2</version>
+            <label>CVC.css</label>
+            <creationDate>2026-06-05T10:55:43.487+05:30</creationDate>
+            <updateDate>2026-06-05T10:55:43.487+05:30</updateDate>
+            <fileType>css</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="CVC.min.js.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/CVC_sample_files</folder>
+            <name>CVC.min.js</name>
+            <version>2</version>
+            <label>CVC.min.js</label>
+            <creationDate>2026-06-05T10:55:43.487+05:30</creationDate>
+            <updateDate>2026-06-05T10:55:43.487+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

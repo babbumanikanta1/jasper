@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>Sven</username>
+    <fullName>Sven</fullName>
+    <password>ENC&lt;4A5253495600000010F747A2C1A67759E58381D9B4E32E886C9A2B4F77E36375EEB14DF9BB9105B645&gt;</password>
+    <externallyDefined>true</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_USER</role>
+    <tenantId>organization_1</tenantId>
+</user>

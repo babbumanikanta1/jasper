@@ -1,0 +1,21 @@
+CurrencySymbol=CurrencySymbol
+customers=Customers
+top.customers=Top Customers
+top.promotions=Top Promotions
+popularity=Popularity
+transactions=Transactions
+revenue=Revenue
+ave.revenue=Ave. Revenue
+total.revenue=Total Revenue
+bar=----------------------------------------------------------------------------------------------------
+Top5.Tooltip.DetailAllCustomers=Retrieve detail for all customers - long report
+Top5.Tooltip.DetailAllProducts=Retrieve detail for all products - long report
+Top5.Tooltip.DetailAllPromotions=Retrieve detail for all promotions - long report
+Top5.Tooltip.Detail=Retrieve detail for {0}
+
+svg.bar= \
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="10" preserveAspectRatio="none"> \
+  <g> \
+    <rect x="0" y="-10" width="PERCENTAGE" height="10" style="fill:#1db1ed" transform="scale(1,-1)" /> \
+  </g> \
+</svg>

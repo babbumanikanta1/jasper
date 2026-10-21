@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputControl exportedWithPermissions="true">
+    <folder>/public/Samples/Resources/Input_Controls</folder>
+    <name>Product_Family</name>
+    <version>1</version>
+    <label>Product Family</label>
+    <description></description>
+    <creationDate>2026-04-21T17:14:32.840+05:30</creationDate>
+    <updateDate>2026-05-12T16:42:23.399+05:30</updateDate>
+    <type>4</type>
+    <mandatory>false</mandatory>
+    <readOnly>false</readOnly>
+    <visible>true</visible>
+    <query>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="query">
+            <folder>/public/Samples/Resources/Input_Controls/Product_Family_files</folder>
+            <name>Product_Family</name>
+            <version>1</version>
+            <label>Product_Family</label>
+            <description></description>
+            <creationDate>2026-04-21T17:14:32.840+05:30</creationDate>
+            <updateDate>2013-09-20T10:33:15.425+05:30</updateDate>
+            <language>sql</language>
+            <queryString>select 
+	'All' as product_family
+union
+select distinct 
+	product_family 
+from 
+	product_class 
+where 
+	product_family is not null</queryString>
+            <dataSource>
+                <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+            </dataSource>
+        </localResource>
+    </query>
+    <queryVisibleColumn>product_family</queryVisibleColumn>
+    <queryValueColumn>product_family</queryValueColumn>
+</inputControl>

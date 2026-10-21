@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="overrides_custom.css.data">
+    <folder>/organizations/organization_1/themes/easy_access</folder>
+    <name>overrides_custom.css</name>
+    <version>0</version>
+    <label>overrides_custom.css</label>
+    <creationDate>2026-04-21T17:14:35.652+05:30</creationDate>
+    <updateDate>2024-01-09T18:19:39.439+05:30</updateDate>
+    <fileType>css</fileType>
+</fileResource>

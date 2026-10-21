@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>raju5</username>
+    <fullName>raju5</fullName>
+    <password>ENC&lt;4A5253495600000010EB05C4423F6E5B74EDAB3BB729EA0077F1C08DF326C9A53ACCEBF7A9DA92EA6B&gt;</password>
+    <externallyDefined>true</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_USER</role>
+    <attribute name="profileAttrib1">
+        <value>USA</value>
+    </attribute>
+    <tenantId>organization_4</tenantId>
+</user>

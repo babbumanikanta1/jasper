@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Training_Manikanta</parent>
+    <name>For_ticket</name>
+    <label>For_ticket</label>
+    <description></description>
+    <creationDate>2026-08-03T10:32:24.181+05:30</creationDate>
+    <updateDate>2026-08-03T10:32:24.181+05:30</updateDate>
+    <resource>Ticket_Handling_sample</resource>
+</folder>

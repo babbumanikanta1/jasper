@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentResource exportedWithPermissions="true" dataFile="JSDiagnosticReport.pdf">
+    <folder>/public/diagnostic</folder>
+    <name>JSDiagnosticReport.pdf</name>
+    <version>0</version>
+    <label>JSDiagnosticReport.pdf</label>
+    <creationDate>2026-07-10T17:13:45.073+05:30</creationDate>
+    <updateDate>2026-07-10T17:13:45.073+05:30</updateDate>
+    <fileType>pdf</fileType>
+</contentResource>

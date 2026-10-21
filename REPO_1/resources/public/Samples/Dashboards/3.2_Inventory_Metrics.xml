@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dashboardModelResource exportedWithPermissions="true">
+    <folder>/public/Samples/Dashboards</folder>
+    <name>3.2_Inventory_Metrics</name>
+    <version>1</version>
+    <label>3.2 Inventory Metrics</label>
+    <description>Sample containing Inventory related data and a hidden filter for embedded Visualize.js demo</description>
+    <creationDate>2026-04-21T17:14:32.105+05:30</creationDate>
+    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+    <defaultFoundation>default</defaultFoundation>
+    <foundation>
+        <id>default</id>
+        <layout>layout</layout>
+        <wiring>wiring</wiring>
+        <components>components</components>
+    </foundation>
+    <resourceDescriptor>
+        <type>wiring</type>
+        <id>wiring</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>layout</type>
+        <id>layout</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>components</type>
+        <id>components</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>adhocDataView</type>
+        <id>/temp/tmpAdv_1571149513223_lffn</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>adhocDataView</type>
+        <id>/temp/tmpAdv_1571149967061_gfpi</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>adhocDataView</type>
+        <id>/temp/tmpAdv_1571150238478_hsnh</id>
+    </resourceDescriptor>
+    <resourceDescriptor>
+        <type>adhocDataView</type>
+        <id>/temp/tmpAdv_1571150558143_zuuh</id>
+    </resourceDescriptor>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="wiring.data" xsi:type="fileResource">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>wiring</name>
+            <version>1</version>
+            <label>wiring</label>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <fileType>json</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="layout" xsi:type="contentResource">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>layout</name>
+            <version>1</version>
+            <label>layout</label>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <fileType>html</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="components.data" xsi:type="fileResource">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>components</name>
+            <version>1</version>
+            <label>components</label>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <fileType>dashboardComponent</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="adhocDataView">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>tmpAdv_1571149513223_lffn</name>
+            <version>1</version>
+            <label>tmpAdv_1571149513223_lffn</label>
+            <description>Dashboard visualization.</description>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <dataSource>
+                <uri>/public/Samples/Domains/supermartDomain</uri>
+            </dataSource>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>inventory_fact_ALL__warehouse_sales_2013_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.inventory_fact_2013.warehouse_sales.label} is greater than</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>2</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <dataType>
+                        <localResource exportedWithPermissions="false" xsi:type="dataType">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/inventory_fact_ALL__warehouse_sales_2013_1_files</folder>
+                            <name>number</name>
+                            <version>0</version>
+                            <label>Number</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <type>2</type>
+                            <strictMin>false</strictMin>
+                            <strictMax>false</strictMax>
+                        </localResource>
+                    </dataType>
+                </localResource>
+            </inputControl>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>inv_store__store_contact__store_country_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.store.store_country.label}</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/inv_store__store_contact__store_country_1_files</folder>
+                            <name>inv_store__store_contact__store_country_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.store.store_country.label}</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country" id="inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv_store.inv_store__store_contact.inv_store__store_contact__store_country</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_es.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_fr.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_ja.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_zh_CN.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_de.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>supermart_domain_en.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="topicJRXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>topicJRXML</name>
+                    <version>0</version>
+                    <label>topicJRXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>jrxml</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="stateXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>stateXML</name>
+                    <version>0</version>
+                    <label>stateXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>xml</fileType>
+                </localResource>
+            </resource>
+            <reports>
+                <localResource exportedWithPermissions="false" xsi:type="reportUnit">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files</folder>
+                    <name>dashboardReport</name>
+                    <version>1</version>
+                    <label>dashboardReport</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <mainReport>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="mainReportJrxml.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>mainReportJrxml</name>
+                            <version>0</version>
+                            <label>mainReportJrxml</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>jrxml</fileType>
+                        </localResource>
+                    </mainReport>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_es.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_fr.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_ja.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_zh_CN.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_de.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>supermart_domain_en.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="stateXML.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149513223_lffn_files/dashboardReport_files</folder>
+                            <name>stateXML</name>
+                            <version>0</version>
+                            <label>stateXML</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>xml</fileType>
+                        </localResource>
+                    </resource>
+                    <alwaysPromptControls>false</alwaysPromptControls>
+                    <controlsLayout>1</controlsLayout>
+                </localResource>
+            </reports>
+            <alwaysPromptControls>false</alwaysPromptControls>
+            <controlsLayout>1</controlsLayout>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="adhocDataView">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>tmpAdv_1571149967061_gfpi</name>
+            <version>1</version>
+            <label>tmpAdv_1571149967061_gfpi</label>
+            <description>Dashboard visualization.</description>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <dataSource>
+                <uri>/public/Samples/Domains/supermartDomain</uri>
+            </dataSource>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>inv_store__region__sales_country_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.region.sales_country.label}</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/inv_store__region__sales_country_1_files</folder>
+                            <name>inv_store__region__sales_country_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.region.sales_country.label}</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_es.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_fr.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_ja.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_zh_CN.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_de.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>supermart_domain_en.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="topicJRXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>topicJRXML</name>
+                    <version>0</version>
+                    <label>topicJRXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>jrxml</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="stateXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>stateXML</name>
+                    <version>0</version>
+                    <label>stateXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>xml</fileType>
+                </localResource>
+            </resource>
+            <reports>
+                <localResource exportedWithPermissions="false" xsi:type="reportUnit">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files</folder>
+                    <name>dashboardReport</name>
+                    <version>1</version>
+                    <label>dashboardReport</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <mainReport>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="mainReportJrxml.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>mainReportJrxml</name>
+                            <version>0</version>
+                            <label>mainReportJrxml</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>jrxml</fileType>
+                        </localResource>
+                    </mainReport>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_es.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_fr.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_ja.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_zh_CN.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_de.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>supermart_domain_en.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="stateXML.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571149967061_gfpi_files/dashboardReport_files</folder>
+                            <name>stateXML</name>
+                            <version>0</version>
+                            <label>stateXML</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>xml</fileType>
+                        </localResource>
+                    </resource>
+                    <alwaysPromptControls>false</alwaysPromptControls>
+                    <controlsLayout>1</controlsLayout>
+                </localResource>
+            </reports>
+            <alwaysPromptControls>false</alwaysPromptControls>
+            <controlsLayout>1</controlsLayout>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="adhocDataView">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>tmpAdv_1571150238478_hsnh</name>
+            <version>1</version>
+            <label>tmpAdv_1571150238478_hsnh</label>
+            <description>Dashboard visualization.</description>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <dataSource>
+                <uri>/public/Samples/Domains/supermartDomain</uri>
+            </dataSource>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>inv_store__region__sales_country_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.region.sales_country.label}</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/inv_store__region__sales_country_1_files</folder>
+                            <name>inv_store__region__sales_country_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.region.sales_country.label}</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_es.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_fr.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_ja.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_zh_CN.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_de.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>supermart_domain_en.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="topicJRXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>topicJRXML</name>
+                    <version>0</version>
+                    <label>topicJRXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>jrxml</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="stateXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>stateXML</name>
+                    <version>0</version>
+                    <label>stateXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>xml</fileType>
+                </localResource>
+            </resource>
+            <reports>
+                <localResource exportedWithPermissions="false" xsi:type="reportUnit">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files</folder>
+                    <name>dashboardReport</name>
+                    <version>1</version>
+                    <label>dashboardReport</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <mainReport>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="mainReportJrxml.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>mainReportJrxml</name>
+                            <version>0</version>
+                            <label>mainReportJrxml</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>jrxml</fileType>
+                        </localResource>
+                    </mainReport>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_es.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_fr.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_ja.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_zh_CN.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_de.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_en.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="stateXML.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150238478_hsnh_files/dashboardReport_files</folder>
+                            <name>stateXML</name>
+                            <version>0</version>
+                            <label>stateXML</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>xml</fileType>
+                        </localResource>
+                    </resource>
+                    <alwaysPromptControls>false</alwaysPromptControls>
+                    <controlsLayout>1</controlsLayout>
+                </localResource>
+            </reports>
+            <alwaysPromptControls>false</alwaysPromptControls>
+            <controlsLayout>1</controlsLayout>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="adhocDataView">
+            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files</folder>
+            <name>tmpAdv_1571150558143_zuuh</name>
+            <version>1</version>
+            <label>tmpAdv_1571150558143_zuuh</label>
+            <description>Dashboard visualization.</description>
+            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+            <dataSource>
+                <uri>/public/Samples/Domains/supermartDomain</uri>
+            </dataSource>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>inv__product__brand_name_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.product.brand_name.label}</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/inv__product__brand_name_1_files</folder>
+                            <name>inv__product__brand_name_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.product.brand_name.label}</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv__product.inv__product__brand_name" id="inventory_fact_ALL.inv__product.inv__product__brand_name" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv__product.inv__product__brand_name" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv__product.inv__product__brand_name" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv__product.inv__product__brand_name</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv__product.inv__product__brand_name</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>inv_store__region__sales_country_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.region.sales_country.label}</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/inv_store__region__sales_country_1_files</folder>
+                            <name>inv_store__region__sales_country_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.region.sales_country.label}</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_country</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <inputControl>
+                <localResource exportedWithPermissions="false" xsi:type="inputControl">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>inv_store__region__sales_district_1</name>
+                    <version>0</version>
+                    <label>$R{supermart.region.sales_district.label} not </label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <type>7</type>
+                    <mandatory>false</mandatory>
+                    <readOnly>false</readOnly>
+                    <visible>true</visible>
+                    <query>
+                        <localResource exportedWithPermissions="false" xsi:type="query">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/inv_store__region__sales_district_1_files</folder>
+                            <name>inv_store__region__sales_district_1</name>
+                            <version>0</version>
+                            <label>$R{supermart.region.sales_district.label} not </label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <language>domain</language>
+                            <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
+  &lt;groupList&gt;
+    &lt;group columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district" id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district" /&gt;
+  &lt;/groupList&gt;
+  &lt;queryFields&gt;
+    &lt;queryField id="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district" /&gt;
+  &lt;/queryFields&gt;
+  &lt;sortList&gt;
+    &lt;sortColumn columnName="inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district" /&gt;
+  &lt;/sortList&gt;
+&lt;/query&gt;
+
+</queryString>
+                            <dataSource>
+                                <uri>/public/Samples/Domains/supermartDomain</uri>
+                            </dataSource>
+                        </localResource>
+                    </query>
+                    <queryVisibleColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district</queryVisibleColumn>
+                    <queryValueColumn>inventory_fact_ALL.inv_store.inv_store__region.inv_store__region__sales_district</queryValueColumn>
+                </localResource>
+            </inputControl>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_es.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_fr.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_ja.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_zh_CN.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_de.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>supermart_domain_en.properties</name>
+                    <version>0</version>
+                    <label>bundle</label>
+                    <description>bundle</description>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>prop</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="topicJRXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>topicJRXML</name>
+                    <version>0</version>
+                    <label>topicJRXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>jrxml</fileType>
+                </localResource>
+            </resource>
+            <resource>
+                <localResource exportedWithPermissions="false"
+                    dataFile="stateXML.data" xsi:type="fileResource">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>stateXML</name>
+                    <version>0</version>
+                    <label>stateXML</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <fileType>xml</fileType>
+                </localResource>
+            </resource>
+            <reports>
+                <localResource exportedWithPermissions="false" xsi:type="reportUnit">
+                    <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files</folder>
+                    <name>dashboardReport</name>
+                    <version>1</version>
+                    <label>dashboardReport</label>
+                    <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                    <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                    <mainReport>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="mainReportJrxml.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>mainReportJrxml</name>
+                            <version>0</version>
+                            <label>mainReportJrxml</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>jrxml</fileType>
+                        </localResource>
+                    </mainReport>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_es.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_es.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_fr.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_fr.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_ja.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_ja.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_zh_CN.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_zh_CN.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_de.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_de.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="supermart_domain_en.properties.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>supermart_domain_en.properties</name>
+                            <version>0</version>
+                            <label>bundle</label>
+                            <description>bundle</description>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>prop</fileType>
+                        </localResource>
+                    </resource>
+                    <resource>
+                        <localResource exportedWithPermissions="false"
+                            dataFile="stateXML.data" xsi:type="fileResource">
+                            <folder>/public/Samples/Dashboards/3.2_Inventory_Metrics_files/tmpAdv_1571150558143_zuuh_files/dashboardReport_files</folder>
+                            <name>stateXML</name>
+                            <version>0</version>
+                            <label>stateXML</label>
+                            <creationDate>2026-05-19T10:51:19.394+05:30</creationDate>
+                            <updateDate>2026-05-19T10:51:19.394+05:30</updateDate>
+                            <fileType>xml</fileType>
+                        </localResource>
+                    </resource>
+                    <alwaysPromptControls>false</alwaysPromptControls>
+                    <controlsLayout>1</controlsLayout>
+                </localResource>
+            </reports>
+            <alwaysPromptControls>false</alwaysPromptControls>
+            <controlsLayout>1</controlsLayout>
+        </localResource>
+    </resource>
+</dashboardModelResource>

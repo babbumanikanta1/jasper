@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Dashboards/Templates</folder>
+    <name>Dashboard_Screenshot</name>
+    <version>0</version>
+    <label>Dashboard Screenshot Export Template</label>
+    <creationDate>2026-04-21T17:14:30.965+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:35.307+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Dashboard_Screenshot.jrxml.data" xsi:type="fileResource">
+            <folder>/public/Dashboards/Templates/Dashboard_Screenshot_files</folder>
+            <name>Dashboard_Screenshot.jrxml</name>
+            <version>0</version>
+            <label>Dashboard_Screenshot.jrxml</label>
+            <creationDate>2026-04-21T17:14:30.965+05:30</creationDate>
+            <updateDate>2024-01-09T18:21:35.307+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

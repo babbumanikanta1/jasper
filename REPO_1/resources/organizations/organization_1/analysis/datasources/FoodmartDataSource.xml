@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbcDataSource exportedWithPermissions="true">
+    <folder>/organizations/organization_1/analysis/datasources</folder>
+    <name>FoodmartDataSource</name>
+    <version>0</version>
+    <label>Foodmart Data Source</label>
+    <description>Foodmart Data Source</description>
+    <creationDate>2026-04-21T17:14:35.215+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:29.746+05:30</updateDate>
+    <driver>org.postgresql.Driver</driver>
+    <connectionUrl>jdbc:postgresql://ci-catalogs-na2-postgresql.jaspersoft.com:5432/foupdate</connectionUrl>
+    <connectionUser>ci_agent</connectionUser>
+    <connectionPassword>ENC&lt;4A5253495600000010329C2E8E9568F448CDD5C97F5BABC89AADAE28BAD9A01E9871FF9E852EE01D62&gt;</connectionPassword>
+</jdbcDataSource>

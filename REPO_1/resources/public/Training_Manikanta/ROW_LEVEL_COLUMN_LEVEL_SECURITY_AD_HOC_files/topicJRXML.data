@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" resourceBundle="foodmart_domain_updated" uuid="585a5f09-2475-418c-ac39-c41a6d70b478">
+	<property name="adhoc.topic.escape.variable.chars"/>
+	<property name="adhoc.metadata.version" value="621"/>
+	<property name="has.modified.presentation" value="false"/>
+	<property name="base.datasource.version" value="3"/>
+	<property name="use.datasource.presentation" value="true"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_1897be54-8f78-4e40-a20c-76968aaea2b3"/>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="department.department_description"></queryField>
+    <queryField id="department.department_id"></queryField>
+    <queryField id="employee.birth_date"></queryField>
+    <queryField id="employee.department_id_1"></queryField>
+    <queryField id="employee.education_level"></queryField>
+    <queryField id="employee.employee_id"></queryField>
+    <queryField id="employee.end_date"></queryField>
+    <queryField id="employee.first_name"></queryField>
+    <queryField id="employee.full_name"></queryField>
+    <queryField id="employee.gender"></queryField>
+    <queryField id="employee.hire_date"></queryField>
+    <queryField id="employee.last_name"></queryField>
+    <queryField id="employee.management_role"></queryField>
+    <queryField id="employee.marital_status"></queryField>
+    <queryField id="employee.position_id"></queryField>
+    <queryField id="employee.position_title"></queryField>
+    <queryField id="employee.salary"></queryField>
+    <queryField id="employee.store_id"></queryField>
+    <queryField id="employee.supervisor_id"></queryField>
+    <queryField id="region.region_id_1"></queryField>
+    <queryField id="region.sales_city"></queryField>
+    <queryField id="region.sales_country"></queryField>
+    <queryField id="region.sales_district"></queryField>
+    <queryField id="region.sales_district_id"></queryField>
+    <queryField id="region.sales_region"></queryField>
+    <queryField id="region.sales_state_province"></queryField>
+    <queryField id="sales_fact_1997.customer_id"></queryField>
+    <queryField id="sales_fact_1997.product_id"></queryField>
+    <queryField id="sales_fact_1997.promotion_id"></queryField>
+    <queryField id="sales_fact_1997.store_cost"></queryField>
+    <queryField id="sales_fact_1997.store_id_2"></queryField>
+    <queryField id="sales_fact_1997.store_sales"></queryField>
+    <queryField id="sales_fact_1997.time_id"></queryField>
+    <queryField id="sales_fact_1997.unit_sales"></queryField>
+    <queryField id="store.coffee_bar"></queryField>
+    <queryField id="store.first_opened_date"></queryField>
+    <queryField id="store.florist"></queryField>
+    <queryField id="store.frozen_sqft"></queryField>
+    <queryField id="store.grocery_sqft"></queryField>
+    <queryField id="store.last_remodel_date"></queryField>
+    <queryField id="store.meat_sqft"></queryField>
+    <queryField id="store.prepared_food"></queryField>
+    <queryField id="store.region_id"></queryField>
+    <queryField id="store.salad_bar"></queryField>
+    <queryField id="store.store_city"></queryField>
+    <queryField id="store.store_country"></queryField>
+    <queryField id="store.store_fax"></queryField>
+    <queryField id="store.store_id_1"></queryField>
+    <queryField id="store.store_manager"></queryField>
+    <queryField id="store.store_name"></queryField>
+    <queryField id="store.store_number"></queryField>
+    <queryField id="store.store_phone"></queryField>
+    <queryField id="store.store_postal_code"></queryField>
+    <queryField id="store.store_sqft"></queryField>
+    <queryField id="store.store_state"></queryField>
+    <queryField id="store.store_street_address"></queryField>
+    <queryField id="store.store_type"></queryField>
+    <queryField id="store.video_store"></queryField>
+    <queryField id="time_by_day.day_of_month"></queryField>
+    <queryField id="time_by_day.day_of_week"></queryField>
+    <queryField id="time_by_day.fiscal_period"></queryField>
+    <queryField id="time_by_day.month_of_year"></queryField>
+    <queryField id="time_by_day.quarter"></queryField>
+    <queryField id="time_by_day.the_date"></queryField>
+    <queryField id="time_by_day.the_day"></queryField>
+    <queryField id="time_by_day.the_month"></queryField>
+    <queryField id="time_by_day.the_year"></queryField>
+    <queryField id="time_by_day.time_id_1"></queryField>
+    <queryField id="time_by_day.week_of_year"></queryField>
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="department.department_description" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.LABEL}"/>
+		<property name="semantic.item.label" value="department_description"/>
+		<property name="adhoc.tree.uri" value="/department/department_description"/>
+		<property name="resourceId" value="JoinTree_1.department.department_description"/>
+		<property name="semantic.tree.uri" value="/department/department_description"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.DESCR"/>
+		<property name="semantic.tree.sort.order">
+			<![CDATA[{"department":1,"department_description":2,"department_id":3,"employee":4,"birth_date":5,"department_id_1":6,"education_level":7,"employee_id":8,"end_date":9,"first_name":10,"full_name":11,"gender":12,"hire_date":13,"last_name":14,"management_role":15,"marital_status":16,"position_id":17,"position_title":18,"salary":19,"store_id":20,"supervisor_id":21,"region":22,"region_id_1":23,"sales_city":24,"sales_country":25,"sales_district":26,"sales_district_id":27,"sales_region":28,"sales_state_province":29,"sales_fact_1997":30,"customer_id":31,"product_id":32,"promotion_id":33,"store_cost":34,"store_id_2":35,"store_sales":36,"time_id":37,"unit_sales":38,"store":39,"coffee_bar":40,"first_opened_date":41,"florist":42,"frozen_sqft":43,"grocery_sqft":44,"last_remodel_date":45,"meat_sqft":46,"prepared_food":47,"region_id":48,"salad_bar":49,"store_city":50,"store_country":51,"store_fax":52,"store_id_1":53,"store_manager":54,"store_name":55,"store_number":56,"store_phone":57,"store_postal_code":58,"store_sqft":59,"store_state":60,"store_street_address":61,"store_type":62,"video_store":63,"time_by_day":64,"day_of_month":65,"day_of_week":66,"fiscal_period":67,"month_of_year":68,"quarter":69,"the_date":70,"the_day":71,"the_month":72,"the_year":73,"time_id_1":74,"week_of_year":75}]]>
+		</property>
+		<property name="adhoc.tree.labels">
+			<![CDATA[[{"uri":"/department","resourceId":"JoinTree_1","label":"department","labelId":"JOINTREE_1.DEPARTMENT.LABEL","descriptionId":"JOINTREE_1.DEPARTMENT.DESCR"},{"uri":"/employee","resourceId":"JoinTree_1","label":"employee","labelId":"JOINTREE_1.EMPLOYEE.LABEL","descriptionId":"JOINTREE_1.EMPLOYEE.DESCR"},{"uri":"/region","resourceId":"JoinTree_1","label":"region","labelId":"JOINTREE_1.REGION.LABEL","descriptionId":"JOINTREE_1.REGION.DESCR"},{"uri":"/sales_fact_1997","resourceId":"JoinTree_1","label":"sales_fact_1997","labelId":"JOINTREE_1.SALES_FACT_1997.LABEL","descriptionId":"JOINTREE_1.SALES_FACT_1997.DESCR"},{"uri":"/store","resourceId":"JoinTree_1","label":"store","labelId":"JOINTREE_1.STORE.LABEL","descriptionId":"JOINTREE_1.STORE.DESCR"},{"uri":"/time_by_day","resourceId":"JoinTree_1","label":"time_by_day","labelId":"JOINTREE_1.TIME_BY_DAY.LABEL","descriptionId":"JOINTREE_1.TIME_BY_DAY.DESCR"}]]]>
+		</property>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/department/department_description"/>
+		<property name="previous.display" value="$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.LABEL}"/>
+		<property name="adhoc.chosen.tree.labels">
+			<![CDATA[[{"uri":"/department","resourceId":"JoinTree_1","label":"department","labelId":"JOINTREE_1.DEPARTMENT.LABEL","descriptionId":"JOINTREE_1.DEPARTMENT.DESCR"},{"uri":"/employee","resourceId":"JoinTree_1","label":"employee","labelId":"JOINTREE_1.EMPLOYEE.LABEL","descriptionId":"JOINTREE_1.EMPLOYEE.DESCR"},{"uri":"/region","resourceId":"JoinTree_1","label":"region","labelId":"JOINTREE_1.REGION.LABEL","descriptionId":"JOINTREE_1.REGION.DESCR"},{"uri":"/sales_fact_1997","resourceId":"JoinTree_1","label":"sales_fact_1997","labelId":"JOINTREE_1.SALES_FACT_1997.LABEL","descriptionId":"JOINTREE_1.SALES_FACT_1997.DESCR"},{"uri":"/store","resourceId":"JoinTree_1","label":"store","labelId":"JOINTREE_1.STORE.LABEL","descriptionId":"JOINTREE_1.STORE.DESCR"},{"uri":"/time_by_day","resourceId":"JoinTree_1","label":"time_by_day","labelId":"JOINTREE_1.TIME_BY_DAY.LABEL","descriptionId":"JOINTREE_1.TIME_BY_DAY.DESCR"}]]]>
+		</property>
+		<property name="adhoc.chosen.tree.order">
+			<![CDATA[{"store_cost":34,"birth_date":5,"supervisor_id":21,"sales_state_province":29,"store_postal_code":58,"video_store":63,"employee":4,"salary":19,"day_of_month":65,"the_month":72,"sales_fact_1997":30,"time_id_1":74,"store_street_address":61,"fiscal_period":67,"the_year":73,"product_id":32,"florist":42,"week_of_year":75,"first_opened_date":41,"frozen_sqft":43,"region_id":48,"management_role":15,"store_type":62,"salad_bar":49,"full_name":11,"employee_id":8,"store_number":56,"meat_sqft":46,"store_sqft":59,"education_level":7,"coffee_bar":40,"region":22,"sales_district_id":27,"position_id":17,"end_date":9,"store_state":60,"store_id_2":35,"prepared_food":47,"gender":12,"store_id_1":53,"store_sales":36,"sales_region":28,"the_day":71,"position_title":18,"promotion_id":33,"region_id_1":23,"store_phone":57,"department_description":2,"unit_sales":38,"sales_city":24,"store_name":55,"department":1,"first_name":10,"time_by_day":64,"store_manager":54,"day_of_week":66,"store_id":20,"store_fax":52,"time_id":37,"store_city":50,"department_id":3,"last_remodel_date":45,"department_id_1":6,"sales_country":25,"store_country":51,"month_of_year":68,"last_name":14,"hire_date":13,"store":39,"sales_district":26,"the_date":70,"marital_status":16,"grocery_sqft":44,"customer_id":31,"quarter":69}]]>
+		</property>
+		<property name="adhoc.chosen.tree.is.flattened" value="false"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(department.department_description)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_DESCRIPTION.DESCR}]]></fieldDescription>
+	</field>
+	<field name="department.department_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.LABEL}"/>
+		<property name="semantic.item.label" value="department_id"/>
+		<property name="adhoc.tree.uri" value="/department/department_id"/>
+		<property name="resourceId" value="JoinTree_1.department.department_id"/>
+		<property name="semantic.tree.uri" value="/department/department_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/department/department_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(department.department_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.DEPARTMENT.DEPARTMENT_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.birth_date" class="java.util.Date">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.BIRTH_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="birth_date"/>
+		<property name="adhoc.tree.uri" value="/employee/birth_date"/>
+		<property name="resourceId" value="JoinTree_1.employee.birth_date"/>
+		<property name="semantic.tree.uri" value="/employee/birth_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.BIRTH_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_date_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/birth_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.BIRTH_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.birth_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.BIRTH_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.department_id_1" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.LABEL}"/>
+		<property name="semantic.item.label" value="department_id"/>
+		<property name="adhoc.tree.uri" value="/employee/department_id_1"/>
+		<property name="resourceId" value="JoinTree_1.employee.department_id"/>
+		<property name="semantic.tree.uri" value="/employee/department_id_1"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/department_id_1"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.department_id_1)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.DEPARTMENT_ID_1.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.education_level" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.LABEL}"/>
+		<property name="semantic.item.label" value="education_level"/>
+		<property name="adhoc.tree.uri" value="/employee/education_level"/>
+		<property name="resourceId" value="JoinTree_1.employee.education_level"/>
+		<property name="semantic.tree.uri" value="/employee/education_level"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.DESCR"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/education_level"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.education_level)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.EDUCATION_LEVEL.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.employee_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.LABEL}"/>
+		<property name="semantic.item.label" value="employee_id"/>
+		<property name="adhoc.tree.uri" value="/employee/employee_id"/>
+		<property name="resourceId" value="JoinTree_1.employee.employee_id"/>
+		<property name="semantic.tree.uri" value="/employee/employee_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/employee_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.employee_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.EMPLOYEE_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.end_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.END_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="end_date"/>
+		<property name="adhoc.tree.uri" value="/employee/end_date"/>
+		<property name="resourceId" value="JoinTree_1.employee.end_date"/>
+		<property name="semantic.tree.uri" value="/employee/end_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.END_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/end_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.END_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.end_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.END_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.first_name" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.FIRST_NAME.LABEL}"/>
+		<property name="semantic.item.label" value="first_name"/>
+		<property name="adhoc.tree.uri" value="/employee/first_name"/>
+		<property name="resourceId" value="JoinTree_1.employee.first_name"/>
+		<property name="semantic.tree.uri" value="/employee/first_name"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.FIRST_NAME.DESCR"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/first_name"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.FIRST_NAME.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.first_name)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.FIRST_NAME.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.full_name" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.FULL_NAME.LABEL}"/>
+		<property name="semantic.item.label" value="full_name"/>
+		<property name="adhoc.tree.uri" value="/employee/full_name"/>
+		<property name="resourceId" value="JoinTree_1.employee.full_name"/>
+		<property name="semantic.tree.uri" value="/employee/full_name"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.FULL_NAME.DESCR"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/full_name"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.FULL_NAME.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.full_name)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.FULL_NAME.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.gender" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.GENDER.LABEL}"/>
+		<property name="semantic.item.label" value="gender"/>
+		<property name="adhoc.tree.uri" value="/employee/gender"/>
+		<property name="resourceId" value="JoinTree_1.employee.gender"/>
+		<property name="semantic.tree.uri" value="/employee/gender"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.GENDER.DESCR"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/gender"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.GENDER.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.gender)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.GENDER.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.hire_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.HIRE_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="hire_date"/>
+		<property name="adhoc.tree.uri" value="/employee/hire_date"/>
+		<property name="resourceId" value="JoinTree_1.employee.hire_date"/>
+		<property name="semantic.tree.uri" value="/employee/hire_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.HIRE_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/hire_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.HIRE_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.hire_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.HIRE_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.last_name" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.LAST_NAME.LABEL}"/>
+		<property name="semantic.item.label" value="last_name"/>
+		<property name="adhoc.tree.uri" value="/employee/last_name"/>
+		<property name="resourceId" value="JoinTree_1.employee.last_name"/>
+		<property name="semantic.tree.uri" value="/employee/last_name"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.LAST_NAME.DESCR"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/last_name"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.LAST_NAME.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.last_name)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.LAST_NAME.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.management_role" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.LABEL}"/>
+		<property name="semantic.item.label" value="management_role"/>
+		<property name="adhoc.tree.uri" value="/employee/management_role"/>
+		<property name="resourceId" value="JoinTree_1.employee.management_role"/>
+		<property name="semantic.tree.uri" value="/employee/management_role"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/management_role"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.management_role)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.MANAGEMENT_ROLE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.marital_status" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.MARITAL_STATUS.LABEL}"/>
+		<property name="semantic.item.label" value="marital_status"/>
+		<property name="adhoc.tree.uri" value="/employee/marital_status"/>
+		<property name="resourceId" value="JoinTree_1.employee.marital_status"/>
+		<property name="semantic.tree.uri" value="/employee/marital_status"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.MARITAL_STATUS.DESCR"/>
+		<property name="semantic.tree.sort.order" value="11"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/marital_status"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.MARITAL_STATUS.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.marital_status)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.MARITAL_STATUS.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.position_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.POSITION_ID.LABEL}"/>
+		<property name="semantic.item.label" value="position_id"/>
+		<property name="adhoc.tree.uri" value="/employee/position_id"/>
+		<property name="resourceId" value="JoinTree_1.employee.position_id"/>
+		<property name="semantic.tree.uri" value="/employee/position_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.POSITION_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="12"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/position_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.POSITION_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.position_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.POSITION_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.position_title" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.POSITION_TITLE.LABEL}"/>
+		<property name="semantic.item.label" value="position_title"/>
+		<property name="adhoc.tree.uri" value="/employee/position_title"/>
+		<property name="resourceId" value="JoinTree_1.employee.position_title"/>
+		<property name="semantic.tree.uri" value="/employee/position_title"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.POSITION_TITLE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="13"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/position_title"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.POSITION_TITLE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(employee.position_title)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.POSITION_TITLE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.salary" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.SALARY.LABEL}"/>
+		<property name="semantic.item.label" value="salary"/>
+		<property name="adhoc.tree.uri" value="/employee/salary"/>
+		<property name="resourceId" value="JoinTree_1.employee.salary"/>
+		<property name="semantic.tree.uri" value="/employee/salary"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.SALARY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="14"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/salary"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.SALARY.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.salary)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.SALARY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.store_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.STORE_ID.LABEL}"/>
+		<property name="semantic.item.label" value="store_id"/>
+		<property name="adhoc.tree.uri" value="/employee/store_id"/>
+		<property name="resourceId" value="JoinTree_1.employee.store_id"/>
+		<property name="semantic.tree.uri" value="/employee/store_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.STORE_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="15"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/store_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.STORE_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.store_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.STORE_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="employee.supervisor_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.LABEL}"/>
+		<property name="semantic.item.label" value="supervisor_id"/>
+		<property name="adhoc.tree.uri" value="/employee/supervisor_id"/>
+		<property name="resourceId" value="JoinTree_1.employee.supervisor_id"/>
+		<property name="semantic.tree.uri" value="/employee/supervisor_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="16"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/employee/supervisor_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(employee.supervisor_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.EMPLOYEE.SUPERVISOR_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.region_id_1" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.REGION_ID_1.LABEL}"/>
+		<property name="semantic.item.label" value="region_id"/>
+		<property name="adhoc.tree.uri" value="/region/region_id_1"/>
+		<property name="resourceId" value="JoinTree_1.region.region_id"/>
+		<property name="semantic.tree.uri" value="/region/region_id_1"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.REGION_ID_1.DESCR"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/region_id_1"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.REGION_ID_1.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(region.region_id_1)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.REGION_ID_1.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_city" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_CITY.LABEL}"/>
+		<property name="semantic.item.label" value="sales_city"/>
+		<property name="adhoc.tree.uri" value="/region/sales_city"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_city"/>
+		<property name="semantic.tree.uri" value="/region/sales_city"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_CITY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_city"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_CITY.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(region.sales_city)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_CITY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_country" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_COUNTRY.LABEL}"/>
+		<property name="semantic.item.label" value="sales_country"/>
+		<property name="adhoc.tree.uri" value="/region/sales_country"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_country"/>
+		<property name="semantic.tree.uri" value="/region/sales_country"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_COUNTRY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_country"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_COUNTRY.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(region.sales_country)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_COUNTRY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_district" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_DISTRICT.LABEL}"/>
+		<property name="semantic.item.label" value="sales_district"/>
+		<property name="adhoc.tree.uri" value="/region/sales_district"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_district"/>
+		<property name="semantic.tree.uri" value="/region/sales_district"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_DISTRICT.DESCR"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_district"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_DISTRICT.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(region.sales_district)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_DISTRICT.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_district_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_DISTRICT_ID.LABEL}"/>
+		<property name="semantic.item.label" value="sales_district_id"/>
+		<property name="adhoc.tree.uri" value="/region/sales_district_id"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_district_id"/>
+		<property name="semantic.tree.uri" value="/region/sales_district_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_DISTRICT_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_district_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_DISTRICT_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(region.sales_district_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_DISTRICT_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_region" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_REGION.LABEL}"/>
+		<property name="semantic.item.label" value="sales_region"/>
+		<property name="adhoc.tree.uri" value="/region/sales_region"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_region"/>
+		<property name="semantic.tree.uri" value="/region/sales_region"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_REGION.DESCR"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_region"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_REGION.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(region.sales_region)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_REGION.DESCR}]]></fieldDescription>
+	</field>
+	<field name="region.sales_state_province" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.REGION.SALES_STATE_PROVINCE.LABEL}"/>
+		<property name="semantic.item.label" value="sales_state_province"/>
+		<property name="adhoc.tree.uri" value="/region/sales_state_province"/>
+		<property name="resourceId" value="JoinTree_1.region.sales_state_province"/>
+		<property name="semantic.tree.uri" value="/region/sales_state_province"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.REGION.SALES_STATE_PROVINCE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/region/sales_state_province"/>
+		<property name="previous.display" value="$R{JOINTREE_1.REGION.SALES_STATE_PROVINCE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(region.sales_state_province)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.REGION.SALES_STATE_PROVINCE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.customer_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.LABEL}"/>
+		<property name="semantic.item.label" value="customer_id"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/customer_id"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.customer_id"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/customer_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/customer_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.customer_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.CUSTOMER_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.product_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.LABEL}"/>
+		<property name="semantic.item.label" value="product_id"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/product_id"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.product_id"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/product_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/product_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.product_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.PRODUCT_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.promotion_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.LABEL}"/>
+		<property name="semantic.item.label" value="promotion_id"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/promotion_id"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.promotion_id"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/promotion_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/promotion_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.promotion_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.PROMOTION_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.store_cost" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_COST.LABEL}"/>
+		<property name="semantic.item.label" value="store_cost"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/store_cost"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.store_cost"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/store_cost"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.STORE_COST.DESCR"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/store_cost"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_COST.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.store_cost)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.STORE_COST.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.store_id_2" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_ID_2.LABEL}"/>
+		<property name="semantic.item.label" value="store_id"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/store_id_2"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.store_id"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/store_id_2"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.STORE_ID_2.DESCR"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/store_id_2"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_ID_2.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.store_id_2)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.STORE_ID_2.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.store_sales" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_SALES.LABEL}"/>
+		<property name="semantic.item.label" value="store_sales"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/store_sales"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.store_sales"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/store_sales"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.STORE_SALES.DESCR"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/store_sales"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.STORE_SALES.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.store_sales)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.STORE_SALES.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.time_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.TIME_ID.LABEL}"/>
+		<property name="semantic.item.label" value="time_id"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/time_id"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.time_id"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/time_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.TIME_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/time_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.TIME_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.time_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.TIME_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="sales_fact_1997.unit_sales" class="java.math.BigDecimal">
+		<property name="adhoc.display" value="$R{JOINTREE_1.SALES_FACT_1997.UNIT_SALES.LABEL}"/>
+		<property name="semantic.item.label" value="unit_sales"/>
+		<property name="adhoc.tree.uri" value="/sales_fact_1997/unit_sales"/>
+		<property name="resourceId" value="JoinTree_1.sales_fact_1997.unit_sales"/>
+		<property name="semantic.tree.uri" value="/sales_fact_1997/unit_sales"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.SALES_FACT_1997.UNIT_SALES.DESCR"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_dec_0"/>
+		<property name="aggregateType" value="java.math.BigDecimal"/>
+		<property name="adhoc.chosen.tree.uri" value="/sales_fact_1997/unit_sales"/>
+		<property name="previous.display" value="$R{JOINTREE_1.SALES_FACT_1997.UNIT_SALES.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(sales_fact_1997.unit_sales)"/>
+		<property name="defaultMask" value="#,##0.00"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.SALES_FACT_1997.UNIT_SALES.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.coffee_bar" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.COFFEE_BAR.LABEL}"/>
+		<property name="semantic.item.label" value="coffee_bar"/>
+		<property name="adhoc.tree.uri" value="/store/coffee_bar"/>
+		<property name="resourceId" value="JoinTree_1.store.coffee_bar"/>
+		<property name="semantic.tree.uri" value="/store/coffee_bar"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.COFFEE_BAR.DESCR"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/coffee_bar"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.COFFEE_BAR.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.coffee_bar)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.COFFEE_BAR.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.first_opened_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.FIRST_OPENED_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="first_opened_date"/>
+		<property name="adhoc.tree.uri" value="/store/first_opened_date"/>
+		<property name="resourceId" value="JoinTree_1.store.first_opened_date"/>
+		<property name="semantic.tree.uri" value="/store/first_opened_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.FIRST_OPENED_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/first_opened_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.FIRST_OPENED_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.first_opened_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.FIRST_OPENED_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.florist" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.FLORIST.LABEL}"/>
+		<property name="semantic.item.label" value="florist"/>
+		<property name="adhoc.tree.uri" value="/store/florist"/>
+		<property name="resourceId" value="JoinTree_1.store.florist"/>
+		<property name="semantic.tree.uri" value="/store/florist"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.FLORIST.DESCR"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/florist"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.FLORIST.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.florist)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.FLORIST.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.frozen_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.FROZEN_SQFT.LABEL}"/>
+		<property name="semantic.item.label" value="frozen_sqft"/>
+		<property name="adhoc.tree.uri" value="/store/frozen_sqft"/>
+		<property name="resourceId" value="JoinTree_1.store.frozen_sqft"/>
+		<property name="semantic.tree.uri" value="/store/frozen_sqft"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.FROZEN_SQFT.DESCR"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/frozen_sqft"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.FROZEN_SQFT.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.frozen_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.FROZEN_SQFT.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.grocery_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.GROCERY_SQFT.LABEL}"/>
+		<property name="semantic.item.label" value="grocery_sqft"/>
+		<property name="adhoc.tree.uri" value="/store/grocery_sqft"/>
+		<property name="resourceId" value="JoinTree_1.store.grocery_sqft"/>
+		<property name="semantic.tree.uri" value="/store/grocery_sqft"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.GROCERY_SQFT.DESCR"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/grocery_sqft"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.GROCERY_SQFT.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.grocery_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.GROCERY_SQFT.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.last_remodel_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.LAST_REMODEL_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="last_remodel_date"/>
+		<property name="adhoc.tree.uri" value="/store/last_remodel_date"/>
+		<property name="resourceId" value="JoinTree_1.store.last_remodel_date"/>
+		<property name="semantic.tree.uri" value="/store/last_remodel_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.LAST_REMODEL_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/last_remodel_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.LAST_REMODEL_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.last_remodel_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.LAST_REMODEL_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.meat_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.MEAT_SQFT.LABEL}"/>
+		<property name="semantic.item.label" value="meat_sqft"/>
+		<property name="adhoc.tree.uri" value="/store/meat_sqft"/>
+		<property name="resourceId" value="JoinTree_1.store.meat_sqft"/>
+		<property name="semantic.tree.uri" value="/store/meat_sqft"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.MEAT_SQFT.DESCR"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/meat_sqft"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.MEAT_SQFT.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.meat_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.MEAT_SQFT.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.prepared_food" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.PREPARED_FOOD.LABEL}"/>
+		<property name="semantic.item.label" value="prepared_food"/>
+		<property name="adhoc.tree.uri" value="/store/prepared_food"/>
+		<property name="resourceId" value="JoinTree_1.store.prepared_food"/>
+		<property name="semantic.tree.uri" value="/store/prepared_food"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.PREPARED_FOOD.DESCR"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/prepared_food"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.PREPARED_FOOD.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.prepared_food)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.PREPARED_FOOD.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.region_id" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.REGION_ID.LABEL}"/>
+		<property name="semantic.item.label" value="region_id"/>
+		<property name="adhoc.tree.uri" value="/store/region_id"/>
+		<property name="resourceId" value="JoinTree_1.store.region_id"/>
+		<property name="semantic.tree.uri" value="/store/region_id"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.REGION_ID.DESCR"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/region_id"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.REGION_ID.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.region_id)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.REGION_ID.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.salad_bar" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.SALAD_BAR.LABEL}"/>
+		<property name="semantic.item.label" value="salad_bar"/>
+		<property name="adhoc.tree.uri" value="/store/salad_bar"/>
+		<property name="resourceId" value="JoinTree_1.store.salad_bar"/>
+		<property name="semantic.tree.uri" value="/store/salad_bar"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.SALAD_BAR.DESCR"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/salad_bar"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.SALAD_BAR.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.salad_bar)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.SALAD_BAR.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_city" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_CITY.LABEL}"/>
+		<property name="semantic.item.label" value="store_city"/>
+		<property name="adhoc.tree.uri" value="/store/store_city"/>
+		<property name="resourceId" value="JoinTree_1.store.store_city"/>
+		<property name="semantic.tree.uri" value="/store/store_city"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_CITY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_city"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_CITY.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_city)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_CITY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_country" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_COUNTRY.LABEL}"/>
+		<property name="semantic.item.label" value="store_country"/>
+		<property name="adhoc.tree.uri" value="/store/store_country"/>
+		<property name="resourceId" value="JoinTree_1.store.store_country"/>
+		<property name="semantic.tree.uri" value="/store/store_country"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_COUNTRY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="11"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_country"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_COUNTRY.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_country)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_COUNTRY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_fax" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_FAX.LABEL}"/>
+		<property name="semantic.item.label" value="store_fax"/>
+		<property name="adhoc.tree.uri" value="/store/store_fax"/>
+		<property name="resourceId" value="JoinTree_1.store.store_fax"/>
+		<property name="semantic.tree.uri" value="/store/store_fax"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_FAX.DESCR"/>
+		<property name="semantic.tree.sort.order" value="12"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_fax"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_FAX.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_fax)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_FAX.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_id_1" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_ID_1.LABEL}"/>
+		<property name="semantic.item.label" value="store_id"/>
+		<property name="adhoc.tree.uri" value="/store/store_id_1"/>
+		<property name="resourceId" value="JoinTree_1.store.store_id"/>
+		<property name="semantic.tree.uri" value="/store/store_id_1"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_ID_1.DESCR"/>
+		<property name="semantic.tree.sort.order" value="13"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_id_1"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_ID_1.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.store_id_1)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_ID_1.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_manager" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_MANAGER.LABEL}"/>
+		<property name="semantic.item.label" value="store_manager"/>
+		<property name="adhoc.tree.uri" value="/store/store_manager"/>
+		<property name="resourceId" value="JoinTree_1.store.store_manager"/>
+		<property name="semantic.tree.uri" value="/store/store_manager"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_MANAGER.DESCR"/>
+		<property name="semantic.tree.sort.order" value="14"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_manager"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_MANAGER.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_manager)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_MANAGER.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_name" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_NAME.LABEL}"/>
+		<property name="semantic.item.label" value="store_name"/>
+		<property name="adhoc.tree.uri" value="/store/store_name"/>
+		<property name="resourceId" value="JoinTree_1.store.store_name"/>
+		<property name="semantic.tree.uri" value="/store/store_name"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_NAME.DESCR"/>
+		<property name="semantic.tree.sort.order" value="15"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_name"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_NAME.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_name)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_NAME.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_number" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_NUMBER.LABEL}"/>
+		<property name="semantic.item.label" value="store_number"/>
+		<property name="adhoc.tree.uri" value="/store/store_number"/>
+		<property name="resourceId" value="JoinTree_1.store.store_number"/>
+		<property name="semantic.tree.uri" value="/store/store_number"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_NUMBER.DESCR"/>
+		<property name="semantic.tree.sort.order" value="16"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_number"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_NUMBER.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.store_number)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_NUMBER.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_phone" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_PHONE.LABEL}"/>
+		<property name="semantic.item.label" value="store_phone"/>
+		<property name="adhoc.tree.uri" value="/store/store_phone"/>
+		<property name="resourceId" value="JoinTree_1.store.store_phone"/>
+		<property name="semantic.tree.uri" value="/store/store_phone"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_PHONE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="17"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_phone"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_PHONE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_phone)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_PHONE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_postal_code" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_POSTAL_CODE.LABEL}"/>
+		<property name="semantic.item.label" value="store_postal_code"/>
+		<property name="adhoc.tree.uri" value="/store/store_postal_code"/>
+		<property name="resourceId" value="JoinTree_1.store.store_postal_code"/>
+		<property name="semantic.tree.uri" value="/store/store_postal_code"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_POSTAL_CODE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="18"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_postal_code"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_POSTAL_CODE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_postal_code)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_POSTAL_CODE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_sqft" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_SQFT.LABEL}"/>
+		<property name="semantic.item.label" value="store_sqft"/>
+		<property name="adhoc.tree.uri" value="/store/store_sqft"/>
+		<property name="resourceId" value="JoinTree_1.store.store_sqft"/>
+		<property name="semantic.tree.uri" value="/store/store_sqft"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_SQFT.DESCR"/>
+		<property name="semantic.tree.sort.order" value="19"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_sqft"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_SQFT.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(store.store_sqft)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_SQFT.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_state" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_STATE.LABEL}"/>
+		<property name="semantic.item.label" value="store_state"/>
+		<property name="adhoc.tree.uri" value="/store/store_state"/>
+		<property name="resourceId" value="JoinTree_1.store.store_state"/>
+		<property name="semantic.tree.uri" value="/store/store_state"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_STATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="20"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_state"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_STATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_state)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_STATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_street_address" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_STREET_ADDRESS.LABEL}"/>
+		<property name="semantic.item.label" value="store_street_address"/>
+		<property name="adhoc.tree.uri" value="/store/store_street_address"/>
+		<property name="resourceId" value="JoinTree_1.store.store_street_address"/>
+		<property name="semantic.tree.uri" value="/store/store_street_address"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_STREET_ADDRESS.DESCR"/>
+		<property name="semantic.tree.sort.order" value="21"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_street_address"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_STREET_ADDRESS.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_street_address)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_STREET_ADDRESS.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.store_type" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.STORE_TYPE.LABEL}"/>
+		<property name="semantic.item.label" value="store_type"/>
+		<property name="adhoc.tree.uri" value="/store/store_type"/>
+		<property name="resourceId" value="JoinTree_1.store.store_type"/>
+		<property name="semantic.tree.uri" value="/store/store_type"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.STORE_TYPE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="22"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/store_type"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.STORE_TYPE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.store_type)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.STORE_TYPE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="store.video_store" class="java.lang.Boolean">
+		<property name="adhoc.display" value="$R{JOINTREE_1.STORE.VIDEO_STORE.LABEL}"/>
+		<property name="semantic.item.label" value="video_store"/>
+		<property name="adhoc.tree.uri" value="/store/video_store"/>
+		<property name="resourceId" value="JoinTree_1.store.video_store"/>
+		<property name="semantic.tree.uri" value="/store/video_store"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.STORE.VIDEO_STORE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="23"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/store/video_store"/>
+		<property name="previous.display" value="$R{JOINTREE_1.STORE.VIDEO_STORE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(store.video_store)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.STORE.VIDEO_STORE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.day_of_month" class="java.lang.Short">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.LABEL}"/>
+		<property name="semantic.item.label" value="day_of_month"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/day_of_month"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.day_of_month"/>
+		<property name="semantic.tree.uri" value="/time_by_day/day_of_month"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.DESCR"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/day_of_month"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.day_of_month)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_MONTH.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.day_of_week" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.LABEL}"/>
+		<property name="semantic.item.label" value="day_of_week"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/day_of_week"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.day_of_week"/>
+		<property name="semantic.tree.uri" value="/time_by_day/day_of_week"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.DESCR"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/day_of_week"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.day_of_week)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.DAY_OF_WEEK.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.fiscal_period" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.LABEL}"/>
+		<property name="semantic.item.label" value="fiscal_period"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/fiscal_period"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.fiscal_period"/>
+		<property name="semantic.tree.uri" value="/time_by_day/fiscal_period"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.DESCR"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/fiscal_period"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(time_by_day.fiscal_period)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.FISCAL_PERIOD.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.month_of_year" class="java.lang.Short">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.LABEL}"/>
+		<property name="semantic.item.label" value="month_of_year"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/month_of_year"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.month_of_year"/>
+		<property name="semantic.tree.uri" value="/time_by_day/month_of_year"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.DESCR"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/month_of_year"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.month_of_year)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.MONTH_OF_YEAR.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.quarter" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.QUARTER.LABEL}"/>
+		<property name="semantic.item.label" value="quarter"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/quarter"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.quarter"/>
+		<property name="semantic.tree.uri" value="/time_by_day/quarter"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.QUARTER.DESCR"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/quarter"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.QUARTER.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(time_by_day.quarter)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.QUARTER.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.the_date" class="java.sql.Timestamp">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_DATE.LABEL}"/>
+		<property name="semantic.item.label" value="the_date"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/the_date"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_date"/>
+		<property name="semantic.tree.uri" value="/time_by_day/the_date"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.THE_DATE.DESCR"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_timestamp_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/the_date"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_DATE.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(time_by_day.the_date)"/>
+		<property name="defaultMask" value="medium,hide"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.THE_DATE.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.the_day" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_DAY.LABEL}"/>
+		<property name="semantic.item.label" value="the_day"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/the_day"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_day"/>
+		<property name="semantic.tree.uri" value="/time_by_day/the_day"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.THE_DAY.DESCR"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/the_day"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_DAY.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(time_by_day.the_day)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.THE_DAY.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.the_month" class="java.lang.String">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_MONTH.LABEL}"/>
+		<property name="semantic.item.label" value="the_month"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/the_month"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_month"/>
+		<property name="semantic.tree.uri" value="/time_by_day/the_month"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.THE_MONTH.DESCR"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/the_month"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_MONTH.LABEL}"/>
+		<property name="defaultAgg" value="CountAll"/>
+		<property name="aggregateExpression" value="CountAll(time_by_day.the_month)"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.THE_MONTH.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.the_year" class="java.lang.Short">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_YEAR.LABEL}"/>
+		<property name="semantic.item.label" value="the_year"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/the_year"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.the_year"/>
+		<property name="semantic.tree.uri" value="/time_by_day/the_year"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.THE_YEAR.DESCR"/>
+		<property name="semantic.tree.sort.order" value="8"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/the_year"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.THE_YEAR.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.the_year)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.THE_YEAR.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.time_id_1" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.TIME_ID_1.LABEL}"/>
+		<property name="semantic.item.label" value="time_id"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/time_id_1"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.time_id"/>
+		<property name="semantic.tree.uri" value="/time_by_day/time_id_1"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.TIME_ID_1.DESCR"/>
+		<property name="semantic.tree.sort.order" value="9"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/time_id_1"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.TIME_ID_1.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.time_id_1)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.TIME_ID_1.DESCR}]]></fieldDescription>
+	</field>
+	<field name="time_by_day.week_of_year" class="java.lang.Integer">
+		<property name="adhoc.display" value="$R{JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.LABEL}"/>
+		<property name="semantic.item.label" value="week_of_year"/>
+		<property name="adhoc.tree.uri" value="/time_by_day/week_of_year"/>
+		<property name="resourceId" value="JoinTree_1.time_by_day.week_of_year"/>
+		<property name="semantic.tree.uri" value="/time_by_day/week_of_year"/>
+		<property name="semantic.item.desc.id" value="JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.DESCR"/>
+		<property name="semantic.tree.sort.order" value="10"/>
+		<property name="kind" value="MEASURE"/>
+		<property name="defaultMaskId" value="ADH_100_MASK_int_0"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.chosen.tree.uri" value="/time_by_day/week_of_year"/>
+		<property name="previous.display" value="$R{JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.LABEL}"/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="aggregateExpression" value="Sum(time_by_day.week_of_year)"/>
+		<property name="defaultMask" value="#,##0"/>
+		<fieldDescription><![CDATA[$R{JOINTREE_1.TIME_BY_DAY.WEEK_OF_YEAR.DESCR}]]></fieldDescription>
+	</field>
+</jasperReport>

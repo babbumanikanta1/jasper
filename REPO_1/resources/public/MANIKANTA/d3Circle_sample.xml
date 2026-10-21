@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>d3Circle_sample</name>
+    <version>5</version>
+    <label>d3Circle_sample</label>
+    <description></description>
+    <creationDate>2026-06-04T18:16:26.740+05:30</creationDate>
+    <updateDate>2026-06-05T10:05:19.257+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/d3Circle_sample_files</folder>
+            <name>main_jrxml</name>
+            <version>10</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-06-04T18:16:26.740+05:30</creationDate>
+            <updateDate>2026-06-05T10:05:19.006+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="CSV.min.js.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/d3Circle_sample_files</folder>
+            <name>CSV.min.js</name>
+            <version>5</version>
+            <label>CSV.min.js</label>
+            <creationDate>2026-06-04T18:16:26.740+05:30</creationDate>
+            <updateDate>2026-06-04T18:16:26.740+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="CSV.css.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/d3Circle_sample_files</folder>
+            <name>CSV.css</name>
+            <version>5</version>
+            <label>CSV.css</label>
+            <creationDate>2026-06-04T18:16:26.740+05:30</creationDate>
+            <updateDate>2026-06-04T18:16:26.740+05:30</updateDate>
+            <fileType>css</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

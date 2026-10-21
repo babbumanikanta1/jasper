@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>superuser</username>
+    <fullName>superuser</fullName>
+    <password>ENC&lt;4A5253495600000010EEBBCBA8C16D1A25217839C0D0690FD107B72C5A1556A8BCBFDEACE60A6DE0CD&gt;</password>
+    <email></email>
+    <externallyDefined>false</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_SUPERUSER</role>
+    <role>ROLE_ADMINISTRATOR</role>
+    <attribute name="mani">
+        <value>public</value>
+    </attribute>
+</user>

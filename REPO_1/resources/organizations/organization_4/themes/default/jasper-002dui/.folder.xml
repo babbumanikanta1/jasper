@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_4/themes/default</parent>
+    <name>jasper-ui</name>
+    <label>jasper-ui</label>
+    <creationDate>2026-04-21T17:14:29.215+05:30</creationDate>
+    <updateDate>2024-01-09T18:19:26.544+05:30</updateDate>
+    <folder>fonts</folder>
+    <folder>images</folder>
+    <resource>jasper-ui.css</resource>
+</folder>

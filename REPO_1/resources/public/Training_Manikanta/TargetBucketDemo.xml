@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Training_Manikanta</folder>
+    <name>TargetBucketDemo</name>
+    <version>21</version>
+    <label>TargetBucketDemo</label>
+    <description></description>
+    <creationDate>2026-07-21T11:56:46.636+05:30</creationDate>
+    <updateDate>2026-07-23T11:39:52.529+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/TargetBucketDemo_files</folder>
+            <name>main_jrxml</name>
+            <version>40</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-07-21T11:56:46.636+05:30</creationDate>
+            <updateDate>2026-07-23T11:39:52.287+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/Training_Manikanta/TargetBucketDemo_files</folder>
+            <name>MainParam</name>
+            <version>1</version>
+            <label>MainParam</label>
+            <creationDate>2026-07-23T11:39:52.529+05:30</creationDate>
+            <updateDate>2026-07-23T11:39:52.529+05:30</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/Training_Manikanta/TargetBucketDemo_files/MainParam_files</folder>
+                    <name>myDatatype</name>
+                    <version>0</version>
+                    <label>myDatatype</label>
+                    <creationDate>2026-07-23T11:39:52.529+05:30</creationDate>
+                    <updateDate>2026-07-23T11:39:52.529+05:30</updateDate>
+                    <type>1</type>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/Training_Manikanta/TargetBucketDemo_files</folder>
+            <name>Pa</name>
+            <version>1</version>
+            <label>Pa</label>
+            <creationDate>2026-07-23T11:39:52.529+05:30</creationDate>
+            <updateDate>2026-07-23T11:39:52.529+05:30</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/Training_Manikanta/TargetBucketDemo_files/Pa_files</folder>
+                    <name>myDatatype</name>
+                    <version>0</version>
+                    <label>myDatatype</label>
+                    <creationDate>2026-07-23T11:39:52.529+05:30</creationDate>
+                    <updateDate>2026-07-23T11:39:52.529+05:30</updateDate>
+                    <type>2</type>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>3</controlsLayout>
+</reportUnit>

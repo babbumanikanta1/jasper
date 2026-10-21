@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>jasperadmin</username>
+    <fullName>organization_4 jasperadmin</fullName>
+    <password>ENC&lt;4A5253495600000010954B1E48131FEB5E77910D74F6DE2F927C186866FEDEEA0F1192961DAB9928CD&gt;</password>
+    <email></email>
+    <externallyDefined>false</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_ADMINISTRATOR</role>
+    <role>ROLE_USER</role>
+    <tenantId>organization_4</tenantId>
+</user>

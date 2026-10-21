@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/MANIKANTA</folder>
+    <name>bb_sample</name>
+    <version>44</version>
+    <label>bb_sample</label>
+    <description></description>
+    <creationDate>2026-06-05T15:56:21.117+05:30</creationDate>
+    <updateDate>2026-06-09T12:07:53.129+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/bb_sample_files</folder>
+            <name>main_jrxml</name>
+            <version>81</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-06-05T15:56:21.117+05:30</creationDate>
+            <updateDate>2026-06-09T12:07:52.977+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/bb_sample_files</folder>
+            <name>Parameter1</name>
+            <version>1</version>
+            <label>Available Countries</label>
+            <description></description>
+            <creationDate>2026-06-09T12:07:53.129+05:30</creationDate>
+            <updateDate>2026-06-09T12:07:53.129+05:30</updateDate>
+            <type>7</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/MANIKANTA/bb_sample_files/Parameter1_files</folder>
+                    <name>Query</name>
+                    <version>0</version>
+                    <label>Query</label>
+                    <description></description>
+                    <creationDate>2026-06-09T12:07:53.129+05:30</creationDate>
+                    <updateDate>2026-06-09T12:07:53.129+05:30</updateDate>
+                    <language>sql</language>
+                    <queryString>select country from customer</queryString>
+                    <dataSource>
+                        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>country</queryVisibleColumn>
+            <queryValueColumn>country</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/MANIKANTA/bb_sample_files</folder>
+            <name>Count</name>
+            <version>1</version>
+            <label>Count</label>
+            <description></description>
+            <creationDate>2026-06-09T12:07:53.129+05:30</creationDate>
+            <updateDate>2026-06-09T12:07:53.129+05:30</updateDate>
+            <type>2</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/MANIKANTA/bb_sample_files/Count_files</folder>
+                    <name>myDatatype</name>
+                    <version>0</version>
+                    <label>myDatatype</label>
+                    <description></description>
+                    <creationDate>2026-06-09T12:07:53.129+05:30</creationDate>
+                    <updateDate>2026-06-09T12:07:53.129+05:30</updateDate>
+                    <type>2</type>
+                    <minValue xmlns:java="http://java.sun.com" xsi:type="java:java.math.BigDecimal">3</minValue>
+                    <maxValue xmlns:java="http://java.sun.com" xsi:type="java:java.math.BigDecimal">500</maxValue>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="cvc_bubble.css.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/bb_sample_files</folder>
+            <name>cvc_bubble.css</name>
+            <version>48</version>
+            <label>cvc_bubble.css</label>
+            <creationDate>2026-06-05T15:56:21.117+05:30</creationDate>
+            <updateDate>2026-06-08T12:34:05.531+05:30</updateDate>
+            <fileType>css</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="cvc_bubble.min.js.data" xsi:type="fileResource">
+            <folder>/public/MANIKANTA/bb_sample_files</folder>
+            <name>cvc_bubble.min.js</name>
+            <version>60</version>
+            <label>cvc_bubble.min.js</label>
+            <creationDate>2026-06-05T15:56:21.117+05:30</creationDate>
+            <updateDate>2026-06-09T12:07:53.063+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

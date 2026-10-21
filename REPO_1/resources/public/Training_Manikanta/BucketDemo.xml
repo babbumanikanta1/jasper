@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Training_Manikanta</folder>
+    <name>BucketDemo</name>
+    <version>130</version>
+    <label>BucketDemo</label>
+    <description></description>
+    <creationDate>2026-07-20T18:03:25.751+05:30</creationDate>
+    <updateDate>2026-07-24T11:44:15.539+05:30</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Training_Manikanta/BucketDemo_files</folder>
+            <name>main_jrxml</name>
+            <version>155</version>
+            <label>Main jrxml</label>
+            <creationDate>2026-07-21T12:01:16.604+05:30</creationDate>
+            <updateDate>2026-07-24T11:44:15.312+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/Training_Manikanta/BucketDemo_files</folder>
+            <name>MainParam</name>
+            <version>1</version>
+            <label>MainParam</label>
+            <creationDate>2026-07-24T11:44:15.539+05:30</creationDate>
+            <updateDate>2026-07-24T11:44:15.539+05:30</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/Training_Manikanta/BucketDemo_files/MainParam_files</folder>
+                    <name>myDatatype</name>
+                    <version>0</version>
+                    <label>myDatatype</label>
+                    <creationDate>2026-07-24T11:44:15.539+05:30</creationDate>
+                    <updateDate>2026-07-24T11:44:15.539+05:30</updateDate>
+                    <type>1</type>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>3</controlsLayout>
+</reportUnit>

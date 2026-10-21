@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.3.final using JasperReports Library version 6.21.6-ef58807af469abb082e2f734b1e78a3c47daad18  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TicketsASS_15" pageWidth="940" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="900" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a0ba4e4-aae3-4309-b0a6-99039799ccbb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FoodMart"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/Training_Manikanta/TicketsASS_15_1__files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/Training_Manikanta/TicketsASS_15_1_"/>
+	<property name="com.jaspersoft.jasperreports.html.component.allowed.elements" value="html,head,meta,style,body,div,select,option"/>
+	<property name="com.jaspersoft.jasperreports.html.component.allowed.attributes" value="lang,charset,id,name,class,value,onchange,disabled,selected,style"/>
+	<property name="com.jaspersoft.jasperreports.html.component.allow.javascript" value="true"/>
+	<property name="com.jaspersoft.jasperreports.components.customvisualization.phantomjs.executable.path" value="C:\Program Files\Jaspersoft\Jaspersoft Studio Professional-9.0.3\plugins\phantomjs-2.1.1-windows\bin"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#E8D6D5">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="59265a5c-2d7e-4abd-afaf-abbfaeb166b3">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<parameter name="final_query" class="java.lang.String" evaluationTime="Early">
+			<defaultValueExpression><![CDATA["WITH run_function AS ( " +
+"    SELECT * FROM function_1() WHERE " + $P{Param_1} + " = 0 " +
+"    UNION ALL " +
+"    SELECT * FROM function_2(" + $P{Param_1} + ", '" + $P{Param_2} + "') WHERE 0 = 0 " +
+") " +
+"SELECT * FROM run_function"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Param_1" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Param_2" class="java.lang.String" evaluationTime="Early">
+			<defaultValueExpression><![CDATA["mani"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="plsql">
+			<![CDATA[WITH run_function AS (
+    -- If id_param is 0, fetch from function_1
+    SELECT * FROM function_1()
+    WHERE $P{Param_1} = 0
+    
+    UNION ALL
+    
+    -- If id_param is NOT 0, execute function_2 and pass the parameters it needs
+	
+    SELECT * FROM function_2($P{Param_1}, $P{Param_2})
+    WHERE $P{Param_1} != 0
+
+	union all
+
+	select * from function_3()
+	where $P{Param_1}=-1
+)
+SELECT * FROM run_function;]]>
+		</queryString>
+		<field name="ticket_id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="ticket_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="ticket_id"/>
+		</field>
+		<field name="ticket_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="ticket_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="ticket_name"/>
+		</field>
+		<field name="priority" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="priority"/>
+			<property name="com.jaspersoft.studio.field.label" value="priority"/>
+		</field>
+		<field name="checkbox" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="checkbox"/>
+			<property name="com.jaspersoft.studio.field.label" value="checkbox"/>
+		</field>
+		<field name="username" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="username"/>
+			<property name="com.jaspersoft.studio.field.label" value="username"/>
+		</field>
+		<field name="assigned_time" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="assigned_time"/>
+			<property name="com.jaspersoft.studio.field.label" value="assigned_time"/>
+		</field>
+		<field name="snooze" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="snooze"/>
+			<property name="com.jaspersoft.studio.field.label" value="snooze"/>
+		</field>
+	</subDataset>
+	<parameter name="LoggedInUsername" class="java.lang.String"/>
+	<parameter name="ForID" class="java.lang.Integer" evaluationTime="Early">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="dummy" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="dummy"/>
+		<property name="com.jaspersoft.studio.field.label" value="dummy"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="210" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="30" width="900" height="180" uuid="c10193c9-e64d-445d-af17-712c90319632">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.jasperreports.components.customvisualization.phantomjs.executable.path$url" value="C:\Program Files\Jaspersoft\Jaspersoft Studio Professional-9.0.3\plugins\phantomjs-2.1.1-windows\bin\phantomjs.exe"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="829a0a80-67c6-4240-a01c-ce26716fd06f">
+						<datasetParameter name="Param_2">
+							<datasetParameterExpression><![CDATA[$P{LoggedInUsername}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="Param_1">
+							<datasetParameterExpression><![CDATA[$P{ForID}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="b3e25060-2862-4285-9176-b72298a0449f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="60d1dde8-fa54-4539-8fd9-38a0913bc0a4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Ticket_id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="50" uuid="f31a045c-ea54-4a7e-8515-b2083ce8b7a4">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ticket_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="190" uuid="d6a08f1a-d54b-47c0-989b-37d562eae960">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="190" height="30" uuid="1c745482-f1ec-4b90-a5ed-a99832acea96"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Ticket_Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="190" height="50" uuid="8aafcecb-1332-44d3-a4dd-478d2dd37c88">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ticket_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="befbb445-4ce1-4832-ae6f-8b4338b6c715">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="22b09ac9-598c-4900-9943-879f84f1416a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Priority]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="50" uuid="5a468318-49d5-421c-9fd4-1e77ba5f50d1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{priority}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="6f0b5970-a2dc-44b8-92dc-81e5d6d64176">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="16f7bb74-f2ea-4d98-9b4a-0100b6db5b61"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Checkbox]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField hyperlinkType="ReportExecution">
+								<reportElement x="0" y="0" width="80" height="50" uuid="43c4fea5-3ec8-4d68-b634-7ce51f9ec263"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="22"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{checkbox} ? "\u2611" : "\u2610"]]></textFieldExpression>
+								<hyperlinkWhenExpression><![CDATA[$F{checkbox}!=true]]></hyperlinkWhenExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["/public/Training_Manikanta/TicketsASS_15"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="ForID">
+									<hyperlinkParameterExpression><![CDATA[$F{ticket_id}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="1d99003b-36e9-456b-852c-ee5aa11b50ef">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="39c3c170-d7f3-4cff-8816-4b9a780354c3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[User_Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="50" uuid="5d41171b-7269-4c9d-9ccc-6f56adc7c497"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="150" uuid="19e17249-750f-4c93-9606-5f7cbfb6799d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="150" height="30" uuid="d01764ed-fe9d-48f2-953b-84f7f83a21c0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Assigned_Time]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="150" height="50" uuid="8718e011-2a81-49fc-8633-9cfa2089f639"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+									<font size="13"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{assigned_time}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="703bdac5-71b4-4355-914a-6f1fc16c453c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="39eecf71-0e49-4fca-af24-147b876392c4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Snooze]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="50" uuid="96b4b1e3-0c15-4212-b63c-62419c404235"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{snooze}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="4616c7e4-653e-4a2c-91c1-913a0358b46d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="7cb1c46d-6b37-46b6-b369-12fad5d2434a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Duration]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="50"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField hyperlinkType="ReportExecution">
+				<reportElement mode="Opaque" x="730" y="0" width="80" height="20" backcolor="#DBDA7D" uuid="677db71b-23a9-4bec-942b-e5e5013d2058"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reset"]]></textFieldExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Training_Manikanta/TicketsASS_15"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="ForID">
+					<hyperlinkParameterExpression><![CDATA[-1]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

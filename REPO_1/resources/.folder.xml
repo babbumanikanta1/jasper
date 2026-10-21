@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <name>/</name>
+    <label>root</label>
+    <description>Root of the folder hierarchy</description>
+    <creationDate>2026-04-21T17:14:28.449+05:30</creationDate>
+    <updateDate>2024-01-09T18:18:56.060+05:30</updateDate>
+    <folder>organizations</folder>
+    <folder>public</folder>
+    <folder>temp</folder>
+    <folder>themes</folder>
+    <folder>Vyjayanthi</folder>
+    <folder>public</folder>
+    <permission>
+        <permissionMask>1</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+    <permission>
+        <permissionMask>1</permissionMask>
+        <recipient recipientType="role">ROLE_SUPERUSER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>2</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

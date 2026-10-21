@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhocDataView exportedWithPermissions="true">
+    <folder>/Vyjayanthi</folder>
+    <name>My_Adhoc_1</name>
+    <version>0</version>
+    <label>My_Adhoc_1</label>
+    <description>This report demonstrates monthly sales in the year 2018.Including gross sales and profit</description>
+    <creationDate>2026-04-21T18:11:38.338+05:30</creationDate>
+    <updateDate>2026-04-01T12:46:28.036+05:30</updateDate>
+    <dataSource>
+        <uri>/public/MANIKANTA/Practice/sales_domain</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="topicJRXML.data" xsi:type="fileResource">
+            <folder>/Vyjayanthi/My_Adhoc_1_files</folder>
+            <name>topicJRXML</name>
+            <version>0</version>
+            <label>topicJRXML</label>
+            <creationDate>2026-04-21T18:11:38.338+05:30</creationDate>
+            <updateDate>2026-04-01T12:45:18.592+05:30</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="stateXML.data" xsi:type="fileResource">
+            <folder>/Vyjayanthi/My_Adhoc_1_files</folder>
+            <name>stateXML</name>
+            <version>0</version>
+            <label>stateXML</label>
+            <creationDate>2026-04-21T18:11:38.338+05:30</creationDate>
+            <updateDate>2026-04-01T12:45:18.592+05:30</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</adhocDataView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlaConnection exportedWithPermissions="true">
+    <folder>/organizations/organization_1/performance/connections</folder>
+    <name>ProfileXmlaConnection</name>
+    <version>0</version>
+    <label>Profile XMLA Connection</label>
+    <description>Profile XML/A Connection</description>
+    <creationDate>2026-04-21T17:14:35.340+05:30</creationDate>
+    <updateDate>2024-01-09T18:21:58.349+05:30</updateDate>
+    <connectionURL>http://localhost:8080/jasperserver-pro/xmla</connectionURL>
+    <dataSource>Provider=Mondrian;DataSource=JRS</dataSource>
+    <catalog>Profile</catalog>
+    <connectionUser>jasperadmin</connectionUser>
+    <connectionPassword>ENC&lt;4A525349560000001041BA9A82445657921AC528C891E37DFFF67B9CF10D8EF0605A07909710A6327B&gt;</connectionPassword>
+</xmlaConnection>
